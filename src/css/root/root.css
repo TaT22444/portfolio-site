@@ -1,8 +1,9 @@
 :root {
   --color-white: #fff;
+  --color-gray: #dadada;
   --color-bg-white: #f3f3f3;
   --color-bg-black: #252528;
-  --font-size-xs: 12px;
+  --font-size-xs: 10px;
   --font-size-s: 16px;
   --font-size-ms: 20px;
   --font-size-m: 24px;
