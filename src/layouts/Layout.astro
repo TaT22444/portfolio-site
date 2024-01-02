@@ -81,10 +81,21 @@ import '../css/root/root.css'
         top: 0;
         left: 0;
 		align-items: center;
-		color: var(--color-white);
-        background-color: transparent;
-        mix-blend-mode: difference;
+		color: var(--color-bg-black);
+        background-color: var(--color-bg-white);
 		z-index: 99;
+
+		@media screen and (min-width:768px) {
+			width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+		    align-items: center;
+			color: var(--color-white);
+            background-color: transparent;
+            mix-blend-mode: difference;
+		    z-index: 99;
+        }
 
         &-nav{
             display: none;
@@ -123,7 +134,7 @@ import '../css/root/root.css'
 				width: 32px;
 				height: 2px;
 				border-radius: 10px;
-				background-color: var(--color-white);
+				background-color: var(--color-bg-black);
 			}
 		}
 
