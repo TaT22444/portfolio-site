@@ -1,5 +1,9 @@
 @use "../root/root.css";
 
+.heading{
+    mix-blend-mode: difference;
+}
+
 .inner{
     width: 100%;
     padding: 0 8vw;
