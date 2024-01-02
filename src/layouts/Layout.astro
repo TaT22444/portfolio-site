@@ -39,7 +39,7 @@ const nav = [
 </head>
 <body>
 	<header class="header ff-en" id="header">
-	    <div class="inner inner--header">
+	    <div class="header__inner">
         <h2 class="header__logo">{title}</h2><!--{title}-->
         <nav class="header-nav">
             <ul class="header-nav__list">
@@ -63,7 +63,7 @@ const nav = [
 
 <style lang="scss">
 	body{
-		background-color: #825f5f;
+		background-color: #3c3c3c;
 		color: #fff;
 	}
     .header{
@@ -76,6 +76,13 @@ const nav = [
 		color: #fff;
         background-color: transparent;
         mix-blend-mode: difference;
+
+		&__inner{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
         &-nav{
             display: none;
