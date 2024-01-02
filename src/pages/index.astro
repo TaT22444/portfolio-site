@@ -1,68 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
 // import Card from '../components/Card.astro';
+import '../css/top/style.css'
 ---
 
 <Layout title="portfolio-site"/>
 <main>
-	<h1 class="title">TaT - Portfolio</h1>
-	<h2 class="sub-heading">UI/UX design + coding</h2>
+	<div class="hero">
+        <div class="inner inner--hero">
+            <!-- <div class="hero__container"> -->
+            <div class="hero__images">
+                <div class="hero__image hero__image-item1">
+                    <img src="public/images/me.JPG" alt="相原立弥の写真">
+                </div>                        
+				<div class="hero__image hero__image-item2">
+                    <img src="public/images/me.JPG" alt="相原立弥の写真">
+                </div>
+                <div class="hero__image hero__image-item3">
+                    <img src="public/images/me.JPG" alt="相原立弥の写真">
+                </div>
+            </div>
+			<h1 class="hero-text">
+			    <span class="hero__title anim-hero__title">TaT ー Portfolio</span>
+				<span class="hero__border anim-hero__border" id="js-hero__border"></span>
+				<span class="hero__subtitle anim-hero__subtitle">Design & coding</span>
+			</h1>
+         </div>
+    </div>
+
+	<div class="scrolldown">
+        <div class="inner inner--scrolldown">
+            <p class="scrolldown__scroll anim-fadein-scroll">SCROLL DOWN</p>
+            <span class="scrolldown__line anim-fadein-scroll anim-scrolldown" id="js-scrolldown"></span>
+            <p class="scrolldown__thankyou">Thank you!</p>
+        </div>
+    </div>
 </main>
 
 <style>
-	main {
-		margin: auto;
-		padding: 2rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+	
 </style>

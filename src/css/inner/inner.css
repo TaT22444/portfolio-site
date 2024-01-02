@@ -1,0 +1,56 @@
+:root {
+  --color-white: #fff;
+  --color-bg-white: #f3f3f3;
+  --color-bg-black: #252528;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-ms: 20px;
+  --font-size-m: 24px;
+  --font-size-ml: 32px;
+  --font-size-l: 40px;
+  --font-size-xl: 60px;
+  --font-size-xxl: 100px;
+  --font-family-ja: "Noto Sans JP", sans-serif;
+  --font-family-en: "Dela Gothic One", cursive;
+} 
+.inner {
+  width: 100%;
+  padding: 0 8vw;
+}
+@media screen and (min-width: 834px) {
+  .inner {
+    padding: 0 4vw;
+  }
+}
+.inner--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+}
+@media screen and (min-width: 834px) {
+  .inner--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+}
+.inner--footer {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+}
+.inner--hero {
+  overflow: hidden;
+  margin-inline: auto;
+  height: 85vh;
+  min-height: 500px;
+}
+@media screen and (min-width: 834px) {
+  .inner--hero {
+    padding: 0;
+  }
+}/*# sourceMappingURL=inner.css.map */

@@ -1,0 +1,42 @@
+@use "../root/root.css";
+
+.inner{
+    width: 100%;
+    padding: 0 8vw;
+    @media screen and (min-width:834px) {
+        padding: 0 4vw;
+    }
+
+    &--header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 8vw;
+        padding-bottom: 8vw;
+        @media screen and (min-width:834px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+            // color: var(--color-white);
+        }
+    }
+
+    &--footer{
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    &--hero{
+        overflow: hidden;
+        // max-width: 1140px;
+        margin-inline: auto;
+        height: 85vh;
+        min-height: 500px;
+        @media screen and (min-width:834px) {
+            padding: 0 ;
+        }
+    }
+}

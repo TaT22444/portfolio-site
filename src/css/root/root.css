@@ -1,0 +1,15 @@
+:root {
+  --color-white: #fff;
+  --color-bg-white: #f3f3f3;
+  --color-bg-black: #252528;
+  --font-size-xs: 12px;
+  --font-size-s: 16px;
+  --font-size-ms: 20px;
+  --font-size-m: 24px;
+  --font-size-ml: 32px;
+  --font-size-l: 40px;
+  --font-size-xl: 60px;
+  --font-size-xxl: 100px;
+  --font-family-ja: "Noto Sans JP", sans-serif;
+  --font-family-en: "Dela Gothic One", cursive;
+}/*# sourceMappingURL=root.css.map */
