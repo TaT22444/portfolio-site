@@ -11,12 +11,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 120px;
+        height: 100px;
         @media screen and (min-width:834px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 140px;
             // color: var(--color-white);
         }
     }

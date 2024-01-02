@@ -27,14 +27,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  height: 100px;
 }
 @media screen and (min-width: 834px) {
   .inner--header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 140px;
   }
 }
 .inner--footer {

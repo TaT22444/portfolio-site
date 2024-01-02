@@ -7,61 +7,75 @@
     &__images{
         height: 65%;
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            column-gap: 2%;
-            // margin-top: 50px;
+        //     justify-content: center;
+        //     align-items: flex-end;
+            padding-top: 180px;
         
         @media screen and (min-width:1024px) {
             height: 65%;
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            // justify-content: center;
+            // align-items: flex-end;
             column-gap: 4%;
-            margin-top: 50px;
+            padding-top: 180px;
         }
     }
 
     &__image{
-        width: 50%;
-        z-index: -1;
+        width: 100%;
 
         &-item1{
-            transform: translateY(3vw) rotate(-10deg);
+            display: none;
         }
         &-item3{
-            transform: translateY(3vw) rotate(10deg);
+            display: none;
         }
 
         > img{
             width: 100%;
-            aspect-ratio: 4/3;
+            aspect-ratio: 16/9;
             object-fit: cover;
-            border-radius: 20px;
+            border-radius: 10px;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 50%;
+            z-index: -1;
+    
+            &-item1{
+                display: block;
+                transform: translateY(3vw) rotate(-10deg);
+            }
+            &-item3{
+                display: block;
+                transform: translateY(3vw) rotate(10deg);
+            }
+    
+            > img{
+                width: 100%;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+                border-radius: 20px;
+            }
         }
     }
 
     &-text{
         width: 100%;
-        height: auto;
         position: relative;
-        // top: 100px;
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding: 0 8vw;
+        padding: 0 4vw;
         font-family: var(--font-family-en);
 
         @media screen and (min-width:1024px) {
             width: auto;
-            height: auto;
-            position: relative;
             display: inline-flex;
             flex-direction: column;
             text-align: center;
             justify-content: center;
-            align-items: center;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -74,20 +88,28 @@
     &__title{
         display: block;
         position: relative;
-        top: -4vw;
+        top: 0;
         width: 100%;
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-m);
         text-shadow: 0px 4px 50px #000;
         // opacity: 0;
+
+        @media screen and (min-width:768px) {
+            display: block;
+            position: relative;
+            top: 0;
+            width: 100%;
+            font-size: var(--font-size-xl);
+            text-shadow: 0px 4px 50px #000;
+            // opacity: 0;
+        }
 
         @media screen and (min-width:1024px) {
             display: block;
             position: relative;
-            top: -4vw;
+            top: 0;
             width: 100%;
             font-size: var(--font-size-xxl);
-            // font-size: 8vw;
-            // border-bottom: 2px solid $color__white;
             text-shadow: 0px 4px 50px #000;
             // opacity: 0;
         }
@@ -95,7 +117,7 @@
 
     &__border{
         position: relative;
-        top: -3vw;
+        top: 1vw;
         height: 2px;
         background-color: #fff;
         // opacity: 0;
@@ -103,14 +125,15 @@
 
     &__subtitle{
         position: relative;
-        top: -1vw;
+        top: 2.5vw;
         font-size: var(--font-size-s);
+        text-shadow: 0px 4px 50px #000;
         // opacity: 0;
 
         @media screen and (min-width:1024px) {
             position: relative;
-            top: -1vw;
-            font-size: 20px;
+            top: 2.5vw;
+            text-shadow: 0px 4px 50px #000;
             // opacity: 0;
         }
     }
