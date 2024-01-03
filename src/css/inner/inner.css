@@ -3,6 +3,7 @@
   --color-gray: #dadada;
   --color-bg-white: #f3f3f3;
   --color-bg-black: #252528;
+  --color-hamori: #7E62EC;
   --font-size-xs: 10px;
   --font-size-s: 16px;
   --font-size-ms: 20px;
@@ -55,5 +56,17 @@
 @media screen and (min-width: 834px) {
   .inner--hero {
     padding: 0;
+  }
+}
+.inner--hamori-about {
+  padding: 0 8vw;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 834px) {
+  .inner--hamori-about {
+    padding: 0 12vw;
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=inner.css.map */

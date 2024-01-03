@@ -1,0 +1,312 @@
+@use "../root/root.css";
+
+body{
+    color: var(--color-bg-black);
+    background-color: var(--color-bg-white);
+    font-family: var(--font-family-ja);
+}
+
+main{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.inner{
+    &--about{
+        padding: 0 8vw;
+        @media screen and (min-width:834px) {
+            padding: 0 12vw;
+        }
+    }
+}
+
+.about-title{
+    &-h2{
+        font-size: 2.8rem;
+    }
+    &-h3{
+        font-size: 1.8rem;
+    }
+    &-h4{
+        font-size: 1.2rem;
+    }
+}
+
+.top{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+
+    &__inner{
+        min-height: 600px;
+        height: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        padding: 0 4vw;
+        overflow: hidden;
+    }
+
+    &-title{
+        position: relative;
+        top: 5vw;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &__logo{
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        &__icon{
+            width: 5vw;
+            max-width: 56px;
+            min-width: 26px;
+        }
+
+        &__name{
+            font-size: 4vw;
+            color: var(--color-bg-black);
+        }
+
+        &__sub-title{
+            padding-left: 4px;
+            color:var(--color-bg-black);
+            font-size: var(--font-size-s);
+            // font-family: 'Noto Sans JP', sans-serif;
+        }
+    }
+
+    &-container{
+        position: relative;
+        // top: -24px;
+        width: 100%;
+        height: 100%;
+        margin-top: 10%;
+        // margin-bottom: 10%;
+
+        &__list{
+            position: relative;
+            height: 100%;
+            bottom: 10vw;
+            display: flex;
+            gap: 72px;
+        }
+
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 72px;
+
+            &:first-child{
+                padding-left: 4vw;
+            }
+        }
+
+        &__title{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        &__name{
+            display: flex;
+            font-size: var(--font-size-s);
+            width: 140px;
+            height: 160px;
+            background-color: var(--color-hamori);
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__ui{
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        &__mock{
+            width: 11vw;
+            min-width: 150px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 40px var(--color-bg-black);
+        }
+    }
+}
+
+.summary{
+    position: relative;
+
+    &__inner{
+        padding: 0 4vw;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8vw;
+        padding: 120px 0 0 0;
+        
+        @media screen and (min-width:834px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8vw;
+            padding: 120px 0;
+        }
+    }
+
+    &-contents{
+        position: relative;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // font-family: 'Noto Sans JP', sans-serif;
+        // color: $color__black;
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            &-mt{
+                margin-top: 96px;
+            }
+        }
+
+        &__title{
+            display: flex;   
+            flex-direction: column;         
+            gap: 8px;
+
+            &-lg{
+                font-family: 'Dela Gothic One', cursive;
+            }
+        }
+
+        &__heading{
+            font-size: var(--font-size-ml);
+        }
+
+        &__text{
+            font-size: var(--font-size-xs);
+            line-height: 1.6;
+        }
+    }
+
+    &-mock{
+        position: relative;
+        top: 6vw;
+        width: 70%;
+        @media screen and (min-width:1024px) {
+            top: 4vw;
+            width: 50%;
+        }
+        &__img{
+            width: 100%;
+            min-width: 300px;
+        }
+    }
+}
+
+.about{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 170px 0;
+    color: var(--color-bg-black);
+    // font-family: 'Noto Sans JP', sans-serif;
+
+    &-lead{
+        padding: 80px 10vw 100px 0;
+        line-height: 1.6;
+
+        &-small{
+            padding: 40px 10vw 40px 0;
+            line-height: 1.6;
+        }
+    }
+
+    &-index{
+        position: relative;
+        padding: 24px 40px;
+        background-color: var(--color-bg-white);
+        border-radius: 4px;
+
+        &-logo{
+            position: absolute;
+            top: -30px;
+            left: -20px;
+        }
+
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+
+            &__link{
+                display: inline-block;
+                padding-bottom: 4px;
+                border-bottom: 1px solid var(--color-gray);
+            }
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    &-strength-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+
+        &__item{
+            width: 480px;
+            padding: 40px 0;
+            background-color: var(--color-bg-white);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        &__text{
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.6;
+
+            > .font-small{
+                font-weight: lighter;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    &__wrapper{
+        padding-top: 40px;
+
+        > p{
+            padding-top: 20px;
+            line-height: 1.6;
+            color: #3a3a3d;
+        }
+    }
+}
+
+
+.close{
+    display: none;
+}
