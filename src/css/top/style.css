@@ -124,13 +124,13 @@
 }
 .hero__border {
   position: relative;
-  top: 1vw;
+  top: 2vw;
   height: 2px;
   background-color: #fff;
 }
 .hero__subtitle {
   position: relative;
-  top: 2.5vw;
+  top: 3.5vw;
   font-size: var(--font-size-xs);
   text-shadow: 0px 4px 50px #000;
 }
