@@ -679,7 +679,7 @@ body {
   background-color: var(--color-bg-black);
 }
 .header-mordal {
-  padding: 80px 0;
+  padding: 120px 0 80px;
 }
 .header-mordal__myname {
   font-size: var(--font-size-ml);
@@ -688,7 +688,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-top: 40px;
+  padding-top: 80px;
 }
 .header-mordal__item {
   display: inline-block;
