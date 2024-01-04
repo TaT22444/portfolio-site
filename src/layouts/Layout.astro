@@ -89,7 +89,7 @@ import '../css/layouts/layout.css'
 				</li>
 			</ul>
 		</div>
-
+		<!-- <div class="header-mordal__back ds-none" id="js-mordal__back"></div> -->
     </header>
 
 </body>
@@ -101,6 +101,7 @@ import '../css/layouts/layout.css'
 <script>
 	const ham = document.getElementById('js-ham')
 	const mordal = document.getElementById('js-mordal')
+	// const mordal_back = document.getElementById('js-mordal__back')
 	const ham_item1 = document.getElementById('js-ham__item1')
     const ham_item2 = document.getElementById('js-ham__item2')
     const ham_item3 = document.getElementById('js-ham__item3')
@@ -108,6 +109,8 @@ import '../css/layouts/layout.css'
 		if (mordal.classList.contains('ds-none') === true) {
 			mordal.classList.remove('ds-none')
             mordal.classList.add('ds-block')
+			// mordal_back.classList.remove('ds-none')
+			// mordal_back.classList.add('ds-block')
 			ham_item1.classList.add('anim-ham__item1--rotate-45')
 			ham_item1.classList.remove('anim-ham__item1--rotate-0')
 		    ham_item2.classList.add('anim-ham__item2--op-0')
@@ -117,6 +120,8 @@ import '../css/layouts/layout.css'
 		} else if (mordal.classList.contains('ds-block') === true) {
 			mordal.classList.add('ds-none')
             mordal.classList.remove('ds-block')
+			// mordal_back.classList.add('ds-none')
+			// mordal_back.classList.remove('ds-block')
 			ham_item1.classList.remove('anim-ham__item1--rotate-45')
 			ham_item1.classList.add('anim-ham__item1--rotate-0')
 		    ham_item2.classList.remove('anim-ham__item2--op-0')
