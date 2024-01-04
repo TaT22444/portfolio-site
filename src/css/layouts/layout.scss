@@ -88,8 +88,9 @@ body{
         }
 
         &__item{
-            display: inline-block;
-            width: auto;
+            width: 100%;
+            display: block;
+            width: 100%;
             transition: all .3s;
             padding-bottom: 4px;
 

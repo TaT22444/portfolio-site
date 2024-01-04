@@ -1025,8 +1025,9 @@ body {
   padding-top: 80px;
 }
 .header-mordal__item {
-  display: inline-block;
-  width: auto;
+  width: 100%;
+  display: block;
+  width: 100%;
   transition: all 0.3s;
   padding-bottom: 4px;
 }
