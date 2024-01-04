@@ -26,6 +26,9 @@ const nav = [
 // import '../css/top/style.css'
 import '../css/inner/inner.css'
 import '../css/root/root.css'
+import '../css/layouts/anim-layout.css'
+import '../css/layouts/layout.css'
+import '../script/layouts/layout.js'
 ---
 
 <!DOCTYPE html>
@@ -54,14 +57,14 @@ import '../css/root/root.css'
 					)}
 				</ul>
 			</nav>
-			<span class="header-ham">
-				<span class="header-ham__elem"></span>
-				<span class="header-ham__elem"></span>
-				<span class="header-ham__elem"></span>
+			<span class="header-ham" id="js-ham">
+				<span class="header-ham__elem" id="js-ham__item1"></span>
+				<span class="header-ham__elem" id="js-ham__item2"></span>
+				<span class="header-ham__elem" id="js-ham__item3"></span>
 			</span>
         </div>
 
-		<div class="header-mordal">
+		<div class="header-mordal ds-none" id="js-mordal">
 		    
 		</div>
 		<!-- <div class="header-mordal-back"></div> -->
@@ -70,96 +73,36 @@ import '../css/root/root.css'
 </body>
 
 <style lang="scss">
-	body{
-		background-color: var(--color-bg-black);
-		color: var(--color-white);
-		font-family: var(--font-family-en);
-	}
-    .header{
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-		align-items: center;
-		color: var(--color-bg-black);
-        background-color: var(--color-bg-white);
-		z-index: 99;
-
-		@media screen and (min-width:768px) {
-			width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-		    align-items: center;
-			color: var(--color-white);
-            background-color: transparent;
-            mix-blend-mode: difference;
-		    z-index: 99;
-        }
-
-        &-nav{
-            display: none;
-
-			@media screen and (min-width:1024px) {
-                display: block;
-            }
-
-            &__list{
-                display: flex;
-                justify-content: space-between;
-                column-gap: 24px;
-                align-items: center;
-				font-size: .8rem;
-            }
-
-			&__link{
-				display: block;
-                opacity: 1;
-                transition: all .3s;
-			}
-        }
-
-		&-ham{
-			display: flex;
-			flex-direction: column;
-			gap: 8px;
-			align-items: center;
-			cursor: pointer;
-
-			@media screen and (min-width:1024px) {
-                display: none;
-            }
-
-			&__elem{
-				width: 32px;
-				height: 2px;
-				border-radius: 10px;
-				background-color: var(--color-bg-black);
-			}
-		}
-
-		&-mordal{
-
-			&-back{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100vh;
-				background-color: var(--color-bg-white);
-				opacity: .5;
-				z-index: -1;
-			}
-		}
-
-        &__logo{
-            font-weight: bold;
-        }
-    }
-
-	main{
-		overflow-x: hidden;
-	}
+	
 </style>
-</body>
+
+<script>
+	const ham = document.getElementById('js-ham')
+	const mordal = document.getElementById('js-mordal')
+	const ham_item1 = document.getElementById('js-ham__item1')
+    const ham_item2 = document.getElementById('js-ham__item2')
+    const ham_item3 = document.getElementById('js-ham__item3')
+	ham.addEventListener('click', ()=>{
+		if (mordal.classList.contains('ds-none') === true) {
+			mordal.classList.remove('ds-none')
+            mordal.classList.add('ds-block')
+			ham_item1.classList.add('anim-ham__item1--rotate-45')
+			ham_item1.classList.remove('anim-ham__item1--rotate-0')
+		    ham_item2.classList.add('anim-ham__item2--op-0')
+			ham_item2.classList.remove('anim-ham__item2--op-1')
+		    ham_item3.classList.add('anim-ham__item3--rotate-45')
+			ham_item3.classList.remove('anim-ham__item3--rotate-0')
+		} else if (mordal.classList.contains('ds-block') === true) {
+			mordal.classList.add('ds-none')
+            mordal.classList.remove('ds-block')
+			ham_item1.classList.remove('anim-ham__item1--rotate-45')
+			ham_item1.classList.add('anim-ham__item1--rotate-0')
+		    ham_item2.classList.remove('anim-ham__item2--op-0')
+			ham_item2.classList.add('anim-ham__item2--op-1')
+		    ham_item3.classList.remove('anim-ham__item3--rotate-45')
+			ham_item3.classList.add('anim-ham__item3--rotate-0')
+		}
+	})
+</script>
+
 </html>

@@ -1,0 +1,95 @@
+@use "../root/root.css";
+@use "../inner/inner.css";
+@use "../layouts/anim-layout.css";
+
+body{
+    background-color: var(--color-bg-black);
+    color: var(--color-white);
+    font-family: var(--font-family-en);
+}
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    color: var(--color-bg-black);
+    background-color: var(--color-bg-white);
+    z-index: 99;
+
+    @media screen and (min-width:768px) {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        color: var(--color-white);
+        background-color: transparent;
+        mix-blend-mode: difference;
+        z-index: 99;
+    }
+
+    &-nav{
+        display: none;
+
+        @media screen and (min-width:1024px) {
+            display: block;
+        }
+
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            column-gap: 24px;
+            align-items: center;
+            font-size: .8rem;
+        }
+
+        &__link{
+            display: block;
+            opacity: 1;
+            transition: all .3s;
+        }
+    }
+
+    &-ham{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        margin-right: 8px;
+        cursor: pointer;
+
+        @media screen and (min-width:1024px) {
+            display: none;
+        }
+
+        &__elem{
+            width: 24px;
+            height: 2px;
+            border-radius: 10px;
+            background-color: var(--color-bg-black);
+        }
+    }
+
+    &-mordal{
+
+        &-back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--color-bg-white);
+            opacity: .5;
+            z-index: -1;
+        }
+    }
+
+    &__logo{
+        font-weight: bold;
+    }
+}
+
+main{
+    overflow-x: hidden;
+}
