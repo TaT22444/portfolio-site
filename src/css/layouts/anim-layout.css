@@ -441,7 +441,7 @@ main {
 }
 
 .anim-ham__item1--rotate-0 {
-  animation: item1-rotate-0 0.3s forwards;
+  animation: item1-rotate-0 0.2s forwards;
 }
 @keyframes item1-rotate-0 {
   0% {
@@ -452,7 +452,7 @@ main {
   }
 }
 .anim-ham__item1--rotate-45 {
-  animation: item1-rotate-45 0.3s forwards;
+  animation: item1-rotate-45 0.2s forwards;
 }
 @keyframes item1-rotate-45 {
   0% {
@@ -463,7 +463,7 @@ main {
   }
 }
 .anim-ham__item2--op-0 {
-  animation: item2-op-0 0.3s forwards;
+  animation: item2-op-0 0.2s forwards;
 }
 @keyframes item2-op-0 {
   0% {
@@ -474,7 +474,7 @@ main {
   }
 }
 .anim-ham__item2--op-1 {
-  animation: item2-op-1 0.3s forwards;
+  animation: item2-op-1 0.2s forwards;
 }
 @keyframes item2-op-1 {
   0% {
@@ -485,7 +485,7 @@ main {
   }
 }
 .anim-ham__item3--rotate-0 {
-  animation: item3-rotate-0 0.3s forwards;
+  animation: item3-rotate-0 0.2s forwards;
 }
 @keyframes item3-rotate-0 {
   0% {
@@ -496,7 +496,7 @@ main {
   }
 }
 .anim-ham__item3--rotate-45 {
-  animation: item3-rotate-45 0.3s forwards;
+  animation: item3-rotate-45 0.2s forwards;
 }
 @keyframes item3-rotate-45 {
   0% {
