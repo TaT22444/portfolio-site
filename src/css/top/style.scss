@@ -126,13 +126,14 @@
     &__subtitle{
         position: relative;
         top: 2.5vw;
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-xs);
         text-shadow: 0px 4px 50px #000;
         // opacity: 0;
 
         @media screen and (min-width:1024px) {
             position: relative;
             top: 2.5vw;
+            font-size: var(--font-size-s);
             text-shadow: 0px 4px 50px #000;
             // opacity: 0;
         }

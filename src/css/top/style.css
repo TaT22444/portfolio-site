@@ -131,13 +131,14 @@
 .hero__subtitle {
   position: relative;
   top: 2.5vw;
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   text-shadow: 0px 4px 50px #000;
 }
 @media screen and (min-width: 1024px) {
   .hero__subtitle {
     position: relative;
     top: 2.5vw;
+    font-size: var(--font-size-s);
     text-shadow: 0px 4px 50px #000;
   }
 }
