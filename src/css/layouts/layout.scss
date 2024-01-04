@@ -72,6 +72,37 @@ body{
     }
 
     &-mordal{
+        padding: 80px 0;
+
+        &__myname{
+            font-size: var(--font-size-ml);
+        }
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-top: 40px;
+        }
+
+        &__item{
+            display: inline-block;
+            width: auto;
+            transition: all .3s;
+            padding-bottom: 4px;
+
+            &:hover{
+                border-bottom: 1px solid var(--color-bg-black);
+                transition: all .3s;
+            }
+        }
+
+        &__sns-list{
+            display: flex;
+            gap: 24px;
+            justify-content: right;
+            padding-top: 40px;
+        }
 
         &-back{
             position: absolute;
