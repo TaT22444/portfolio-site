@@ -197,8 +197,7 @@ body {
 }
 
 .profile {
-  margin-top: 10vw;
-  padding-top: 10vw;
+  padding-top: 8vw;
   padding-bottom: 10vw;
   color: var(--color-white);
   background-color: var(--color-bg-black);
