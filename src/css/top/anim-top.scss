@@ -29,15 +29,15 @@
                     opacity: 0;
                 }
                 100%{
-                    opacity: 1;
+                    opacity: .7;
                 }
             }
         }
     }
 
     &-scrolldown{
-        animation: down 1s forwards linear infinite .8s;
-        @keyframes down {
+        animation: scroll-down 1s forwards linear infinite .8s;
+        @keyframes scroll-down {
             0%{
                 transform: rotate(180deg);
                 opacity: 0;
@@ -46,7 +46,7 @@
             100%{
                 transform: rotate(180deg);
                 opacity: 1;
-                height: 100%;
+                height: 20px;
             }
         }
     }

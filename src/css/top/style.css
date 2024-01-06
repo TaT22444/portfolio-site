@@ -150,27 +150,22 @@
 }
 
 .scrolldown {
-  width: 100%;
-  text-align: center;
-}
-.scrolldown__inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1vw;
+  position: absolute;
+  top: 95vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .scrolldown__scroll {
   font-size: var(--font-size-xs);
+  color: var(--color-gray);
 }
 .scrolldown__line {
+  position: relative;
+  top: 10px;
   width: 1px;
-  height: 40vw;
+  height: 10px;
   background-color: var(--color-bg-white);
   opacity: 1;
-}
-.scrolldown__thankyou {
-  margin-top: 24px;
 }
 
 .about {

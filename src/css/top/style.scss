@@ -141,32 +141,23 @@
 }
 
 .scrolldown{
-    width: 100%;
-    // height: 15vw;
-    text-align: center;
-
-    &__inner{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-between;
-        align-items: center;
-        gap: 1vw;
-    }
+    position: absolute;
+    top: 95vh;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__scroll{
         font-size: var(--font-size-xs);
+        color: var(--color-gray);
     }
 
     &__line{
+        position: relative;
+        top: 10px;
         width: 1px;
-        height: 40vw;
+        height: 10px;
         background-color: var(--color-bg-white);
         opacity: 1;
-    }
-
-    &__thankyou{
-        margin-top: 24px;
     }
 }
 
