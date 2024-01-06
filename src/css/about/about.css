@@ -43,7 +43,7 @@ body {
 }
 
 .comp-title {
-  font-size: var(--font-size-ml);
+  font-size: var(--font-size-m);
   padding: 0 4vw;
   color: var(--color-white);
 }
