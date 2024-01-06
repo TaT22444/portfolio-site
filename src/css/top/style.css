@@ -685,7 +685,7 @@
   margin-top: 10px;
 }
 .skills__skillset__level > .skills__skillset__meter {
-  background-color: var(--color-bg-black);
+  background-color: var(--color-gray);
 }
 .skills__skillset__meter {
   display: inline-block;
@@ -711,7 +711,8 @@
   height: 46px;
   border-radius: 100%;
   background-color: var(--color-bg-black);
-  background-color: var(--color-bg-white);
+  color: var(--color-bg-white);
+  box-shadow: 0 0 10px rgba(243, 243, 243, 0.7);
   font-size: 12px;
 }
 @media screen and (min-width: 768px) {
@@ -725,7 +726,7 @@
     height: 70px;
     border-radius: 100%;
     background-color: var(--color-bg-black);
-    background-color: var(--color-bg-white);
+    color: var(--color-bg-white);
   }
 }
 

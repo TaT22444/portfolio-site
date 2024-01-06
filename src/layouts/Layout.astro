@@ -48,7 +48,9 @@ import '../css/layouts/layout.css'
 <body>
 	<header class="header" id="header">
 	    <div class="inner inner--header">
-			<h2 class="header__logo">{title}</h2><!--{title}-->
+			<h2 class="header__logo">
+				<a href={title.id}>{title}</a>
+			</h2><!--{title}-->
 			<nav class="header-nav">
 				<ul class="header-nav__list">
 					{nav.map((item)=>
@@ -126,6 +128,129 @@ import '../css/layouts/layout.css'
 			ham_item3.classList.add('anim-ham__item3--rotate-0')
 		}
 	})
+
+	window.addEventListener('scroll', ()=>{
+	document.querySelectorAll("#fig-elem").forEach((fig_elem)=>{
+		console.log(fig_elem)
+		let fig_shadow = document.getElementById('js-shadow-fig')
+		if(fig_elem.getBoundingClientRect().top < 550){
+			fig_shadow.classList.add('skills__skillset__item-fig')
+			fig_elem.classList.add('el-fig')
+		}
+
+	    fig_shadow.addEventListener('mouseover', ()=>{
+            fig_shadow.classList.add('skills__skillset__item-hover-figover')
+            fig_shadow.classList.remove('skills__skillset__item-hover-figleave')
+            fig_shadow.classList.remove('skills__skillset__item-fig')
+            fig_elem.classList.remove('el-fig')
+        })
+        fig_shadow.addEventListener('mouseleave', ()=>{
+            fig_shadow.classList.remove('skills__skillset__item-hover-figover')
+            fig_shadow.classList.add('skills__skillset__item-hover-figleave')
+            fig_elem.classList.add('el-fig')
+        })
+	})
+	document.querySelectorAll("#ai-elem").forEach((ai_elem)=>{
+		console.log(ai_elem)
+		let ai_shadow = document.getElementById('js-shadow-ai')
+		if(ai_elem.getBoundingClientRect().top < 550){
+			ai_shadow.classList.add('skills__skillset__item-ai')
+			ai_elem.classList.add('el-ai')
+		}
+
+	    ai_shadow.addEventListener('mouseover', ()=>{
+            ai_shadow.classList.add('skills__skillset__item-hover-aiover')
+            ai_shadow.classList.remove('skills__skillset__item-hover-aileave')
+            ai_shadow.classList.remove('skills__skillset__item-ai')
+            ai_elem.classList.remove('el-ai')
+        })
+        ai_shadow.addEventListener('mouseleave', ()=>{
+            ai_shadow.classList.remove('skills__skillset__item-hover-aiover')
+            ai_shadow.classList.add('skills__skillset__item-hover-aileave')
+            ai_elem.classList.add('el-ai')
+        })
+	})
+	document.querySelectorAll("#ps-elem").forEach((ps_elem)=>{
+		console.log(ps_elem)
+		let ps_shadow = document.getElementById('js-shadow-ps')
+		if(ps_elem.getBoundingClientRect().top < 550){
+			ps_shadow.classList.add('skills__skillset__item-ps')
+			ps_elem.classList.add('el-ps')
+		}
+
+	    ps_shadow.addEventListener('mouseover', ()=>{
+            ps_shadow.classList.add('skills__skillset__item-hover-psover')
+            ps_shadow.classList.remove('skills__skillset__item-hover-psleave')
+            ps_shadow.classList.remove('skills__skillset__item-ps')
+            ps_elem.classList.remove('el-ps')
+        })
+        ps_shadow.addEventListener('mouseleave', ()=>{
+            ps_shadow.classList.remove('skills__skillset__item-hover-psover')
+            ps_shadow.classList.add('skills__skillset__item-hover-psleave')
+            ps_elem.classList.add('el-ps')
+        })
+	})
+	document.querySelectorAll("#hc-elem").forEach((hc_elem)=>{
+		console.log(hc_elem)
+		let hc_shadow = document.getElementById('js-shadow-hc')
+		if(hc_elem.getBoundingClientRect().top < 550){
+			hc_shadow.classList.add('skills__skillset__item-hc')
+			hc_elem.classList.add('el-hc')
+		}
+
+	    hc_shadow.addEventListener('mouseover', ()=>{
+            hc_shadow.classList.add('skills__skillset__item-hover-hcover')
+            hc_shadow.classList.remove('skills__skillset__item-hover-hcleave')
+            hc_shadow.classList.remove('skills__skillset__item-hc')
+            hc_elem.classList.remove('el-hc')
+        })
+        hc_shadow.addEventListener('mouseleave', ()=>{
+            hc_shadow.classList.remove('skills__skillset__item-hover-hcover')
+            hc_shadow.classList.add('skills__skillset__item-hover-hcleave')
+            hc_elem.classList.add('el-hc')
+        })
+	})
+	document.querySelectorAll("#js-elem").forEach((js_elem)=>{
+		console.log(js_elem)
+		let js_shadow = document.getElementById('js-shadow-js')
+		if(js_elem.getBoundingClientRect().top < 550){
+			js_shadow.classList.add('skills__skillset__item-js')
+			js_elem.classList.add('el-js')
+		}
+
+	    js_shadow.addEventListener('mouseover', ()=>{
+            js_shadow.classList.add('skills__skillset__item-hover-jsover')
+            js_shadow.classList.remove('skills__skillset__item-hover-jsleave')
+            js_shadow.classList.remove('skills__skillset__item-js')
+            js_elem.classList.remove('el-js')
+        })
+        js_shadow.addEventListener('mouseleave', ()=>{
+            js_shadow.classList.remove('skills__skillset__item-hover-jsover')
+            js_shadow.classList.add('skills__skillset__item-hover-jsleave')
+            js_elem.classList.add('el-js')
+        })
+	})
+	document.querySelectorAll("#wp-elem").forEach((wp_elem)=>{
+		console.log(wp_elem)
+		let wp_shadow = document.getElementById('js-shadow-wp')
+		if(wp_elem.getBoundingClientRect().top < 550){
+			wp_shadow.classList.add('skills__skillset__item-wp')
+			wp_elem.classList.add('el-wp')
+		}
+
+	    wp_shadow.addEventListener('mouseover', ()=>{
+            wp_shadow.classList.add('skills__skillset__item-hover-wpover')
+            wp_shadow.classList.remove('skills__skillset__item-hover-wpleave')
+            wp_shadow.classList.remove('skills__skillset__item-wp')
+            wp_elem.classList.remove('el-wp')
+        })
+        wp_shadow.addEventListener('mouseleave', ()=>{
+            wp_shadow.classList.remove('skills__skillset__item-hover-wpover')
+            wp_shadow.classList.add('skills__skillset__item-hover-wpleave')
+            wp_elem.classList.add('el-wp')
+        })
+	})
+})
 </script>
 
 </html>

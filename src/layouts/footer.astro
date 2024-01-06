@@ -22,8 +22,18 @@ import '../css/top/style.css'
             position: absolute;
             right: 4vw;
             bottom: 20px;
-            // font-size: $font-size--smallest;
+            font-size: var(--font-size-xs);
             cursor: pointer;
         }
     }
 </style>
+
+<script>
+    const page_top = document.getElementById('js-page-top')
+    page_top.addEventListener('click', ()=>{
+        window.scroll({
+            top: 0, 
+            behavior: "smooth"
+        })
+    })
+</script>
