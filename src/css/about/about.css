@@ -321,4 +321,8 @@ body {
   .profile__aboutme__title {
     color: var(--color-gray);
   }
+}
+
+.footer {
+  background-color: var(--color-bg-black);
 }/*# sourceMappingURL=about.css.map */
