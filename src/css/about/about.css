@@ -241,7 +241,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  gap: 40px;
+  gap: 80px;
 }
 @media screen and (min-width: 1024px) {
   .profile__intro {
@@ -269,7 +269,7 @@ body {
   }
 }
 .profile__aboutme {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 @media screen and (min-width: 1024px) {
   .profile__aboutme {
@@ -280,7 +280,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   justify-content: end;
 }
 .profile__aboutme__item {

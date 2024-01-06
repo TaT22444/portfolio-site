@@ -233,7 +233,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: end;
-        gap: 40px;
+        gap: 80px;
         // background-color: #c9c9c9;
 
         @media screen and (min-width:1024px) {
@@ -264,7 +264,7 @@ body{
     }
 
     &__aboutme{
-        padding-top: 40px;
+        padding-top: 80px;
 
         @media screen and (min-width:1024px) {
             padding-top: 60px;
@@ -274,7 +274,7 @@ body{
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 16px;
             justify-content: end;
         }
     
