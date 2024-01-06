@@ -106,13 +106,27 @@ main{
             height: 100%;
             bottom: 10vw;
             display: flex;
-            gap: 72px;
+            gap: 40px;
+
+            @media screen and (min-width:1024px) {
+                position: relative;
+                height: 100%;
+                bottom: 10vw;
+                display: flex;
+                gap: 72px;
+            }
         }
 
         &__item{
             display: flex;
             align-items: center;
-            gap: 72px;
+            gap: 40px;
+
+            @media screen and (min-width:1024px) {
+                display: flex;
+                align-items: center;
+                gap: 72px;
+            }
 
             &:first-child{
                 padding-left: 4vw;
