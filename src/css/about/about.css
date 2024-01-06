@@ -314,7 +314,7 @@ body {
   }
 }
 .profile__aboutme__title {
-  width: auto;
+  width: 100%;
   color: var(--color-gray);
 }
 @media screen and (min-width: 1024px) {
