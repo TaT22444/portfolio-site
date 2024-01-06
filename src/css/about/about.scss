@@ -186,22 +186,28 @@ body{
 }
 
 .profile{
-    // margin-top: 10vw;
-    // padding-top: 10vw;
+    margin-top: 8vw;
     padding-top: 8vw;
     padding-bottom: 10vw;
     color: var(--color-white);
     background-color: var(--color-bg-black);
 
-    &__inner{
-        padding: 0 4vw;
-        margin-top: 120px;
-    }
+    // &__inner{
+    //     padding: 0 4vw;
+    //     margin-top: 120px;
+    // }
 
     &__top{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         gap: 4vw;
+        padding-top: 120px;
+
+        @media screen and (min-width:1024px) {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 4vw;
+        }
     }
 
     &__figure{
@@ -216,15 +222,14 @@ body{
     }
 
     &__intro{
-        position: relative;
-        top: 80px;
+        padding-top: 24px;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        gap: 80px;
+        gap: 40px;
         // background-color: #c9c9c9;
 
-        @media screen and (min-width:834px) {
+        @media screen and (min-width:1024px) {
             position: relative;
             top: 0;
             display: flex;
@@ -243,12 +248,18 @@ body{
         font-size: var(--font-size-s);
         font-family: var(--font-family-ja);
         line-height: 1.6em;
+
+        @media screen and (min-width:1024px) {
+            font-size: var(--font-size-s);
+            font-family: var(--font-family-ja);
+            line-height: 1.6em;
+        }
     }
 
     &__aboutme{
-        padding-top: 136px;
+        padding-top: 80px;
 
-        @media screen and (min-width:834px) {
+        @media screen and (min-width:1024px) {
             padding-top: 60px;
         }
 
@@ -263,10 +274,19 @@ body{
         &__item{
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: var(--font-size-s);
+            gap: 4px;
+            font-size: var(--font-size-xs);
             font-family: var(--font-family-ja);
-            line-height: 1.6em;
+            line-height: 1.4em;
+
+            @media screen and (min-width:1024px) {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: var(--font-size-s);
+                font-family: var(--font-family-ja);
+                line-height: 1.6em;                
+            }
 
             > a{
                 transform: scale(.8);
@@ -276,7 +296,12 @@ body{
         }
 
         &__title{
+            width: auto;
             color: var(--color-gray);
+
+            @media screen and (min-width:1024px) {
+                color: var(--color-gray);         
+            }
         }
     }
 }

@@ -197,19 +197,24 @@ body {
 }
 
 .profile {
+  margin-top: 8vw;
   padding-top: 8vw;
   padding-bottom: 10vw;
   color: var(--color-white);
   background-color: var(--color-bg-black);
 }
-.profile__inner {
-  padding: 0 4vw;
-  margin-top: 120px;
-}
 .profile__top {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   gap: 4vw;
+  padding-top: 120px;
+}
+@media screen and (min-width: 1024px) {
+  .profile__top {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4vw;
+  }
 }
 .profile__figure {
   width: auto;
@@ -221,14 +226,13 @@ body {
      object-fit: cover;
 }
 .profile__intro {
-  position: relative;
-  top: 80px;
+  padding-top: 24px;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  gap: 80px;
+  gap: 40px;
 }
-@media screen and (min-width: 834px) {
+@media screen and (min-width: 1024px) {
   .profile__intro {
     position: relative;
     top: 0;
@@ -246,10 +250,17 @@ body {
   font-family: var(--font-family-ja);
   line-height: 1.6em;
 }
-.profile__aboutme {
-  padding-top: 136px;
+@media screen and (min-width: 1024px) {
+  .profile__text {
+    font-size: var(--font-size-s);
+    font-family: var(--font-family-ja);
+    line-height: 1.6em;
+  }
 }
-@media screen and (min-width: 834px) {
+.profile__aboutme {
+  padding-top: 80px;
+}
+@media screen and (min-width: 1024px) {
   .profile__aboutme {
     padding-top: 60px;
   }
@@ -264,10 +275,20 @@ body {
 .profile__aboutme__item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: var(--font-size-s);
+  gap: 4px;
+  font-size: var(--font-size-xs);
   font-family: var(--font-family-ja);
-  line-height: 1.6em;
+  line-height: 1.4em;
+}
+@media screen and (min-width: 1024px) {
+  .profile__aboutme__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--font-size-s);
+    font-family: var(--font-family-ja);
+    line-height: 1.6em;
+  }
 }
 .profile__aboutme__item > a {
   transform: scale(0.8);
@@ -275,5 +296,11 @@ body {
   margin-right: 8px;
 }
 .profile__aboutme__title {
+  width: auto;
   color: var(--color-gray);
+}
+@media screen and (min-width: 1024px) {
+  .profile__aboutme__title {
+    color: var(--color-gray);
+  }
 }/*# sourceMappingURL=about.css.map */
