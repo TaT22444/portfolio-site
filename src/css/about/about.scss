@@ -27,7 +27,7 @@ body{
 
 .comp{
     &-title{
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-ms);
         padding: 0 4vw;
         color: var(--color-white);
         // font-family: $font-family__en;
@@ -186,8 +186,8 @@ body{
 }
 
 .profile{
-    margin-top: 8vw;
-    padding-top: 16vw;
+    margin-top: 120px;
+    padding-top: 120px;
     padding-bottom: 10vw;
     color: var(--color-white);
     background-color: var(--color-bg-black);
