@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
 import Works from '../layouts/works.astro';
+import '../css/about/anim-about.css'
 import '../css/about/about.css'
 ---
 <Layout title="about" />
@@ -275,3 +276,17 @@ import '../css/about/about.css'
 </main>
 
 <Footer/>
+
+<script>
+    window.addEventListener('scroll', ()=>{
+    const prof_img = document.getElementById('js-profile__img')
+    const prof = document.getElementById('js-profile')
+    if(prof.getBoundingClientRect().top < 0){
+        prof_img.classList.add('anim-gray-out')
+        prof_img.classList.remove('anim-gray-in')
+    } else{
+        prof_img.classList.remove('anim-gray-out')
+        prof_img.classList.add('anim-gray-in')
+}
+})
+</script>
