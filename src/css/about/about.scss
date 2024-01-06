@@ -4,10 +4,25 @@ body{
     background-color: var(--color-bg-white);
 }
 
-.heading{
-    padding: 14vw 4vw 16px 4vw;
+.about-title{
+    padding: 30vw 4vw 0 4vw;
     font-family: var(--font-family-en);
-    font-size: 7vw;
+    font-size: var(--font-size-xl);
+    color: var(--color-bg-black);
+
+    @media screen and (min-width:768px) {
+        padding: 20vw 4vw 16px 4vw;
+        font-family: var(--font-family-en);
+        font-size: 8vw;
+        color: var(--color-bg-black);
+    }
+
+    @media screen and (min-width:1024px) {
+        padding: 14vw 4vw 16px 4vw;
+        font-family: var(--font-family-en);
+        font-size: 7vw;
+        color: var(--color-bg-black);
+    }
 }
 
 .comp{
@@ -30,45 +45,45 @@ body{
 .scroll{
     width: 100%;
     display: block;
-    padding-top: 4vw;
+    padding-top: 8vw;
     padding-left: 4vw;
-    color: var(--color-white);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
     font-family: var(--font-family-en);
-
-    // &__text{
-    //     position: absolute;
-    //     top: 0;
-    //     background-color: #252528;
-    //     padding-right: 16px;
-    //     z-index: 2;
-    // }
-
-    // &__border{
-    //     position: absolute;
-    //     top: 6px;
-    //     width: 100%;
-    //     height: 1px;
-    //     background-color: #f3f3f3;
-    //     z-index: -1;
-    // }
+    
+    @media screen and (min-width:768px) {
+        width: 100%;
+        display: block;
+        padding-top: 4vw;
+        padding-left: 4vw;
+        font-size: var(--font-size-s);
+        font-family: var(--font-family-en);
+    }
 
     &__text{
-        width: 160px;
-        // color: $color__white;
         color: var(--color-bg-black);
-        z-index: 2;
     }
 }
 
 .contents{
-    padding: 24px 4vw 0 4vw;
-    // height: 100vh;
+    padding: 8px 4vw 0 4vw;
+    
+    @media screen and (min-width:768px) {
+        padding: 16px 4vw 0 4vw;
+    }
+    @media screen and (min-width:1024px) {
+        padding: 24px 4vw 0 4vw;
+    }
 
     &__list{
         width: 100%;
         display: flex;
-        gap: 40px;
+        gap: 24px;
+
+        @media screen and (min-width:768px) {
+            width: 100%;
+            display: flex;
+            gap: 40px;
+        }
     }
 
     &__item{
@@ -83,6 +98,13 @@ body{
         max-width: 30vw;
         max-height: 28vw;
         transition: all .3s;
+
+        @media screen and (min-width:768px) {
+            padding: 14vw 4vw 16px 4vw;
+            font-family: var(--font-family-en);
+            font-size: 7vw;
+            color: var(--color-bg-black);
+        }
 
         &:hover{
             transition: all .3s;
