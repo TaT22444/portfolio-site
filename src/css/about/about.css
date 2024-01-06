@@ -303,7 +303,7 @@ body {
 }
 .profile__aboutme__item > a {
   transform: scale(0.8);
-  margin-top: 16px;
+  margin-top: 40px;
   margin-right: 16px;
 }
 @media screen and (min-width: 1024px) {
