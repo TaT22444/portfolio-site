@@ -17,7 +17,7 @@
   --font-family-en: "Dela Gothic One", cursive;
 } 
 .anim-about__contents {
-  animation: slide-text 50s linear infinite 1.4s;
+  animation: slide-text 20s linear infinite 1.4s;
 }
 @keyframes slide-text {
   0% {
@@ -25,6 +25,19 @@
   }
   100% {
     transform: translateX(-200%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .anim-about__contents {
+    animation: slide-text 50s linear infinite 1.4s;
+  }
+  @keyframes slide-text {
+    0% {
+      transform: 0;
+    }
+    100% {
+      transform: translateX(-200%);
+    }
   }
 }
 .anim-gray-out {

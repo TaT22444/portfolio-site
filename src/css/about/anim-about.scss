@@ -4,13 +4,25 @@
     &-about{
 
         &__contents{
-            animation: slide-text 50s linear infinite 1.4s;
+            animation: slide-text 20s linear infinite 1.4s;
             @keyframes slide-text {
                 0%{
                     transform: 0;
                 }
                 100%{
                     transform: translateX(-200%);
+                }
+            }
+
+            @media screen and (min-width:1024px) {
+                animation: slide-text 50s linear infinite 1.4s;
+                @keyframes slide-text {
+                    0%{
+                        transform: 0;
+                    }
+                    100%{
+                        transform: translateX(-200%);
+                    }
                 }
             }
         }
