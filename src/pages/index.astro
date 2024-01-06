@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
 import Works from '../layouts/works.astro';
 // import Card from '../components/Card.astro';
+import '../css/top/anim-top.css'
 import '../css/top/style.css'
 ---
 
@@ -360,6 +361,24 @@ import '../css/top/style.css'
 
 <Footer/>
 
-<style>
-	
-</style>
+<script>
+	window.addEventListener('mouseover', ()=>{
+        const works_item = document.getElementById('js-works__item')
+        // const back = document.getElementById('js-back')
+        const works_img = document.getElementById('js-works__img')
+        works_item.addEventListener('mouseover', ()=>{
+            works_img.classList.add('anim-works__img-up')
+            works_img.classList.remove('anim-works__img-down')
+        })
+        works_item.addEventListener('mouseleave', ()=>{
+            works_img.classList.remove('anim-works__img-up')
+            works_img.classList.add('anim-works__img-down')
+        })
+    })
+
+	const scrolldown = document.getElementById('js-scrolldown')
+    window.addEventListener('load', ()=>{
+        scrolldown.classList.add('anim-fadein-scroll')
+    })
+
+</script>
