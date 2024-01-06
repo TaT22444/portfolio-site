@@ -286,7 +286,7 @@ body {
 .profile__aboutme__item {
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 8px;
   font-size: var(--font-size-xxs);
   font-family: var(--font-family-ja);
   line-height: 1.4em;
