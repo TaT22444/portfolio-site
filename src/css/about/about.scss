@@ -309,7 +309,7 @@ body{
         }
 
         &__title{
-            width: 100%;
+            width: auto;
             color: var(--color-gray);
 
             @media screen and (min-width:1024px) {
