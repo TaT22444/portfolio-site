@@ -192,7 +192,7 @@ body {
 @media screen and (min-width: 768px) {
   .contents__subtitle {
     padding-top: 32px;
-    font-size: var(--font-size-ml);
+    font-size: var(--font-size-ms);
     color: var(--color-bg-black);
   }
 }
