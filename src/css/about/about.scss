@@ -233,7 +233,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: end;
-        gap: 80px;
+        gap: 40px;
         // background-color: #c9c9c9;
 
         @media screen and (min-width:1024px) {
@@ -242,7 +242,7 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: end;
-            gap: 80px;
+            gap: 40px;
         }
     }
 
