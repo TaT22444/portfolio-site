@@ -3,13 +3,25 @@
 .anim{
     &-top{
         &__looptext{
-            animation: top_looptext 50s forwards linear infinite;
+            animation: top_looptext 24s forwards linear infinite;
             @keyframes top_looptext {
                 0%{
                     transform: translateX(0);
                 }
                 100%{
                     transform: translateX(-300%);
+                }
+            }
+
+            @media screen and (min-width:1024px) {
+                animation: top_looptext 50s forwards linear infinite;
+                @keyframes top_looptext {
+                    0%{
+                        transform: translateX(0);
+                    }
+                    100%{
+                        transform: translateX(-300%);
+                    }
                 }
             }
         }
