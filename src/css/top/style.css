@@ -158,6 +158,7 @@
 .scrolldown__scroll {
   font-size: var(--font-size-xs);
   color: var(--color-gray);
+  letter-spacing: 0.5em;
 }
 .scrolldown__line {
   position: relative;
