@@ -24,7 +24,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-600%);
   }
 }
 @media screen and (min-width: 1024px) {
