@@ -160,6 +160,7 @@ import '../css/root/root.css'
             // background-color: var(--color-gray);
             border-radius: 8px;
             font-size: var(--font-size-xxs);
+            font-family: var(--font-family-ja);
         }
 
         &__title{
@@ -213,3 +214,19 @@ import '../css/root/root.css'
         }
     }
 </style>
+
+<script>
+    window.addEventListener('mouseover', ()=>{
+        document.querySelectorAll('#js-works__item').forEach((works_item)=>{
+            const works_img = works_item.querySelector('#js-works__img')
+            works_item.addEventListener('mouseover', ()=>{
+                works_img.classList.add('anim-works__img-up')
+                works_img.classList.remove('anim-works__img-down')
+            })
+            works_item.addEventListener('mouseleave', ()=>{
+                works_img.classList.remove('anim-works__img-up')
+                works_img.classList.add('anim-works__img-down')
+            })
+        })
+    })
+</script>

@@ -409,19 +409,6 @@ import '../css/top/style.css'
 <Footer/>
 
 <script>
-	window.addEventListener('mouseover', ()=>{
-        const works_item = document.getElementById('js-works__item')
-        // const back = document.getElementById('js-back')
-        const works_img = document.getElementById('js-works__img')
-        works_item.addEventListener('mouseover', ()=>{
-            works_img.classList.add('anim-works__img-up')
-            works_img.classList.remove('anim-works__img-down')
-        })
-        works_item.addEventListener('mouseleave', ()=>{
-            works_img.classList.remove('anim-works__img-up')
-            works_img.classList.add('anim-works__img-down')
-        })
-    })
 
 	const scrolldown = document.getElementById('js-scrolldown')
     window.addEventListener('load', ()=>{

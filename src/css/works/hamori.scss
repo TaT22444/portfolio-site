@@ -469,3 +469,14 @@ main{
 .close{
     display: none;
 }
+
+.works{
+    &-list{
+        &__title{
+            color: var(--color-white);
+        }
+    }
+}
+.heading__splitText{
+    color: var(--color-white);
+}

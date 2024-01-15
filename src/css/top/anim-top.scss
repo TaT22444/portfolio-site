@@ -97,37 +97,6 @@
             }
         }
     }
-	&-works{
-        &__img-up{
-            animation: img-up 10s forwards;
-            @keyframes img-up {
-                0%{
-                    transform: scale(1);
-                }
-                10%{
-                    transform: scale(1.05);
-                    border-radius: 16px;
-                }
-                100%{
-                    transform: scale(1.5);
-                    border-radius: 400px;
-                }
-            }
-        }
-        &__img-down{
-            animation: img-down .2s forwards;
-            @keyframes img-down {
-                0%{
-                    transform: scale(1.2);
-                    border-radius: 200px;
-                }
-                100%{
-                    transform: scale(1);
-                    border-radius: 0;
-                }
-            }
-        }
-    }
 }
 
 .mouseover-twi{
