@@ -42,7 +42,6 @@ import '../css/root/root.css'
         transition: all .2s;
 
     @media screen and (max-width:768px) {
-        display: inline;
         position: fixed;
         bottom: 40px;
         left: 16px;
@@ -51,7 +50,7 @@ import '../css/root/root.css'
         border: none;
         border-radius: 100%;
         transition: all .2s;
-        background-color: var(--color-bg-white);
+        // background-color: var(--color-bg-white);
     }
 
     &:hover{
@@ -73,8 +72,14 @@ import '../css/root/root.css'
 
     &__img-wrapper{
         position: relative;
-        padding: 20px;
-        // background-color: var(--color-bg-black);
+        padding: 16px 24px 16px 16px;
+
+        @media screen and (max-width:768px) {
+            position: relative;
+            padding: 24px;
+            background-color: var(--color-bg-white);
+            border-radius: 100px;
+        }
     }
 
     &__icon{
@@ -187,10 +192,7 @@ import '../css/root/root.css'
         const dl_title = dl_area.querySelector('#js-download-title')
         const dl_dot = dl_area.querySelector('#js-download-dot')
         const dl_cate = dl_area.querySelector('#js-download-category')
-        let width = window.outerWidth
-        console.log(width)
-        if (width > 768){
-            dl_area.addEventListener('mouseover', ()=>{
+        dl_area.addEventListener('mouseover', ()=>{
             dl_icon_black.classList.add('ds-out')
             dl_icon_hov.classList.add('ds-in')
             // dl_title
@@ -208,6 +210,5 @@ import '../css/root/root.css'
             dl_icon_hov.classList.add('ds-out')
             dl_dot.classList.add('anim-black')
         })
-        }
     })
 </script>
