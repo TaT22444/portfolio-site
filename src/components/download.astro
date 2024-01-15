@@ -1,0 +1,70 @@
+---
+interface Props {
+	title: string;
+    href: string;
+	category: string;
+}
+
+const { title, href, category } = Astro.props;
+
+import '../css/root/root.css'
+
+---
+
+<a href={href} class="download" download>
+    <img class="download__icon" src="../icon/download.png" alt="">
+    <div class="download__name">
+        <p class="download__title">{title}</p>
+        <p class="download__dot">.</p>
+        <p class="download__category">{category}</p>
+    </div>
+</a>
+
+<style lang="scss">
+    .download{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 99;
+   border-radius: 500px;
+    color: var(--color-white);
+    background-color: var(--color-bg-black);
+    font-size: var(--font-sizexs);
+    font-family: var(--font-family-en);
+
+    @media screen and (min-width:768px) {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        z-index: 99;
+        margin-left: auto;
+        padding: 8px 16px;
+        color: var(--color-white);
+        background-color: var(--color-bg-black);
+        border-radius: 4px;
+        font-size: var(--font-sizexs);
+        font-family: var(--font-family-en);
+    }
+
+    &__icon{
+        width: 18px;
+    }
+
+    &__name{
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+    }
+
+    &__title, &__category{
+        padding: 4px 8px;
+        color: var(--color-bg-black);
+        background-color: var(--color-bg-white);
+        border-radius: 4px;
+    }
+}
+</style>
