@@ -65,7 +65,7 @@ main{
 // }
 
 .top{
-    position: relative;
+    // position: relative;
     width: 100%;
     height: calc(100vh - 120px);
     margin-top: 120px;
@@ -81,7 +81,7 @@ main{
     }
 
     &-title{
-        position: relative;
+        // position: relative;
         top: 5vw;
         display: flex;
         flex-direction: column;

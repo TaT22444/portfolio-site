@@ -12,7 +12,7 @@ import '../css/root/root.css'
 ---
 
 <a href={href} class="download" download>
-    <img class="download__icon" src="/icon/download.png" alt="">
+    <img class="download__icon" src="../icon/download.png" alt="">
     <div class="download__name">
         <p class="download__title">{title}</p>
         <p class="download__dot">.</p>
@@ -22,20 +22,18 @@ import '../css/root/root.css'
 
 <style lang="scss">
     .download{
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 99;
-   border-radius: 500px;
-    color: var(--color-white);
-    background-color: var(--color-bg-black);
-    font-size: var(--font-sizexs);
-    font-family: var(--font-family-en);
+        position: fixed;
+        bottom: 40px;
+        right: 24px;
+        z-index: 99;
+        padding: 14px;
+        border-radius: 200px;
+        background-color: var(--color-bg-black);
 
     @media screen and (min-width:768px) {
         position: relative;
+        bottom: 0;
+        right: 0;
         display: flex;
         align-items: center;
         gap: 16px;
@@ -50,20 +48,38 @@ import '../css/root/root.css'
     }
 
     &__icon{
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
         width: 18px;
+        z-index: 100;
+
+        @media screen and (min-width:768px) {
+            width: 18px;
+            border-radius: 0;
+        }
     }
 
     &__name{
-        display: flex;
-        align-items: baseline;
-        gap: 4px;
+        display: none;
+        
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
     }
 
     &__title, &__category{
-        padding: 4px 8px;
-        color: var(--color-bg-black);
-        background-color: var(--color-bg-white);
-        border-radius: 4px;
+        display: none;
+
+        @media screen and (min-width:768px) {
+            display: block;
+            padding: 4px 8px;
+            color: var(--color-bg-black);
+            background-color: var(--color-bg-white);
+            border-radius: 4px;
+        }
     }
 }
 </style>
