@@ -11,12 +11,15 @@ import '../css/root/root.css'
 
 ---
 
-<a href={href} class="download" download>
-    <img class="download__icon" src="/icon/download.png" alt="">
+<a href={href} class="download" id="js-download-area" download>
+    <div class="download_img-wrapper">
+        <img class="download__icon download__icon--black" id="js-download-icon-black" src="/icon/download-black.svg" alt="">
+        <img class="download__icon download__icon--hov ds-out" id="js-download-icon-hov" src="/icon/download.svg" alt="">
+    </div>
     <div class="download__name">
-        <p class="download__title">{title}</p>
-        <p class="download__dot">.</p>
-        <p class="download__category">{category}</p>
+        <p class="download__title" id="js-download-title">{title}</p>
+        <p class="download__dot" id="js-download-dot">.</p>
+        <p class="download__category" id="js-download-category">{category}</p>
     </div>
 </a>
 
@@ -55,22 +58,36 @@ import '../css/root/root.css'
         transition: all .2s;
         color: var(--color-hov-hamori);
         background-color: var(--color-hov-hamori);
+        border: none;
+        padding: 14px 32px;
+    }
+
+    &__img-wrapper{
+        position: relative;
     }
 
     &__icon{
-        position: relative;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         width: 18px; 
 
         @media screen and (min-width:768px) {
             width: 18px;
             border-radius: 0;
+            color: var(--color-bg-black);
         }
+
+        // &--hov{
+        //     display: none;
+        // }
     }
 
     &__name{
         display: none;
         
         @media screen and (min-width:768px) {
+            margin-left: 16px;
             display: flex;
             align-items: baseline;
             gap: 4px;
@@ -78,7 +95,7 @@ import '../css/root/root.css'
     }
 
     &__dot{
-        color: var(--color-bg-white);
+        color: var(--color-bg-black);
     }
 
     &__title, &__category{
@@ -86,11 +103,91 @@ import '../css/root/root.css'
 
         @media screen and (min-width:768px) {
             display: block;
-            padding: 4px 8px;
+            padding: 8px;
             // color: var(--color-bg-black);
             background-color: var(--color-bg-white);
             border-radius: 16px;
         }
     }
 }
+
+.ds-out{
+    animation: ds-out .3s forwards;
+    @keyframes ds-out {
+        0%{
+            display: block;
+            opacity: 1;
+        }
+        100%{
+            display: none;
+            opacity: 0;
+        }
+    }
+}
+.ds-in{
+    animation: ds-in .3s forwards;
+    @keyframes ds-in {
+        0%{
+            display: none;
+            opacity: 0;
+        }
+        100%{
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+.anim{
+    &-white{
+        animation: anim-white .3s forwards;
+        @keyframes anim-white {
+            0%{
+                color: var(--color-bg-black);
+            }
+            100%{
+                color: var(--color-white);
+            }
+        }
+    }
+    &-black{
+        animation: anim-black .3s forwards;
+        @keyframes anim-black {
+            0%{
+                color: var(--color-white);
+            }
+            100%{
+                color: var(--color-bg-black);
+            }
+        }
+    }
+}
+
 </style>
+
+<script>
+    document.querySelectorAll('#js-download-area').forEach((dl_area)=>{
+        const dl_icon_black = dl_area.querySelector('#js-download-icon-black')
+        const dl_icon_hov = dl_area.querySelector('#js-download-icon-hov')
+        const dl_title = dl_area.querySelector('#js-download-title')
+        const dl_dot = dl_area.querySelector('#js-download-dot')
+        const dl_cate = dl_area.querySelector('#js-download-category')
+        dl_area.addEventListener('mouseover', ()=>{
+            dl_icon_black.classList.add('ds-out')
+            dl_icon_hov.classList.add('ds-in')
+            // dl_title
+            dl_dot.classList.add('anim-white')
+            // dl_cate
+            dl_icon_black.classList.remove('ds-in')
+            dl_icon_hov.classList.remove('ds-out')
+            dl_dot.classList.remove('anim-black')
+        })
+        dl_area.addEventListener('mouseleave', ()=>{
+            dl_icon_black.classList.remove('ds-out')
+            dl_icon_hov.classList.remove('ds-in')
+            dl_dot.classList.remove('anim-white')
+            dl_icon_black.classList.add('ds-in')
+            dl_icon_hov.classList.add('ds-out')
+            dl_dot.classList.add('anim-black')
+        })
+    })
+</script>
