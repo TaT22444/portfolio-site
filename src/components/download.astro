@@ -12,7 +12,7 @@ import '../css/root/root.css'
 ---
 
 <a href={href} class="download" id="js-download-area" download>
-    <div class="download_img-wrapper">
+    <div class="download__img-wrapper">
         <img class="download__icon download__icon--black" id="js-download-icon-black" src="/icon/download-black.svg" alt="">
         <img class="download__icon download__icon--hov ds-out" id="js-download-icon-hov" src="/icon/download.svg" alt="">
     </div>
@@ -72,18 +72,22 @@ import '../css/root/root.css'
 
     &__img-wrapper{
         position: relative;
-        padding: 40px;
-        background-color: var(--color-bg-black);
+        padding: 20px;
+        // background-color: var(--color-bg-black);
     }
 
     &__icon{
         position: absolute;
+        display: block;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 18px; 
+        width: 24px; 
 
         @media screen and (min-width:768px) {
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
             width: 18px;
             border-radius: 0;
             color: var(--color-bg-black);
@@ -98,7 +102,7 @@ import '../css/root/root.css'
         display: none;
         
         @media screen and (min-width:768px) {
-            margin-left: 16px;
+            margin-left: 4px;
             display: flex;
             align-items: baseline;
             gap: 4px;
@@ -182,7 +186,10 @@ import '../css/root/root.css'
         const dl_title = dl_area.querySelector('#js-download-title')
         const dl_dot = dl_area.querySelector('#js-download-dot')
         const dl_cate = dl_area.querySelector('#js-download-category')
-        dl_area.addEventListener('mouseover', ()=>{
+        let width = window.outerWidth
+        console.log(width)
+        if (width > 768){
+            dl_area.addEventListener('mouseover', ()=>{
             dl_icon_black.classList.add('ds-out')
             dl_icon_hov.classList.add('ds-in')
             // dl_title
@@ -200,5 +207,6 @@ import '../css/root/root.css'
             dl_icon_hov.classList.add('ds-out')
             dl_dot.classList.add('anim-black')
         })
+        }
     })
 </script>
