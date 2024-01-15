@@ -72,12 +72,15 @@ import '../css/root/root.css'
 
     &__img-wrapper{
         position: relative;
+        padding: 16px;
+        background-color: var(--color-bg-black);
     }
 
     &__icon{
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 18px; 
 
         @media screen and (min-width:768px) {
