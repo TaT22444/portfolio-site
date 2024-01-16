@@ -1,0 +1,97 @@
+---
+import '../css/root/root.css'
+---
+
+<div class="alert">
+    <div class="alert__body">
+        <p class="alert__text">instagramを開きますか？</p>
+        <div class="alert__btn-wrapper">
+            <button class="alert-button alert-button--yes">
+                <a href="https://instagram.com/tatsu_aihara" class="alert-button__link">はい</a>
+            </button>
+            <button class="alert-button alert-button--no">
+                いいえ
+            </button>
+        </div>
+    </div>
+    <button class="alert-close">
+        <span class="alert-close__elem alert-close__elem--left"></span>
+        <span class="alert-close__elem alert-close__elem--right"></span>
+    </button>
+</div>
+
+<style lang="scss">
+    .alert{
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+    font-family: var(--font-family-ja);
+    z-index: 94;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+
+    &__body{
+        width: 100%;
+        padding: 40px 24px 24px;
+        color: var(--color-bg-black);
+        background-color: var(--color-bg-white);
+        box-shadow: 0 0 10px rgba($color: #252528, $alpha: .7);
+        border-radius: 16px;
+        text-align: center;
+    }
+
+    &__btn-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    &-button{
+        width: 30vw;
+        padding: 16px 0;
+        border-radius: 30px;
+        border: 1px solid var(--color-bg-black);
+
+        &--yes{
+            color: var(--color-white);
+            background-color: var(--color-bg-black);
+        }
+    }
+
+    &-close{
+        display: block;
+        width: 36px;
+        height: 36px;
+        margin-top: 16px;
+        background-color: var(--color-bg-white);
+        border-radius: 50px;
+
+        &__elem{
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-bg-black);
+            border-radius: 8px;
+            
+            &--left{
+                left: 50%;
+                transform: translateY(50%) translateX(-50%) rotate(-45deg);
+            }
+            &--right{
+                left: 50%;
+                transform: translateY(-30%) translateX(-50%) rotate(45deg);
+            }
+        }
+    }
+}
+</style>
