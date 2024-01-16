@@ -141,12 +141,13 @@
 }
 
 .scrolldown{
+    width: 100%;
     position: absolute;
     top: 94dvh;
-    left: 50%;
-    transform: translateX(-50%);
 
     &__scroll{
+        text-align: center;
+        width: 100%;
         font-size: var(--font-size-xs);
         color: var(--color-white);
         letter-spacing: .5em;
