@@ -1,5 +1,26 @@
 @use "../root/root.css";
 
+.ds-none{
+    display: none;
+}
+.alert-back-in{
+    display: block;
+    opacity: .8;
+}
+.ds-block{
+    animation: ds-block .2s forwards linear;
+    @keyframes ds-block {
+        0%{
+            opacity: 0;
+            display: none;
+        }
+        100%{
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
 .anim{
     &-header{
         opacity: 0;

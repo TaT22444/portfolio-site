@@ -18,6 +18,29 @@
   --font-family-ja: "Noto Sans JP", sans-serif;
   --font-family-en: "Dela Gothic One", cursive;
 } 
+.ds-none {
+  display: none;
+}
+
+.alert-back-in {
+  display: block;
+  opacity: 0.8;
+}
+
+.ds-block {
+  animation: ds-block 0.2s forwards linear;
+}
+@keyframes ds-block {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
 .anim-header {
   opacity: 0;
   animation: header-in 0.5s forwards 0.8s;

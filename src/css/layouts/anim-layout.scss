@@ -2,17 +2,7 @@
 @use "../layouts/layout.css";
 
 .ds-none{
-    animation: ds-none .5s forwards;
-    @keyframes ds-none {
-        0%{
-            display: flex;
-            opacity: 0;
-        }
-        100%{
-            display: none;
-            opacity: 0;
-        }
-    }
+    display: none;
 }
 .ds-block{
     animation: ds-block .2s forwards linear;

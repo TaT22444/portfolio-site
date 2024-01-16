@@ -3,14 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
 import Works from '../layouts/works.astro';
 import Alert from '../components/alert.astro';
-import Mordal_back from '../components/mordal-back.astro';
+// import Mordal_back from '../components/mordal-back.astro';
 import '../css/top/anim-top.css'
 import '../css/top/style.css'
 ---
 
 <Layout title="portfolio-site"/>
-<Alert text='' href='' />
-<Mordal_back/>
+<Alert class:list='alert--insta' text='Instagramを開きますか？' href='https://instagram.com/tatsu_aihara' />
+<Alert class:list='alert--twitter' text='Twitterを開きますか？' href='twitter:@tatsu_aihara' />
+<!-- <Mordal_back/> -->
 <main>
 	<!-- <div class="mordal-back" id="js-mordal-back"></div> -->
 	<div class="hero">
@@ -382,8 +383,8 @@ import '../css/top/style.css'
 				<div class="contact-sns" id="sns">
 					<span class="contact-sns-insta" id="js-contact-insta"></span>
 					<span class="contact-sns-twitter" id="js-contact-twitter"></span>
-					<span class="contact-sns-insta--sp" id="js-contact-insta-sp"></span>
-					<span class="contact-sns-twitter--sp" id="js-contact-twitter-sp"></span>
+					<span class="contact-sns-insta--sp" id="js-contact-insta-alert"></span>
+					<span class="contact-sns-twitter--sp" id="js-contact-twitter-alert"></span>
 					<a class="contact-sns-insta__hover" id="js-contact-insta-hover" href="https://instagram.com/tatsu_aihara"></a>
 					<a class="contact-sns-twitter__hover"  id="js-contact-twitter-hover" href="twitter:@tatsu_aihara"></a>
 					<span class="contact-sns__icon" id="js-icon-insta">
@@ -406,8 +407,37 @@ import '../css/top/style.css'
 <Footer/>
 
 <script>
+	// document.querySelectorAll('#js-contact-insta-alert').forEach((contact_insta)=>{
+	// 	const insta_alert = contact_insta.querySelector('#js-alert')
+    //     const alert_back = contact_insta.querySelector('#js-alert-back')
+	//     contact_insta.addEventListener('click', ()=>{
+	//     	console.log(insta_alert)
+	//     	insta_alert.classList.add('ds-in')
+	//     	insta_alert.classList.remove('ds-none')
+	//     	alert_back.classList.add('ds-in')
+	//     	alert_back.classList.remove('ds-none')
+	//     })
+	// })
+	const contact_insta = document.getElementById('js-contact-insta-alert')
+	const insta_alert = document.getElementById('js-alert')
+    const alert_back = document.getElementById('js-alert-back')
+	contact_insta.addEventListener('click', ()=>{
+		console.log(insta_alert)
+		insta_alert.classList.add('ds-in')
+		insta_alert.classList.remove('ds-none')
+		alert_back.classList.add('ds-in')
+		alert_back.classList.remove('ds-none')
+	})
 
-import Alert from "../components/alert.astro"
+	const contact_twitter = document.getElementById('js-contact-twitter-alert')
+	contact_twitter.addEventListener('click', ()=>{
+		console.log(insta_alert)
+		insta_alert.classList.add('ds-in')
+		insta_alert.classList.remove('ds-none')
+		alert_back.classList.add('ds-in')
+		alert_back.classList.remove('ds-none')
+	})
+
 	const scrolldown = document.getElementById('js-scrolldown')
     window.addEventListener('load', ()=>{
         scrolldown.classList.add('anim-fadein-scroll')
