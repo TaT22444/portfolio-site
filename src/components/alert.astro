@@ -124,6 +124,35 @@ import '../css/layouts/anim-layout.css'
         }
     }
 }
+
+.anim{
+    &-alert{
+        &__link{
+            &-in{
+                animation: alert-link-in .3s forwards;
+                @keyframes alert-link-in {
+                    0%{
+                        background-color: var(--color-bg-black);
+                    }
+                    100%{
+                        background-color: var(--color-hov-black);
+                    }
+                }
+            }
+            &-out{
+                animation: alert-link-out .3s forwards;
+                @keyframes alert-link-out {
+                    0%{
+                        background-color: var(--color-hov-black);
+                    }
+                    100%{
+                        background-color: var(--color-bg-black);
+                    }
+                }
+            }
+        }
+    }
+}
 </style>
 
 <script>

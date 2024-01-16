@@ -431,6 +431,7 @@ import '../css/top/style.css'
 		alert_back.classList.remove('ds-none')
 		alert_text.innerText = "Instagramを開きますか？"
 		alert_link.innerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
+		alert_link.classList.add('anim-alert-link-in')
 	})
 
 	const contact_twitter = document.getElementById('js-contact-twitter-alert')
@@ -442,6 +443,7 @@ import '../css/top/style.css'
 		alert_back.classList.remove('ds-none')
 		alert_text.innerText = "twitterを開きますか？"
 		alert_link.innerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
+		alert_link.classList.add('anim-alert-link-in')
 	})
 
 	const scrolldown = document.getElementById('js-scrolldown')
