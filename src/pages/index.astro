@@ -418,7 +418,47 @@ import '../css/top/style.css'
 	//     	alert_back.classList.remove('ds-none')
 	//     })
 	// })
+	
+	// document.querySelectorAll('#js-alert').forEach((alert_area)=>{
+	// 	const contact_insta = document.getElementById('js-contact-insta-alert')
+	//     const contact_twitter = document.getElementById('js-contact-twitter-alert')
+	// 	const insta_alert = document.querySelector('#js-alert')
+    //     const mordal_back = document.querySelector('#js-mordal-back')
+	//     const alert_text = document.querySelector('#js-alert-text')
+	//     const alert_link = document.querySelector('#js-alert-link')
+	//     const alert_yes = document.querySelector('#js-alert-yes')
+    //     const alert_no = document.querySelector('#js-alert-no')
+	// 	contact_insta.addEventListener('click', ()=>{
+	//     	console.log(alert_link)
+	//     	console.log(alert_text)
+	//     	insta_alert.classList.add('ds-in')
+	//     	insta_alert.classList.remove('ds-none')
+	//     	mordal_back.classList.add('ds-in')
+	//     	mordal_back.classList.remove('ds-out')
+	//     	alert_text.textContent = "Instagramを開きますか？"
+	//     	alert_link.innerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
+	//     	alert_yes.classList.remove('anim-alert-link-in')
+	//     })
+	//     contact_twitter.addEventListener('click', ()=>{
+	//     	console.log(alert_link)
+	//     	console.log(alert_text)
+	//     	insta_alert.classList.add('ds-in')
+	//     	insta_alert.classList.remove('ds-none')
+	//     	mordal_back.classList.add('ds-in')
+	//     	mordal_back.classList.remove('ds-out')
+	//     	alert_text.textContent = "Twitterを開きますか？"
+	//     	alert_link.innerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
+	//     	alert_yes.classList.remove('anim-alert-link-in')
+	//     })
+	//     mordal_back.addEventListener('click', ()=>{
+    //         insta_alert.classList.add('ds-out')
+    //         mordal_back.classList.add('ds-out')
+	//     	insta_alert.classList.remove('ds-in')
+    //         mordal_back.classList.remove('ds-in')
+    //     })
+	// })
 	const contact_insta = document.getElementById('js-contact-insta-alert')
+	const contact_twitter = document.getElementById('js-contact-twitter-alert')
 	const insta_alert = document.getElementById('js-alert')
     const mordal_back = document.getElementById('js-mordal-back')
 	const alert_text = document.getElementById('js-alert-text')
@@ -426,16 +466,16 @@ import '../css/top/style.css'
 	const alert_yes = document.getElementById('js-alert-yes')
     const alert_no = document.getElementById('js-alert-no')
 	contact_insta.addEventListener('click', ()=>{
-		console.log(insta_alert)
+		console.log(alert_link)
+		console.log(alert_text)
 		insta_alert.classList.add('ds-in')
 		insta_alert.classList.remove('ds-none')
 		mordal_back.classList.add('ds-in')
 		mordal_back.classList.remove('ds-out')
 		alert_text.innerText = "Instagramを開きますか？"
-		alert_link.outerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
+		alert_link.innerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
 		alert_yes.classList.remove('anim-alert-link-in')
 	})
-	const contact_twitter = document.getElementById('js-contact-twitter-alert')
 	contact_twitter.addEventListener('click', ()=>{
 		console.log(alert_link)
 		console.log(alert_text)
@@ -444,7 +484,7 @@ import '../css/top/style.css'
 		mordal_back.classList.add('ds-in')
 		mordal_back.classList.remove('ds-out')
 		alert_text.innerText = "Twitterを開きますか？"
-		alert_link.outerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
+		alert_link.innerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
 		alert_yes.classList.remove('anim-alert-link-in')
 	})
 	mordal_back.addEventListener('click', ()=>{

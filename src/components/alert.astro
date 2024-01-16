@@ -18,7 +18,7 @@ import '../css/layouts/anim-layout.css'
             <p class="alert__text" id="js-alert-text"></p>
             <div class="alert__btn-wrapper">
                 <button class="alert-button alert-button--yes" id="js-alert-yes">
-                    <a href="/" class="alert-button__link" id="js-alert-link">はい</a>
+                    <a class="alert-button__link" id="js-alert-link">はい</a>
                 </button>
                 <button class="alert-button alert-button--no" id="js-alert-no">
                     いいえ
@@ -166,6 +166,13 @@ import '../css/layouts/anim-layout.css'
         }
     }
 }
+
+.ds-out{
+    display: none;
+}
+.ds-in{
+    display: block;
+}
 </style>
 
 <script>
@@ -183,14 +190,14 @@ import '../css/layouts/anim-layout.css'
             mordal_back.classList.add('ds-out')
             alert_area.classList.remove('ds-in')
             mordal_back.classList.remove('ds-in')
-            alert_link.outerHTML = '<a href="/" class="alert-button__link" id="js-alert-link">はい</a>'
+            // alert_link.outerHTML = '<a href="/" class="alert-button__link" id="js-alert-link">はい</a>'
         })
         alert_close.addEventListener('click', ()=>{
             alert_area.classList.add('ds-out')
             mordal_back.classList.add('ds-out')
             alert_area.classList.remove('ds-in')
             mordal_back.classList.remove('ds-in')
-            alert_link.outerHTML = '<a href="/" class="alert-button__link" id="js-alert-link">はい</a>'
+            // alert_link.outerHTML = '<a href="/" class="alert-button__link" id="js-alert-link">はい</a>'
         })
     })
 </script>
