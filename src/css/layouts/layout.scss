@@ -16,7 +16,7 @@ body{
     align-items: center;
     color: var(--color-bg-black);
     background-color: var(--color-bg-white);
-    z-index: 99;
+    z-index: 90;
 
     @media screen and (min-width:768px) {
         width: 100%;
