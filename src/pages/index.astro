@@ -421,12 +421,16 @@ import '../css/top/style.css'
 	const contact_insta = document.getElementById('js-contact-insta-alert')
 	const insta_alert = document.getElementById('js-alert')
     const alert_back = document.getElementById('js-alert-back')
+	const alert_text = document.getElementById('js-alert-text')
+	const alert_link = document.getElementById('js-alert-link')
 	contact_insta.addEventListener('click', ()=>{
 		console.log(insta_alert)
 		insta_alert.classList.add('ds-in')
 		insta_alert.classList.remove('ds-none')
 		alert_back.classList.add('ds-in')
 		alert_back.classList.remove('ds-none')
+		alert_text.innerText = "Instagramを開きますか？"
+		alert_link.innerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
 	})
 
 	const contact_twitter = document.getElementById('js-contact-twitter-alert')
@@ -436,6 +440,8 @@ import '../css/top/style.css'
 		insta_alert.classList.remove('ds-none')
 		alert_back.classList.add('ds-in')
 		alert_back.classList.remove('ds-none')
+		alert_text.innerText = "twitterを開きますか？"
+		alert_link.innerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
 	})
 
 	const scrolldown = document.getElementById('js-scrolldown')

@@ -14,10 +14,10 @@ import '../css/layouts/anim-layout.css'
     <div class="alert__back" id="js-alert-back"></div>
     <div class="alert__inner">
         <div class="alert__body">
-            <p class="alert__text">{text}</p>
+            <p class="alert__text" id="js-alert-text">{text}</p>
             <div class="alert__btn-wrapper">
                 <button class="alert-button alert-button--yes">
-                    <a href={href} class="alert-button__link">はい</a>
+                    <a href={href} class="alert-button__link" id="js-alert-link">はい</a>
                 </button>
                 <button class="alert-button alert-button--no" id="js-alert-no">
                     いいえ
