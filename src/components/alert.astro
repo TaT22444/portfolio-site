@@ -1,20 +1,28 @@
 ---
+interface Props {
+	text: string;
+    href: string;
+}
+
+const { text, href} = Astro.props;
+
 import '../css/root/root.css'
+import '../css/layouts/anim-layout.css'
 ---
 
-<div class="alert">
+<div class="alert" id="js-alert">
     <div class="alert__body">
-        <p class="alert__text">instagramを開きますか？</p>
+        <p class="alert__text">{text}</p>
         <div class="alert__btn-wrapper">
             <button class="alert-button alert-button--yes">
-                <a href="https://instagram.com/tatsu_aihara" class="alert-button__link">はい</a>
+                <a href={href} class="alert-button__link">はい</a>
             </button>
-            <button class="alert-button alert-button--no">
+            <button class="alert-button alert-button--no" id="js-alert-no">
                 いいえ
             </button>
         </div>
     </div>
-    <button class="alert-close">
+    <button class="alert-close" id="js-alert-close">
         <span class="alert-close__elem alert-close__elem--left"></span>
         <span class="alert-close__elem alert-close__elem--right"></span>
     </button>
@@ -24,7 +32,7 @@ import '../css/root/root.css'
     .alert{
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%) translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -95,3 +103,16 @@ import '../css/root/root.css'
     }
 }
 </style>
+
+<script>
+    document.querySelectorAll('#js-alert').forEach((alert_area)=>{
+        const alert_no = alert_area.querySelector('#js-alert-no')
+        const alert_close = alert_area.querySelector('#js-alert-close')
+        alert_no.addEventListener('click', ()=>{
+            alert_area.classList.add('ds-none')
+        })
+        alert_close.addEventListener('click', ()=>{
+            alert_area.classList.add('ds-none')
+        })
+    })
+</script>

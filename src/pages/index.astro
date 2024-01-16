@@ -9,7 +9,7 @@ import '../css/top/style.css'
 ---
 
 <Layout title="portfolio-site"/>
-<Alert/>
+<Alert text='' href='' />
 <Mordal_back/>
 <main>
 	<!-- <div class="mordal-back" id="js-mordal-back"></div> -->
@@ -407,6 +407,7 @@ import '../css/top/style.css'
 
 <script>
 
+import Alert from "../components/alert.astro"
 	const scrolldown = document.getElementById('js-scrolldown')
     window.addEventListener('load', ()=>{
         scrolldown.classList.add('anim-fadein-scroll')
@@ -443,4 +444,6 @@ import '../css/top/style.css'
         twi_icon.classList.remove('in-rotate-twi');
         twi_icon.classList.add('out-rotate-twi');
     })
+
+	
 </script>

@@ -14,7 +14,7 @@ import '../css/root/root.css'
 <a href={href} class="download" id="js-download-area" download>
     <div class="download__img-wrapper">
         <img class="download__icon download__icon--black" id="js-download-icon-black" src="/icon/download-black.svg" alt="">
-        <img class="download__icon download__icon--hov ds-out" id="js-download-icon-hov" src="/icon/download.svg" alt="">
+        <img class="download__icon download__icon--hov anim-ds-out" id="js-download-icon-hov" src="/icon/download.svg" alt="">
     </div>
     <div class="download__name">
         <p class="download__title" id="js-download-title">{title}</p>
@@ -134,8 +134,16 @@ import '../css/root/root.css'
 }
 
 .ds-out{
-    animation: ds-out .3s forwards;
-    @keyframes ds-out {
+    display: none;
+}
+
+.ds-in{
+    display: block;
+}
+
+.anim-ds-out{
+    animation: anim-ds-out .3s forwards;
+    @keyframes anim-ds-out {
         0%{
             display: block;
             opacity: 1;
@@ -146,9 +154,9 @@ import '../css/root/root.css'
         }
     }
 }
-.ds-in{
-    animation: ds-in .3s forwards;
-    @keyframes ds-in {
+.anim-ds-in{
+    animation: anim-ds-in .3s forwards;
+    @keyframes anim-ds-in {
         0%{
             display: none;
             opacity: 0;
@@ -160,6 +168,33 @@ import '../css/root/root.css'
     }
 }
 .anim{
+    &-ds-out{
+    animation: anim-ds-out .3s forwards;
+    @keyframes anim-ds-out {
+        0%{
+            display: block;
+            opacity: 1;
+        }
+        100%{
+            display: none;
+            opacity: 0;
+        }
+    }}
+
+    &-ds-in{
+    animation: anim-ds-in .3s forwards;
+    @keyframes anim-ds-in {
+        0%{
+            display: none;
+            opacity: 0;
+        }
+        100%{
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
     &-white{
         animation: anim-white .3s forwards;
         @keyframes anim-white {
@@ -194,21 +229,21 @@ import '../css/root/root.css'
         const dl_dot = dl_area.querySelector('#js-download-dot')
         const dl_cate = dl_area.querySelector('#js-download-category')
         dl_area.addEventListener('mouseover', ()=>{
-            dl_icon_black.classList.add('ds-out')
-            dl_icon_hov.classList.add('ds-in')
+            dl_icon_black.classList.add('anim-ds-out')
+            dl_icon_hov.classList.add('anim-ds-in')
             // dl_title
             dl_dot.classList.add('anim-white')
             // dl_cate
-            dl_icon_black.classList.remove('ds-in')
-            dl_icon_hov.classList.remove('ds-out')
+            dl_icon_black.classList.remove('anim-ds-in')
+            dl_icon_hov.classList.remove('anim-ds-out')
             dl_dot.classList.remove('anim-black')
         })
         dl_area.addEventListener('mouseleave', ()=>{
-            dl_icon_black.classList.remove('ds-out')
-            dl_icon_hov.classList.remove('ds-in')
+            dl_icon_black.classList.remove('anim-ds-out')
+            dl_icon_hov.classList.remove('anim-ds-in')
             dl_dot.classList.remove('anim-white')
-            dl_icon_black.classList.add('ds-in')
-            dl_icon_hov.classList.add('ds-out')
+            dl_icon_black.classList.add('anim-ds-in')
+            dl_icon_hov.classList.add('anim-ds-out')
             dl_dot.classList.add('anim-black')
         })
     })
