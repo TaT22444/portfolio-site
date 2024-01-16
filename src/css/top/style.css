@@ -885,6 +885,11 @@
   padding: 0 16px;
   font-family: var(--font-family-ja);
 }
+@media screen and (min-width: 768px) {
+  .alert {
+    display: none;
+  }
+}
 .alert__body {
   width: 100%;
   padding: 40px 24px 32px;
