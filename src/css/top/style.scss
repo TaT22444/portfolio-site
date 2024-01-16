@@ -917,3 +917,70 @@
         }
     }
 }
+
+.alert{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+    font-family: var(--font-family-ja);
+
+    &__body{
+        width: 100%;
+        padding: 40px 24px 32px;
+        color: var(--color-bg-black);
+        background-color: var(--color-bg-white);
+        box-shadow: 0 0 10px rgba($color: #252528, $alpha: .7);
+        border-radius: 16px;
+        text-align: center;
+    }
+
+    &__btn-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+    &-button{
+        width: 30vw;
+        padding: 16px 0;
+        border-radius: 30px;
+        border: 1px solid var(--color-bg-black);
+
+        &--yes{
+            color: var(--color-white);
+            background-color: var(--color-bg-black);
+        }
+    }
+
+    &-close{
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-top: 16px;
+        background-color: var(--color-bg-white);
+        border: 1px solid var(--color-bg-black);
+        border-radius: 50px;
+
+        &__elem{
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-bg-black);
+            border-radius: 8px;
+            
+            &--left{
+                left: 50%;
+                transform: translateY(50%) translateX(-50%) rotate(-45deg);
+            }
+            &--right{
+                left: 50%;
+                transform: translateY(-10%) translateX(-50%) rotate(45deg);
+            }
+        }
+    }
+}
