@@ -6,12 +6,13 @@ interface Props {
 
 const { text, href} = Astro.props;
 
+import Mordal_back from '../components/mordal-back.astro';
 import '../css/root/root.css'
 import '../css/layouts/anim-layout.css'
 ---
 
 <div class="alert ds-none" id="js-alert">
-    <div class="alert__back" id="js-alert-back"></div>
+    <Mordal_back/>
     <div class="alert__inner">
         <div class="alert__body">
             <p class="alert__text" id="js-alert-text">{text}</p>
@@ -42,15 +43,15 @@ import '../css/layouts/anim-layout.css'
         display: none;
     }
 
-    &__back{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--color-bg-black);
-        opacity: .8;
-    }
+    // &__back{
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: var(--color-bg-black);
+    //     opacity: .8;
+    // }
 
     &__inner{
         position: relative;
@@ -170,7 +171,7 @@ import '../css/layouts/anim-layout.css'
 <script>
     document.querySelectorAll('#js-alert').forEach((alert_area)=>{
         const alert_close = alert_area.querySelector('#js-alert-close')
-        const alert_back = alert_area.querySelector('#js-alert-back')
+        const mordal_back = document.getElementById('js-mordal-back')
         const alert_link = alert_area.querySelector('#js-alert-link')
         const alert_yes = alert_area.querySelector('#js-alert-yes')
         const alert_no = alert_area.querySelector('#js-alert-no')
@@ -178,22 +179,16 @@ import '../css/layouts/anim-layout.css'
             alert_yes.classList.add('anim-alert-link-in')
         })
         alert_no.addEventListener('click', ()=>{
-            alert_area.classList.add('ds-none')
-            alert_back.classList.add('ds-none')
-            alert_area.classList.remove('ds-block')
-            alert_back.classList.remove('ds-block')
+            alert_area.classList.add('ds-out')
+            mordal_back.classList.add('ds-out')
+            alert_area.classList.remove('ds-in')
+            mordal_back.classList.remove('ds-in')
         })
         alert_close.addEventListener('click', ()=>{
-            alert_area.classList.add('ds-none')
-            alert_back.classList.add('ds-none')
-            alert_area.classList.remove('ds-block')
-            alert_back.classList.remove('ds-block')
-        })
-        alert_back.addEventListener('click', ()=>{
-            alert_area.classList.add('ds-none')
-            alert_back.classList.add('ds-none')
-            alert_area.classList.remove('ds-block')
-            alert_back.classList.remove('ds-block')
+            alert_area.classList.add('ds-out')
+            mordal_back.classList.add('ds-out')
+            alert_area.classList.remove('ds-in')
+            mordal_back.classList.remove('ds-in')
         })
     })
 </script>

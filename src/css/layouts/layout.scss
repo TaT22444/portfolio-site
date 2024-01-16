@@ -16,7 +16,7 @@ body{
     align-items: center;
     color: var(--color-bg-black);
     background-color: var(--color-bg-white);
-    z-index: 90;
+    z-index: 99;
 
     @media screen and (min-width:768px) {
         width: 100%;
@@ -75,6 +75,7 @@ body{
     &-mordal{
         padding: 120px 0 80px;
         background-color: var(--color-bg-white);
+        z-index: 90;
 
         &__myname{
             font-size: var(--font-size-ml);

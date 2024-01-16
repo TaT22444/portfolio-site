@@ -23,6 +23,7 @@ const nav = [
     }
 ];
 
+import Mordal_back from '../components/mordal-back.astro';
 // import '../css/top/style.css'
 import '../css/inner/inner.css'
 import '../css/root/root.css'
@@ -46,6 +47,7 @@ import '../css/layouts/layout.css'
 	<title>{title}</title>
 </head>
 <body>
+	<Mordal_back/>
 	<header class="header" id="header">
 	    <div class="inner inner--header">
 			<h2 class="header__logo">
@@ -65,7 +67,7 @@ import '../css/layouts/layout.css'
 			</span>
         </div>
 
-		<div class="header-mordal ds-none" id="js-mordal">
+		<div class="header-mordal ds-out" id="js-mordal">
 			<h2 class="header-mordal__myname inner">
 				Tatsuya Aihara
 			</h2>
@@ -103,10 +105,13 @@ import '../css/layouts/layout.css'
 	const ham_item1 = document.getElementById('js-ham__item1')
     const ham_item2 = document.getElementById('js-ham__item2')
     const ham_item3 = document.getElementById('js-ham__item3')
+	const mordal_back = document.getElementById('js-mordal-back')
 	ham.addEventListener('click', ()=>{
-		if (mordal.classList.contains('ds-none') === true) {
-			mordal.classList.remove('ds-none')
+		if (mordal.classList.contains('ds-out') === true) {
+			mordal.classList.remove('ds-out')
             mordal.classList.add('ds-block')
+			mordal_back.classList.remove('ds-out')
+            mordal_back.classList.add('ds-in')
 			// mordal_back.classList.remove('ds-none')
 			// mordal_back.classList.add('ds-block')
 			ham_item1.classList.add('anim-ham__item1--rotate-45')
@@ -116,8 +121,10 @@ import '../css/layouts/layout.css'
 		    ham_item3.classList.add('anim-ham__item3--rotate-45')
 			ham_item3.classList.remove('anim-ham__item3--rotate-0')
 		} else if (mordal.classList.contains('ds-block') === true) {
-			mordal.classList.add('ds-none')
+			mordal.classList.add('ds-out')
             mordal.classList.remove('ds-block')
+			mordal_back.classList.add('ds-out')
+            mordal_back.classList.remove('ds-in')
 			// mordal_back.classList.add('ds-none')
 			// mordal_back.classList.remove('ds-block')
 			ham_item1.classList.remove('anim-ham__item1--rotate-45')
@@ -127,6 +134,18 @@ import '../css/layouts/layout.css'
 		    ham_item3.classList.remove('anim-ham__item3--rotate-45')
 			ham_item3.classList.add('anim-ham__item3--rotate-0')
 		}
+		mordal_back.addEventListener('click', ()=>{
+			mordal.classList.add('ds-out')
+            mordal.classList.remove('ds-block')
+			mordal_back.classList.add('ds-out')
+            mordal_back.classList.remove('ds-in')
+			ham_item1.classList.remove('anim-ham__item1--rotate-45')
+			ham_item1.classList.add('anim-ham__item1--rotate-0')
+		    ham_item2.classList.remove('anim-ham__item2--op-0')
+			ham_item2.classList.add('anim-ham__item2--op-1')
+		    ham_item3.classList.remove('anim-ham__item3--rotate-45')
+			ham_item3.classList.add('anim-ham__item3--rotate-0')
+		})
 	})
 
 	window.addEventListener('scroll', ()=>{

@@ -18,6 +18,13 @@
     }
 }
 
+.ds-out{
+    display: none;
+}
+.ds-in{
+    display: block;
+}
+
 .anim {
     &-ham {
         &__item1 {
