@@ -16,7 +16,7 @@ import '../css/layouts/anim-layout.css'
         <div class="alert__body">
             <p class="alert__text" id="js-alert-text">{text}</p>
             <div class="alert__btn-wrapper">
-                <button class="alert-button alert-button--yes">
+                <button class="alert-button alert-button--yes" id="js-alert-yes">
                     <a href={href} class="alert-button__link" id="js-alert-link">はい</a>
                 </button>
                 <button class="alert-button alert-button--no" id="js-alert-no">
@@ -86,13 +86,25 @@ import '../css/layouts/anim-layout.css'
 
     &-button{
         width: 30vw;
-        padding: 16px 0;
+        height: 100%;
         border-radius: 30px;
         border: 1px solid var(--color-bg-black);
+
+        &__link{
+            width: 100%;
+            height: 100%;
+            padding: 16px 0;
+            border-radius: 30px;
+            display: block;
+        }
 
         &--yes{
             color: var(--color-white);
             background-color: var(--color-bg-black);
+        }
+
+        &--no{
+            padding: 16px 0;
         }
     }
 
@@ -127,7 +139,7 @@ import '../css/layouts/anim-layout.css'
 
 .anim{
     &-alert{
-        &__link{
+        &-link{
             &-in{
                 animation: alert-link-in .3s forwards;
                 @keyframes alert-link-in {
@@ -157,9 +169,14 @@ import '../css/layouts/anim-layout.css'
 
 <script>
     document.querySelectorAll('#js-alert').forEach((alert_area)=>{
-        const alert_no = alert_area.querySelector('#js-alert-no')
         const alert_close = alert_area.querySelector('#js-alert-close')
         const alert_back = alert_area.querySelector('#js-alert-back')
+        const alert_link = alert_area.querySelector('#js-alert-link')
+        const alert_yes = alert_area.querySelector('#js-alert-yes')
+        const alert_no = alert_area.querySelector('#js-alert-no')
+        alert_link.addEventListener('click', ()=>{
+            alert_yes.classList.add('anim-alert-link-in')
+        })
         alert_no.addEventListener('click', ()=>{
             alert_area.classList.add('ds-none')
             alert_back.classList.add('ds-none')

@@ -423,6 +423,8 @@ import '../css/top/style.css'
     const alert_back = document.getElementById('js-alert-back')
 	const alert_text = document.getElementById('js-alert-text')
 	const alert_link = document.getElementById('js-alert-link')
+	const alert_yes = document.getElementById('js-alert-yes')
+    const alert_no = document.getElementById('js-alert-no')
 	contact_insta.addEventListener('click', ()=>{
 		console.log(insta_alert)
 		insta_alert.classList.add('ds-in')
@@ -431,7 +433,7 @@ import '../css/top/style.css'
 		alert_back.classList.remove('ds-none')
 		alert_text.innerText = "Instagramを開きますか？"
 		alert_link.innerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
-		alert_link.classList.add('anim-alert-link-in')
+		alert_yes.classList.remove('anim-alert-link-in')
 	})
 
 	const contact_twitter = document.getElementById('js-contact-twitter-alert')
@@ -443,7 +445,7 @@ import '../css/top/style.css'
 		alert_back.classList.remove('ds-none')
 		alert_text.innerText = "twitterを開きますか？"
 		alert_link.innerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
-		alert_link.classList.add('anim-alert-link-in')
+		alert_yes.classList.remove('anim-alert-link-in')
 	})
 
 	const scrolldown = document.getElementById('js-scrolldown')
