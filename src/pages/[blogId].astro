@@ -1,5 +1,5 @@
 ---
-import { getBlogs, getBlogDetail,  } from '../library/microcms'
+import { getBlogs, getBlogDetail } from '../library/microcms'
 export async function getStaticPaths(){
     const response = await getBlogs({fields: ["id"]})
     return response.contents.map((content)=>({
@@ -12,7 +12,7 @@ const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 
 import Layout from '../layouts/Layout.astro';
-import Footer from '../layouts/footer.astro';
+// import Footer from '../layouts/footer.astro';
 
 import '../css/blog/anim-blog.css'
 import '../css/blog/blog.css'
@@ -24,7 +24,7 @@ import '../css/blog/blog.css'
     <h1 style="margin-top: 300px;">タイトル</h1>
     <p class="publishedAt">{blog.publishedAt.substring(0, 10)}</p>
     <div set:html={blog.content} />
-    <img src={blog.image.url} class="" alt=""  />
+    <img src={blog.image.url} alt=""  />
     
 </article>
 
