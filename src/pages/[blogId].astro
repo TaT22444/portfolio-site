@@ -20,11 +20,11 @@ import '../css/blog/blog.css'
 
 <Layout title={blog.title}  />
 
-<article style="color: black;">
+<article class="article" style="color: black;">
     <h1 style="margin-top: 300px;">タイトル</h1>
     <p class="publishedAt">{blog.publishedAt.substring(0, 10)}</p>
     <div set:html={blog.content} />
-    <img src={blog.image.url} alt="" />
+    <img src={blog.image.url} class="" alt=""  />
     
 </article>
 
