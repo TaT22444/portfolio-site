@@ -1,4 +1,4 @@
----
+<!-- ---
 import { getBlogs, getBlogDetail } from '../library/microcms'
 export async function getStaticPaths(){
     const response = await getBlogs({fields: ["id"]})
@@ -12,7 +12,6 @@ const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 
 import Layout from '../layouts/Layout.astro';
-// import Footer from '../layouts/footer.astro';
 
 import '../css/blog/anim-blog.css'
 import '../css/blog/blog.css'
@@ -33,4 +32,4 @@ import '../css/blog/blog.css'
     .header{
         display: none;
     }
-</style>
+</style> -->
