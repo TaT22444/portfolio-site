@@ -21,14 +21,13 @@ main{
 
     &-contents{
         width: 100%;
-        overflow-x: scroll;
         padding-top: 40px;
-        // margin-bottom: 40px;
         padding-bottom: 40px;
 
         &__list{
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             gap: 40px;
         }
 
@@ -47,6 +46,7 @@ main{
         }
 
         &__thumbnail{
+            width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
             border-radius: 4px;
@@ -89,6 +89,10 @@ main{
             color: var(--color-white);
             background-color: var(--color-bg-black);
             border-radius: 30px;
+            @media screen and (max-width:768px) {
+                font-size: var(--font-size-xs);
+                padding: 6px;
+            }
         }
     }
 
