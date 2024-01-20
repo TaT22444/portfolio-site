@@ -72,9 +72,14 @@ main{
 
         &__list{
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             // justify-content: center;
-            gap: 24px;
+            gap: 16px 24px;
+
+            @media screen and (max-width:768px) {
+                justify-content: center;
+            }
         }
 
         &__link{

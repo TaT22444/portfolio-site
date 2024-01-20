@@ -80,8 +80,14 @@ main {
 }
 .blog-nav__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 24px;
+  gap: 16px 24px;
+}
+@media screen and (max-width: 768px) {
+  .blog-nav__list {
+    justify-content: center;
+  }
 }
 .blog-nav__link {
   display: block;
