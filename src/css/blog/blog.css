@@ -87,6 +87,7 @@ main {
 @media screen and (max-width: 768px) {
   .blog-nav__list {
     justify-content: center;
+    gap: 8px;
   }
 }
 .blog-nav__link {
