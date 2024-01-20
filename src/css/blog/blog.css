@@ -47,7 +47,7 @@ main {
   gap: 40px;
 }
 .course-contents__item {
-  width: 380px;
+  width: 330px;
 }
 .course-contents__link {
   display: flex;
@@ -65,7 +65,7 @@ main {
 }
 
 .blog {
-  padding: 120px 0 40px;
+  padding: 40px 0 40px;
 }
 .blog__title {
   font-size: var(--font-size-m);
@@ -76,7 +76,7 @@ main {
 }
 .blog-nav {
   width: 100%;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 .blog-nav__list {
   display: flex;
@@ -101,7 +101,7 @@ main {
   gap: 40px;
 }
 .blog-contents__item {
-  width: 280px;
+  width: 250px;
 }
 .blog-contents__link {
   display: flex;

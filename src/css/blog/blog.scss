@@ -33,7 +33,7 @@ main{
         }
 
         &__item{
-            width: 380px;
+            width: 330px;
         }
 
         &__link{
@@ -55,7 +55,7 @@ main{
 }
 
 .blog{
-    padding: 120px 0 40px;
+    padding: 40px 0 40px;
 
     &__title{
         font-size: var(--font-size-m);
@@ -68,7 +68,7 @@ main{
 
     &-nav{
         width: 100%;
-        padding-top: 80px;
+        padding-top: 40px;
 
         &__list{
             display: flex;
@@ -98,7 +98,7 @@ main{
         }
 
         &__item{
-            width: 280px;
+            width: 250px;
         }
 
         &__link{
