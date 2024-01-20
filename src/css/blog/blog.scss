@@ -1,5 +1,129 @@
 @use "../root/root.css";
 
-body{
+main{
+    position: relative;
     background-color: var(--color-bg-white);
+    color: var(--color-bg-black);
+    font-family: var(--font-family-ja);
+    padding-top: 160px;
+}
+
+.course{
+    width: 100%;
+    margin-inline: auto;
+    padding-top: 40px;
+    // border-bottom: 1px solid var(--color-bg-black);
+
+    &__title{
+        font-size: var(--font-size-m);
+        font-family: var(--font-family-en);
+    }
+
+    &-contents{
+        width: 100%;
+        overflow-x: scroll;
+        padding-top: 40px;
+        // margin-bottom: 40px;
+        padding-bottom: 40px;
+
+        &__list{
+            width: 100%;
+            display: flex;
+            gap: 40px;
+        }
+
+        &__item{
+            width: 380px;
+        }
+
+        &__link{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__title{
+            font-size: var(--font-size-ms);
+        }
+
+        &__thumbnail{
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    }
+}
+
+.blog{
+    padding: 120px 0 40px;
+
+    &__title{
+        font-size: var(--font-size-m);
+        font-family: var(--font-family-en);
+    }
+
+    &__container{
+        width: 100%;
+    }
+
+    &-nav{
+        width: 100%;
+        padding-top: 80px;
+
+        &__list{
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            gap: 24px;
+        }
+
+        &__link{
+            display: block;
+            padding: 8px 16px;
+            color: var(--color-white);
+            background-color: var(--color-bg-black);
+            border-radius: 30px;
+        }
+    }
+
+    &-contents{
+        width: 100%;
+        padding-top: 40px;
+
+        &__list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        &__item{
+            width: 280px;
+        }
+
+        &__link{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__thumbnail{
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        &__title{
+            font-size: var(--font-size-s);
+            margin-top: 16px;
+        }
+
+        &__tags{
+            margin-top: 8px;
+            display: flex;
+            gap: 8px;
+            font-size: var(--font-size-xs);
+        }
+    }
+    
 }

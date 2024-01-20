@@ -18,6 +18,109 @@
   --font-family-ja: "Noto Sans JP", sans-serif;
   --font-family-en: "Dela Gothic One", cursive;
 } 
-body {
+main {
+  position: relative;
   background-color: var(--color-bg-white);
+  color: var(--color-bg-black);
+  font-family: var(--font-family-ja);
+  padding-top: 160px;
+}
+
+.course {
+  width: 100%;
+  margin-inline: auto;
+  padding-top: 40px;
+}
+.course__title {
+  font-size: var(--font-size-m);
+  font-family: var(--font-family-en);
+}
+.course-contents {
+  width: 100%;
+  overflow-x: scroll;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.course-contents__list {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+.course-contents__item {
+  width: 380px;
+}
+.course-contents__link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.course-contents__title {
+  font-size: var(--font-size-ms);
+}
+.course-contents__thumbnail {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.blog {
+  padding: 120px 0 40px;
+}
+.blog__title {
+  font-size: var(--font-size-m);
+  font-family: var(--font-family-en);
+}
+.blog__container {
+  width: 100%;
+}
+.blog-nav {
+  width: 100%;
+  padding-top: 80px;
+}
+.blog-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.blog-nav__link {
+  display: block;
+  padding: 8px 16px;
+  color: var(--color-white);
+  background-color: var(--color-bg-black);
+  border-radius: 30px;
+}
+.blog-contents {
+  width: 100%;
+  padding-top: 40px;
+}
+.blog-contents__list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.blog-contents__item {
+  width: 280px;
+}
+.blog-contents__link {
+  display: flex;
+  flex-direction: column;
+}
+.blog-contents__thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.blog-contents__title {
+  font-size: var(--font-size-s);
+  margin-top: 16px;
+}
+.blog-contents__tags {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  font-size: var(--font-size-xs);
 }/*# sourceMappingURL=blog.css.map */
