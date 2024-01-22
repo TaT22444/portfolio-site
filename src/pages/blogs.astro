@@ -92,7 +92,7 @@ import '../css/blog/blog.css'
                     <ul class="blog-contents__list">
                         {response.contents.map((content => 
                             <li class="blog-contents__item">
-                                <a class="blog-contents__link" href={content.id}>
+                                <a class="blog-contents__link" href={content.id} target="_blank">
                                     <img class="blog-contents__thumbnail" src={content.image.url} alt="" />
                                     <h3 class="blog-contents__title">{content.title}</h3>
                                     <div class="blog-contents__tags">
