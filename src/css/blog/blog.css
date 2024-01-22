@@ -27,12 +27,17 @@ main {
 }
 @media screen and (max-width: 768px) {
   main {
-    padding-top: 80px;
+    padding-top: 96px;
   }
 }
 
 .top {
   padding: 0 4vw;
+}
+@media screen and (max-width: 768px) {
+  .top {
+    padding: 0;
+  }
 }
 .top__wrapper {
   width: 100%;
@@ -79,7 +84,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .course {
-    padding-top: 80px;
+    padding-top: 64px;
   }
 }
 .course__title {
@@ -128,7 +133,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .blog {
-    padding-top: 80px;
+    padding-top: 64px;
   }
 }
 .blog__title {
@@ -189,6 +194,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .blog-contents__list {
+    gap: 24px;
+  }
 }
 .blog-contents__item {
   width: calc((100% - 120px) / 4);

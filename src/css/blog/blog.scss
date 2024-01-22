@@ -8,12 +8,16 @@ main{
     padding-top: 140px;
 
     @media screen and (max-width:768px) {
-        padding-top: 80px;
+        padding-top: 96px;
     }
 }
 
 .top{
     padding: 0 4vw;
+
+    @media screen and (max-width:768px) {
+        padding: 0;
+    }
 
     &__wrapper{
         width: 100%;
@@ -58,7 +62,7 @@ main{
     padding-top: 120px;
 
     @media screen and (max-width:768px) {
-        padding-top: 80px;
+        padding-top: 64px;
     }
 
     &__title{
@@ -115,7 +119,7 @@ main{
     padding: 120px 0;
 
     @media screen and (max-width:768px) {
-        padding-top: 80px;
+        padding-top: 64px;
     }
 
     &__title{
@@ -178,6 +182,10 @@ main{
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
+
+            @media screen and (max-width:768px) {
+                gap: 24px;
+            }
         }
 
         &__item{
