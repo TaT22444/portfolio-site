@@ -35,11 +35,9 @@ main{
         // border-radius: 16px;
         overflow: hidden;
 
-        // @media screen and (max-width:768px) {
-        //     gap: 16px;
-        //     padding: 64px 0;
-        //     border-radius: 4px;
-        // }
+        @media screen and (max-width:768px) {
+            padding: 96px 40px;
+        }
     }
     &__title{
         position: relative;
@@ -286,6 +284,10 @@ main{
             padding: 4px 8px;
             border: 1px solid #8a8a8a;
             border-radius: 8px;
+
+            @media screen and (max-width:768px) {
+                padding: 8px 16px;
+            }
         }
 
         &__time{
@@ -311,6 +313,7 @@ main{
                 100%{
                     color: var(--color-bg-black);
                     background-color: var(--color-bg-white);
+                    border: none;
                 }
             }
         }

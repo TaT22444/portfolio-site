@@ -52,6 +52,11 @@ main {
   background-color: var(--color-bg-white);
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .top__wrapper {
+    padding: 96px 40px;
+  }
+}
 .top__title {
   position: relative;
   font-size: var(--font-size-xxl);
@@ -292,6 +297,11 @@ main {
   border: 1px solid #8a8a8a;
   border-radius: 8px;
 }
+@media screen and (max-width: 768px) {
+  .blog-contents__tag {
+    padding: 8px 16px;
+  }
+}
 .blog-contents__time {
   display: block;
   margin-top: 8px;
@@ -311,5 +321,6 @@ main {
   100% {
     color: var(--color-bg-black);
     background-color: var(--color-bg-white);
+    border: none;
   }
 }/*# sourceMappingURL=blog.css.map */
