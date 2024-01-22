@@ -23,9 +23,9 @@ export type Blog = {
   publishedAt: string;
   revisedAt: string;
   title: string;
+//   image: MicroCMSImage;
   image:{
     url: string;
-    img:MicroCMSImage[];
   }
   content: string;
 };

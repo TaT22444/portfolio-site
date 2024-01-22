@@ -17,6 +17,7 @@ import '../css/blog/blog.css'
     <article class="course">
         <div class="inner inner--course">
             <h2 class="course__title">Course</h2>
+            <h3 class="course__sub-title"></h3>
             <section class="course-contents">
                 <ul class="course-contents__list">
                     <li class="course-contents__item">
@@ -45,9 +46,13 @@ import '../css/blog/blog.css'
     <article class="blog">
         <div class="inner inner-blog">
             <h2 class="blog__title">Blog</h2>
+            <h3 class="blog__sub-title"></h3>
             <section class="blog__container">
                 <nav class="blog-nav">
                     <ul class="blog-nav__list">
+                        <li class="blog-nav__list">
+                            <a class="blog-nav__link active-blog-nav" href="/">All</a>
+                        </li>
                         <li class="blog-nav__list">
                             <a class="blog-nav__link" href="/">HTML/CSS</a>
                         </li>
@@ -73,106 +78,19 @@ import '../css/blog/blog.css'
                 </nav>
                 <div class="blog-contents">
                     <ul class="blog-contents__list">
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-contents__item">
-                            <a href="" class="blog-contents__link">
-                                <img class="blog-contents__thumbnail" src="../../images/me.JPG" alt="">
-                                <h3 class="blog-contents__title">ここにテキスト</h3>
-                                <div class="blog-contents__tags">
-                                    <p class="blog-contents__tag">UI</p>
-                                    <p class="blog-contents__tag">Figma</p>
-                                </div>
-                            </a>
-                        </li>
+                        {response.contents.map((content => 
+                            <li class="blog-contents__item">
+                                <a class="blog-contents__title" href={content.id}>
+                                    <img class="blog-contents__thumbnail" src={content.image.url} alt="" />
+                                    <h3 class="blog-contents__title">{content.title}</h3>
+                                    <div class="blog-contents__tags">
+                                        <p class="blog-contents__tag">UI</p>
+                                        <p class="blog-contents__tag">Figma</p>
+                                    </div>
+                                    <time class="blog-contents__time">{content.publishedAt.substring(0, 10)}</time>
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </section>

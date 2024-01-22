@@ -20,8 +20,6 @@
 } 
 main {
   position: relative;
-  background-color: var(--color-bg-white);
-  color: var(--color-bg-black);
   font-family: var(--font-family-ja);
   padding-top: 160px;
 }
@@ -37,8 +35,7 @@ main {
 }
 .course-contents {
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
 }
 .course-contents__list {
   width: 100%;
@@ -48,25 +45,30 @@ main {
 }
 .course-contents__item {
   width: 330px;
+  height: 350px;
+  color: var(--color-bg-black);
+  background-color: var(--color-white);
+  border-radius: 16px;
 }
 .course-contents__link {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 .course-contents__title {
-  font-size: var(--font-size-ms);
+  padding: 8px 16px;
+  font-size: var(--font-size-s);
 }
 .course-contents__thumbnail {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
+  border-radius: 16px 16px 0 0;
 }
 
 .blog {
-  padding: 40px 0 40px;
+  padding-top: 120px;
 }
 .blog__title {
   font-size: var(--font-size-m);
@@ -77,7 +79,7 @@ main {
 }
 .blog-nav {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 .blog-nav__list {
   display: flex;
@@ -95,13 +97,14 @@ main {
   display: block;
   padding: 8px 16px;
   color: var(--color-white);
-  background-color: var(--color-bg-black);
-  border-radius: 30px;
+  border: 2px solid var(--color-white);
+  border-radius: 100px;
 }
 @media screen and (max-width: 768px) {
   .blog-nav__link {
     font-size: var(--font-size-xs);
     padding: 6px;
+    border: 1px solid var(--color-bg-black);
   }
 }
 .blog-contents {
@@ -126,15 +129,40 @@ main {
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
 }
 .blog-contents__title {
-  font-size: var(--font-size-s);
   margin-top: 16px;
+  font-size: var(--font-size-s);
 }
 .blog-contents__tags {
-  margin-top: 8px;
+  margin-top: 16px;
   display: flex;
   gap: 8px;
+  color: #c4c4c4;
   font-size: var(--font-size-xs);
+}
+.blog-contents__tag {
+  padding: 4px 8px;
+  border: 1px solid var(--color-white);
+  border-radius: 8px;
+}
+.blog-contents__time {
+  display: block;
+  margin-top: 8px;
+  color: #c4c4c4;
+  font-size: var(--font-size-xs);
+}
+
+.active-blog-nav {
+  animation: blog-nav-active 0.3s forwards;
+}
+@keyframes blog-nav-active {
+  0% {
+    color: var(--color-white);
+    background-color: var(--color-bg-black);
+  }
+  100% {
+    color: var(--color-bg-black);
+    background-color: var(--color-white);
+  }
 }/*# sourceMappingURL=blog.css.map */
