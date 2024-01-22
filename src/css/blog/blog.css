@@ -55,6 +55,7 @@ main {
 @media screen and (max-width: 768px) {
   .top__wrapper {
     padding: 96px 40px;
+    gap: 16px;
   }
 }
 .top__title {
@@ -188,7 +189,7 @@ main {
 @media screen and (max-width: 768px) {
   .blog-nav__list {
     justify-content: center;
-    gap: 8px;
+    gap: 16px 24px;
   }
 }
 .blog-nav__item {
@@ -200,7 +201,7 @@ main {
 @media screen and (max-width: 768px) {
   .blog-nav__item {
     font-size: var(--font-size-xs);
-    padding: 6px;
+    padding: 8px 16px;
     border: 1px solid var(--color-bg-black);
   }
 }
@@ -275,7 +276,7 @@ main {
   .blog-contents__title {
     width: 100%;
     margin-top: 16px;
-    padding: 0 8px;
+    padding: 0 16px;
   }
 }
 .blog-contents__tags {
@@ -288,7 +289,6 @@ main {
 @media screen and (max-width: 768px) {
   .blog-contents__tags {
     width: 100%;
-    margin-top: 4px;
     padding: 0 16px;
   }
 }
