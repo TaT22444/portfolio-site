@@ -25,6 +25,12 @@ main{
         background-color: var(--color-bg-black);
         border-radius: 16px;
         overflow: hidden;
+
+        @media screen and (max-width:768px) {
+            gap: 16px;
+            padding: 64px 0;
+            border-radius: 16px;
+        }
     }
     &__title{
         font-size: var(--font-size-xxl);
