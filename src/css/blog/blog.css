@@ -25,6 +25,11 @@ main {
   font-family: var(--font-family-ja);
   padding-top: 140px;
 }
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 80px;
+  }
+}
 
 .top {
   padding: 0 4vw;
@@ -72,6 +77,11 @@ main {
   margin-inline: auto;
   padding-top: 120px;
 }
+@media screen and (max-width: 768px) {
+  .course {
+    padding-top: 80px;
+  }
+}
 .course__title {
   font-size: var(--font-size-m);
   font-family: var(--font-family-en);
@@ -115,6 +125,11 @@ main {
 
 .blog {
   padding: 120px 0;
+}
+@media screen and (max-width: 768px) {
+  .blog {
+    padding-top: 80px;
+  }
 }
 .blog__title {
   font-size: var(--font-size-m);

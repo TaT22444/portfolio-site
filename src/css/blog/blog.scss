@@ -6,6 +6,10 @@ main{
     color: var(--color-bg-black);
     font-family: var(--font-family-ja);
     padding-top: 140px;
+
+    @media screen and (max-width:768px) {
+        padding-top: 80px;
+    }
 }
 
 .top{
@@ -52,7 +56,10 @@ main{
     width: 100%;
     margin-inline: auto;
     padding-top: 120px;
-    // border-bottom: 1px solid var(--color-bg-black);
+
+    @media screen and (max-width:768px) {
+        padding-top: 80px;
+    }
 
     &__title{
         font-size: var(--font-size-m);
@@ -106,6 +113,10 @@ main{
 
 .blog{
     padding: 120px 0;
+
+    @media screen and (max-width:768px) {
+        padding-top: 80px;
+    }
 
     &__title{
         font-size: var(--font-size-m);
