@@ -129,7 +129,7 @@ main {
 @media screen and (max-width: 768px) {
   .blog-contents__item {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 24px;
   }
 }
 .blog-contents__link {
