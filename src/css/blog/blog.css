@@ -181,6 +181,7 @@ main {
   display: block;
   margin-top: 8px;
   color: #8a8a8a;
+  text-align: right;
   font-size: var(--font-size-xs);
 }
 
