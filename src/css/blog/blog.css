@@ -20,6 +20,8 @@
 } 
 main {
   position: relative;
+  background-color: var(--color-bg-white);
+  color: var(--color-bg-black);
   font-family: var(--font-family-ja);
   padding-top: 160px;
 }
@@ -45,10 +47,7 @@ main {
 }
 .course-contents__item {
   width: 330px;
-  height: 350px;
   color: var(--color-bg-black);
-  background-color: var(--color-white);
-  border-radius: 16px;
 }
 .course-contents__link {
   display: flex;
@@ -56,7 +55,7 @@ main {
   gap: 8px;
 }
 .course-contents__title {
-  padding: 8px 16px;
+  margin-left: 8px;
   font-size: var(--font-size-s);
 }
 .course-contents__thumbnail {
@@ -64,11 +63,11 @@ main {
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 16px 16px 0 0;
+  border-radius: 8px;
 }
 
 .blog {
-  padding-top: 120px;
+  padding: 120px 0;
 }
 .blog__title {
   font-size: var(--font-size-m);
@@ -96,8 +95,8 @@ main {
 .blog-nav__link {
   display: block;
   padding: 8px 16px;
-  color: var(--color-white);
-  border: 2px solid var(--color-white);
+  color: var(--color-bg-black);
+  border: 2px solid var(--color-bg-black);
   border-radius: 100px;
 }
 @media screen and (max-width: 768px) {
@@ -118,7 +117,20 @@ main {
   gap: 40px;
 }
 .blog-contents__item {
-  width: 250px;
+  width: calc((100% - 120px) / 4);
+  margin-top: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .blog-contents__item {
+    width: calc((100% - 80px) / 3);
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog-contents__item {
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 .blog-contents__link {
   display: flex;
@@ -132,24 +144,25 @@ main {
 }
 .blog-contents__title {
   margin-top: 16px;
+  line-height: 1.4;
   font-size: var(--font-size-s);
 }
 .blog-contents__tags {
   margin-top: 16px;
   display: flex;
   gap: 8px;
-  color: #c4c4c4;
+  color: #8a8a8a;
   font-size: var(--font-size-xs);
 }
 .blog-contents__tag {
   padding: 4px 8px;
-  border: 1px solid var(--color-white);
+  border: 1px solid #8a8a8a;
   border-radius: 8px;
 }
 .blog-contents__time {
   display: block;
   margin-top: 8px;
-  color: #c4c4c4;
+  color: #8a8a8a;
   font-size: var(--font-size-xs);
 }
 
@@ -158,11 +171,10 @@ main {
 }
 @keyframes blog-nav-active {
   0% {
-    color: var(--color-white);
-    background-color: var(--color-bg-black);
+    color: var(--color-bg-black);
   }
   100% {
-    color: var(--color-bg-black);
-    background-color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-bg-black);
   }
 }/*# sourceMappingURL=blog.css.map */

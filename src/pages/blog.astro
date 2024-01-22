@@ -1,6 +1,6 @@
 ---
 import { getBlogs} from '../library/microcms'
-const response = await getBlogs({ fields: ["id", "title", "image", "media", "publishedAt"] })
+const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt"] })
 
 
 
@@ -50,7 +50,12 @@ import '../css/blog/blog.css'
             <section class="blog__container">
                 <nav class="blog-nav">
                     <ul class="blog-nav__list">
-                        <li class="blog-nav__list">
+                        {response.contents.map((nav => 
+                            <li class="blog-nav__list">
+                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags.Figma}</a>
+                            </li>
+                        ))}
+                        <!-- <li class="blog-nav__list">
                             <a class="blog-nav__link active-blog-nav" href="/">All</a>
                         </li>
                         <li class="blog-nav__list">
@@ -73,7 +78,7 @@ import '../css/blog/blog.css'
                         </li>
                         <li class="blog-nav__list">
                             <a class="blog-nav__link" href="/">Figma</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
                 <div class="blog-contents">

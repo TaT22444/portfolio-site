@@ -27,6 +27,9 @@ export type Blog = {
   image:{
     url: string;
   }
+  tags: {
+    Figma: string;
+  }
   content: string;
 };
 export type BlogResponse = {
