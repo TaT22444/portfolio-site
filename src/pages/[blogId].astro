@@ -11,22 +11,55 @@ export async function getStaticPaths(){
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 
-import Layout from '../layouts/Layout.astro';
 
-import '../css/blog/anim-blog.css'
-import '../css/blog/blog.css'
+import Layout from '../layouts/Layout.astro';
+import Footer from '../layouts/footer.astro';
+import '../css/inner/inner.css'
+import '../css/blogId/anim-blogid.css'
+import '../css/blogId/blogid.css'
 ---
 
 <Layout title={blog.title}  />
 
-<article class="article" style="color: black;">
-    <h1 style="margin-top: 300px;">タイトル</h1>
-    <p class="publishedAt">{blog.publishedAt.substring(0, 10)}</p>
-    <div set:html={blog.content} />
-    <!-- <img src={blog.image.url} alt=""  /> -->
-    
-</article>
+<main>
+    <article class="article">
+        <div class="inner inner--article">
+            <div class="article__container">
+                <section class="article-main">
+                    <img class="article__thumbnail" src={blog.image.url} alt=""  />
+                    <p class="article__publish">
+                        <time datetime={blog.publishedAt.substring(0, 10)}>公開日 : {blog.publishedAt.substring(0, 10)}</time>
+                    </p>
+                    <p class="article__updated">
+                        <time datetime={blog.updatedAt.substring(0, 10)}>最終更新日 : {blog.updatedAt.substring(0, 10)}</time>
+                    </p>
+                    <h1 class="article__title">{blog.title}</h1>
+                    <p class="article__intro">{blog.intro}</p>
+                    <div class="article__text" set:html={blog.content} />
+                </section>
+                <aside class="article-aside">
+                    <div class="article-aside__inner">
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                        <p>ああああ</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+</main>
 
+<Footer />
 
 <style lang="scss">
     .header{

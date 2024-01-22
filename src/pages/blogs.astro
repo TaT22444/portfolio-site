@@ -1,11 +1,25 @@
 ---
-import { getBlogs} from '../library/microcms'
-const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt"] })
+// import { getBlogs, getTags } from '../library/microcms'
+// const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt",] })
+// const response2 = await getTags({ fields: ["id", "tags"]})
+// console.log(response2.tags)
 
+import { getBlogs, getTags } from '../library/microcms'
+const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt",] })
+// export async function getStaticPaths(){
+//     const response2 = await getBlogs({fields: ["id", "tags"]})
+//     return response2.contents.map((content)=>({
+//         params:{
+//             blogId: content.id
+//         }
+//     }))
+// }
+// const { blogId } = Astro.params;
+// const blog = await getTags(blogId);
 
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
-
+import '../css/inner/inner.css'
 import '../css/blog/anim-blog.css'
 import '../css/blog/blog.css'
 ---
@@ -55,43 +69,39 @@ import '../css/blog/blog.css'
             <h3 class="blog__sub-title"></h3>
             <section class="blog__container">
                 <nav class="blog-nav">
+                    <!-- <ul class="blog-nav__list">
+                        <li class="blog-nav__list">
+                            <a class="blog-nav__link active-blog-nav" href=>{blog.tags[1]}</a>
+                        </li>
+                    </ul> -->
                     <ul class="blog-nav__list">
                         {response.contents.map((nav => 
                             <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags.Figma}</a>
+                                <a class="blog-nav__link active-blog-nav" href={nav.id[0]}>{nav.tags[0]}</a>
+                            </li>
+                            <li class="blog-nav__list">
+                                <a class="blog-nav__link active-blog-nav" href={nav.id[1]}>{nav.tags[1]}</a>
+                            </li>
+                            <li class="blog-nav__list">
+                                <a class="blog-nav__link active-blog-nav" href={nav.id[2]}>{nav.tags[2]}</a>
+                            </li>
+                            <li class="blog-nav__list">
+                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags[3]}</a>
+                            </li>
+                            <li class="blog-nav__list">
+                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags[4]}</a>
+                            </li>
+                            <li class="blog-nav__list">
+                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags[5]}</a>
                             </li>
                         ))}
-                        <!-- <li class="blog-nav__list">
-                            <a class="blog-nav__link active-blog-nav" href="/">All</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">HTML/CSS</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">UI</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">Figma</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">Figma</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">Figma</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">Figma</a>
-                        </li>
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link" href="/">Figma</a>
-                        </li> -->
                     </ul>
                 </nav>
                 <div class="blog-contents">
                     <ul class="blog-contents__list">
                         {response.contents.map((content => 
                             <li class="blog-contents__item">
-                                <a class="blog-contents__link" href={"../"+content.id} target="_blank">
+                                <a class="blog-contents__link" href={"../"+content.id}>
                                     <img class="blog-contents__thumbnail" src={content.image.url} alt="" />
                                     <h3 class="blog-contents__title">{content.title}</h3>
                                     <div class="blog-contents__tags">

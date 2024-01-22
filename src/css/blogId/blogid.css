@@ -1,0 +1,122 @@
+:root {
+  --color-white: #fff;
+  --color-gray: #dadada;
+  --color-bg-white: #f3f3f3;
+  --color-bg-black: #252528;
+  --color-hamori: #7E62EC;
+  --color-hov-black: #48484b;
+  --color-hov-hamori: #8c77e1;
+  --font-size-xxs: 10px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-ms: 20px;
+  --font-size-m: 24px;
+  --font-size-ml: 32px;
+  --font-size-l: 40px;
+  --font-size-xl: 60px;
+  --font-size-xxl: 100px;
+  --font-family-ja: "Noto Sans JP", sans-serif;
+  --font-family-en: "Dela Gothic One", cursive;
+} 
+main {
+  position: relative;
+  background-color: var(--color-bg-white);
+  color: var(--color-bg-black);
+  font-family: var(--font-family-ja);
+  padding-top: 140px;
+}
+
+.article {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+}
+.article-main {
+  width: calc(100% - 340px);
+}
+@media screen and (max-width: 992px) {
+  .article-main {
+    width: 100%;
+  }
+}
+.article__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.article__thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid var(--color-bg-black);
+}
+.article__publish, .article__updated {
+  display: block;
+  margin-top: 24px;
+  text-align: right;
+  font-size: var(--font-size-xs);
+  color: #8a8a8a;
+}
+.article__updated {
+  margin-top: 8px;
+}
+.article__title {
+  margin-top: 40px;
+  line-height: 1.4;
+  font-size: var(--font-size-ml);
+}
+@media screen and (max-width: 768px) {
+  .article__title {
+    font-size: var(--font-size-m);
+  }
+}
+.article__intro {
+  margin-top: 24px;
+  line-height: 1.6;
+  color: #393939;
+}
+.article__text {
+  margin-top: 80px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+  .article__text {
+    margin-top: 40px;
+  }
+}
+.article__text > h2 {
+  margin-top: 64px;
+  padding: 16px 24px;
+  color: var(--color-white);
+  background-color: var(--color-bg-black);
+  font-size: var(--font-size-ml);
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  .article__text > h2 {
+    margin-top: 40px;
+    font-size: var(--font-size-m);
+  }
+}
+.article__text > p {
+  margin-top: 40px;
+  font-size: var(--font-size-s);
+}
+.article-aside {
+  width: 300px;
+  height: 100%;
+}
+@media screen and (max-width: 992px) {
+  .article-aside {
+    display: none;
+  }
+}
+.article-aside__inner {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 50px);
+  border: 1px solid var(--color-bg-black);
+}/*# sourceMappingURL=blogid.css.map */
