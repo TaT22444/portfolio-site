@@ -209,15 +209,18 @@ main{
             }
         }
 
-        &__link{
-            display: flex;
-            flex-direction: column;
-        }
+        // &__link{
+        //     display: flex;
+        //     flex-direction: column;
+        // }
 
         &__thumbnail{
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
+            @media screen and (max-width:768px) {
+                border-radius: 8px 0;
+            }
         }
 
         &__title{
@@ -228,6 +231,7 @@ main{
             @media screen and (max-width:768px) {
                 width: 100%;
                 margin-top: 16px;
+                padding: 0 8px;
             }
         }
 
@@ -241,6 +245,7 @@ main{
             @media screen and (max-width:768px) {
                 width: 100%;
                 margin-top: 8px;
+                padding: 0 8px;
             }
         }
 
@@ -253,6 +258,7 @@ main{
         &__time{
             display: block;
             margin-top: 8px;
+            padding: 0 8px 8px;
             color: #8a8a8a;
             text-align: right;
             font-size: var(--font-size-xs);
