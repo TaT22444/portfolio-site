@@ -5,13 +5,39 @@ main{
     background-color: var(--color-bg-white);
     color: var(--color-bg-black);
     font-family: var(--font-family-ja);
-    padding-top: 160px;
+    padding-top: 140px;
+}
+
+.top{
+    padding: 0 4vw;
+
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 96px 0;
+        // text-align: center;
+        font-family: var(--font-family-en);
+        color: var(--color-bg-white);
+        background-color: var(--color-bg-black);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    &__title{
+        font-size: var(--font-size-xxl);
+    }
+    &__sub-title{
+        font-size: var(--font-size-s);
+    }
 }
 
 .course{
     width: 100%;
     margin-inline: auto;
-    padding-top: 40px;
+    padding-top: 120px;
     // border-bottom: 1px solid var(--color-bg-black);
 
     &__title{
@@ -33,7 +59,7 @@ main{
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 24px;
         }
 
         &__item{
