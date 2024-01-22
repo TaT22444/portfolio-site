@@ -207,18 +207,15 @@ main {
 }
 .blog-contents__item {
   width: calc((100% - 120px) / 4);
-  margin-top: 40px;
 }
 @media screen and (max-width: 1024px) {
   .blog-contents__item {
     width: calc((100% - 80px) / 3);
-    margin-top: 40px;
   }
 }
 @media screen and (max-width: 768px) {
   .blog-contents__item {
     width: 100%;
-    margin-top: 24px;
     border: 1px solid #8a8a8a;
     border-radius: 8px;
   }
