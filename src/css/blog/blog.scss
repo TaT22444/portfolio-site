@@ -197,10 +197,6 @@ main{
             width: calc((100% - 120px) / 4);
             margin-top: 40px;
 
-            @media screen and (max-width:768px) {
-                box-shadow: 0px 4px 10px #252528;
-            }
-
             @media screen and (max-width:1024px) {
                 width: calc((100% - 80px) / 3);
                 margin-top: 40px;
@@ -208,6 +204,7 @@ main{
             @media screen and (max-width:768px) {
                 width: 100%;
                 margin-top: 24px;
+                box-shadow: 0px 4px 10px rgba(21, 21, 21, .7)
             }
         }
 
