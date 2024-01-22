@@ -107,6 +107,10 @@ main{
     &-contents{
         width: 100%;
         padding-top: 40px;
+        @media screen and (max-width:768px) {
+            width: 100%;
+            padding-top: 24px;
+        }
 
         &__list{
             width: 100%;
