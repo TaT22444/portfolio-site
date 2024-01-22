@@ -147,6 +147,12 @@ main {
   line-height: 1.4;
   font-size: var(--font-size-s);
 }
+@media screen and (max-width: 768px) {
+  .blog-contents__title {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
 .blog-contents__tags {
   margin-top: 16px;
   display: flex;
