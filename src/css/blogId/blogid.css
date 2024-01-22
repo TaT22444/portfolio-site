@@ -82,7 +82,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .article__text {
-    margin-top: 40px;
+    margin-top: 64px;
   }
 }
 .article__text > h2 {

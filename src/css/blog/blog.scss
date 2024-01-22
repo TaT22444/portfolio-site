@@ -277,8 +277,8 @@ main{
 
             @media screen and (max-width:768px) {
                 width: 100%;
-                margin-top: 8px;
-                padding: 0 8px;
+                margin-top: 4px;
+                padding: 0 16px;
             }
         }
 
@@ -291,7 +291,7 @@ main{
         &__time{
             display: block;
             margin-top: 8px;
-            padding: 0 8px 8px;
+            padding: 0 8px 16px;
             color: #8a8a8a;
             text-align: right;
             font-size: var(--font-size-xs);
