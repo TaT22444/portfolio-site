@@ -7,19 +7,19 @@ const nav = [
         label: 'home'
     },
     {
-        href: '/about',
+        href: 'about',
         label: 'about'
     },
     {
         href: '/works/hamori',
         label: 'works'
     },
+    // {
+    //     href: '/blog',
+    //     label: 'blog'
+    // },
     {
-        href: '../blog',
-        label: 'blog'
-    },
-    {
-        href: '/contact',
+        href: 'contact',
         label: 'contact'
     }
 ];
@@ -57,8 +57,11 @@ import '../css/layouts/layout.css'
 			<nav class="header-nav">
 				<ul class="header-nav__list">
 					{nav.map((item)=>
-						<li class="header-nav__item"><a class:list="header-nav__link c-black" href={item.href}>{item.label}</a></li>
+						<li class="header-nav__item"><a class:list="header-nav__link" href={item.href}>{item.label}</a></li>
 					)}
+					<li class="header-nav__item">
+						<a class="header-nav__link" href="blog">blog</a>
+					</li>
 				</ul>
 			</nav>
 			<span class="header-ham" id="js-ham">
