@@ -219,18 +219,11 @@ main {
   .blog-contents__item {
     width: 100%;
     margin-top: 24px;
-    box-shadow: 0px 4px 10px rgba(21, 21, 21, 0.7);
   }
 }
 .blog-contents__link {
   display: flex;
   flex-direction: column;
-}
-@media screen and (max-width: 768px) {
-  .blog-contents__link {
-    padding: 0 8px 8px;
-    border-radius: 4px;
-  }
 }
 .blog-contents__thumbnail {
   width: 100%;
