@@ -84,7 +84,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .course {
-    padding-top: 64px;
+    padding-top: 80px;
   }
 }
 .course__title {
@@ -133,7 +133,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .blog {
-    padding-top: 64px;
+    padding-top: 80px;
   }
 }
 .blog__title {
