@@ -18,6 +18,11 @@
   --font-family-ja: "Noto Sans JP", sans-serif;
   --font-family-en: "Dela Gothic One", cursive;
 } 
+body {
+  overflow: hidden;
+  background-color: var(--color-bg-white);
+}
+
 main {
   position: relative;
   background-color: var(--color-bg-white);
