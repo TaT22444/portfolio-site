@@ -73,6 +73,10 @@ main{
     &__title{
         font-size: var(--font-size-m);
         font-family: var(--font-family-en);
+
+        @media screen and (max-width:768px) {
+            font-size: var(--font-size-ms);
+        }
     }
 
     &-contents{
@@ -130,6 +134,10 @@ main{
     &__title{
         font-size: var(--font-size-m);
         font-family: var(--font-family-en);
+
+        @media screen and (max-width:768px) {
+            font-size: var(--font-size-ms);
+        }
     }
 
     &__container{

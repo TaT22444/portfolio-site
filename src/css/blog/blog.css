@@ -96,6 +96,11 @@ main {
   font-size: var(--font-size-m);
   font-family: var(--font-family-en);
 }
+@media screen and (max-width: 768px) {
+  .course__title {
+    font-size: var(--font-size-ms);
+  }
+}
 .course-contents {
   width: 100%;
   padding-top: 60px;
@@ -144,6 +149,11 @@ main {
 .blog__title {
   font-size: var(--font-size-m);
   font-family: var(--font-family-en);
+}
+@media screen and (max-width: 768px) {
+  .blog__title {
+    font-size: var(--font-size-ms);
+  }
 }
 .blog__container {
   width: 100%;
