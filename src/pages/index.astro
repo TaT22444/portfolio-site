@@ -1,4 +1,8 @@
 ---
+import { getBlogs} from '../library/microcms'
+const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt"] })
+
+
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
 import Works from '../layouts/works.astro';
@@ -401,6 +405,19 @@ import '../css/top/style.css'
 			</div>
 		</div>
 	</section>
+	{response.contents.map((content => 
+		<li class="blog-contents__item">
+			<a class="blog-contents__link" href={content.id}>
+				<img class="blog-contents__thumbnail" src={content.image.url} alt="" />
+				<h3 class="blog-contents__title">{content.title}</h3>
+				<div class="blog-contents__tags">
+					<p class="blog-contents__tag">UI</p>
+					<p class="blog-contents__tag">Figma</p>
+				</div>
+				<time class="blog-contents__time">{content.publishedAt.substring(0, 10)}</time>
+			</a>
+		</li>
+	))}
 </main>
 
 <Footer/>
