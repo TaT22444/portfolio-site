@@ -166,6 +166,12 @@ main {
   color: #8a8a8a;
   font-size: var(--font-size-xs);
 }
+@media screen and (max-width: 768px) {
+  .blog-contents__tags {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
 .blog-contents__tag {
   padding: 4px 8px;
   border: 1px solid #8a8a8a;
