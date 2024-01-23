@@ -52,26 +52,31 @@ main{
         font-size: var(--font-size-ml);
 
         @media screen and (max-width:768px) {
-            font-size: var(--font-size-m);
+            margin-top: 24px;
+            font-size: var(--font-size-ms);
         }
     }
 
     &__intro{
         margin-top: 24px;
-        line-height: 1.6;
+        line-height: 2;
         color: #393939;
+
+        @media screen and (max-width:768px) {
+            font-size: var(--font-size-xs);
+        }
     }
 
     &__text{
         margin-top: 80px;
-        line-height: 1.4;
+        line-height: 2;
 
         @media screen and (max-width:768px) {
             margin-top: 64px;
         }
 
         > h2{
-            margin-top: 64px;
+            margin-top: 40px;
             padding: 16px 24px;
             color: var(--color-white);
             background-color: var(--color-bg-black);
@@ -79,13 +84,17 @@ main{
             border-radius: 4px;
 
             @media screen and (max-width:768px) {
-                margin-top: 40px;
+                // margin-top: 24px;
                 font-size: var(--font-size-m);
             }
         }
         > p{
             margin-top: 40px;
             font-size: var(--font-size-s);
+            @media screen and (max-width:768px) {
+                margin-top: 24px;
+                font-size: var(--font-size-xs);
+            }
         }
     }
 
