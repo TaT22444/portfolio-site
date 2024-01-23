@@ -292,7 +292,7 @@ main {
 .blog-contents__time {
   display: block;
   margin-top: 8px;
-  padding: 0 16px 8px;
+  padding: 0 16px 16px;
   color: #8a8a8a;
   text-align: right;
   font-size: var(--font-size-xs);
