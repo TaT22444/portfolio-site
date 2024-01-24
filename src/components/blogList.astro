@@ -1,0 +1,156 @@
+---
+import { getBlogs, getTags } from '../library/microcms'
+const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt", "name"] })
+
+import '../css/root/root.css'
+---
+
+<ul class="blog-contents__list">
+    {response.contents.map((content => 
+        <li class="blog-contents__item">
+            <a class="blog-contents__link" href={"../"+content.id}>
+                <img class="blog-contents__thumbnail" src={content.image.url} alt="" />
+                <h3 class="blog-contents__title">{content.title}</h3>
+                <ul class="blog-contents__tags">
+                    <li class="blog-contents__tag">
+                        <p class="blog-contents__tag-link">{content.tags}</p>
+                    </li>
+                </ul>
+                <div class="blog-contents__wrapper">
+                    <p class="blog-contents__name">{content.name}</p>
+                    <time class="blog-contents__time">{content.publishedAt.substring(0, 10)}</time>
+                </div>
+            </a>
+        </li>
+    ))}
+</ul>
+
+<style lang="scss">
+    .blog{
+        &-contents{
+            &__list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            @media screen and (max-width:768px) {
+                gap: 24px;
+            }
+        }
+
+        &__item{
+            width: calc((100% - 120px) / 4);
+            // margin-top: 40px;
+
+            @media screen and (max-width:1024px) {
+                width: calc((100% - 80px) / 3);
+                // margin-top: 40px;
+            }
+            @media screen and (max-width:768px) {
+                width: 100%;
+                // margin-top: 24px;
+                border: 1px solid #8a8a8a;
+                border-radius: 8px;
+            }
+        }
+
+        // &__link{
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+
+        &__thumbnail{
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border: 1px solid var(--color-bg-white);
+            @media screen and (max-width:768px) {
+                border-radius: 8px 0;
+            }
+        }
+
+        &__title{
+            margin-top: 16px;
+            line-height: 1.4;
+            font-size: var(--font-size-s);
+
+            @media screen and (max-width:768px) {
+                width: 100%;
+                margin-top: 16px;
+                padding: 0 16px;
+            }
+        }
+
+        &__tags{
+            margin-top: 24px;
+            display: flex;
+            gap: 8px;
+            font-size: var(--font-size-xs);
+            color: #8a8a8a;
+
+            @media screen and (max-width:768px) {
+                width: 100%;
+                margin-top: 16px;
+                padding: 0 16px;
+                font-size: var(--font-size-xxs);
+            }
+        }
+
+        // &__tag{
+        //     padding: 4px 8px;
+        //     border: 1px solid #8a8a8a;
+        //     border-radius: 8px;
+
+        //     @media screen and (max-width:768px) {
+        //         padding: 8px 16px;
+        //     }
+        // }
+
+        &__tag-link{
+            display: block;
+            padding: 4px 8px;
+            border: 1px solid #8a8a8a;
+            border-radius: 8px;
+
+            @media screen and (max-width:768px) {
+                padding: 8px 16px;
+            }
+        }
+
+        &__wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            padding: 0 0 16px;
+            color: #8a8a8a;
+            font-size: var(--font-size-xs);
+
+            @media screen and (max-width:768px) {
+                margin-top: 16px;
+                padding: 0 16px 16px;
+                font-size: var(--font-size-xxs);
+            }
+        }
+
+        }
+    }
+.active{
+    &-blog{
+        &-nav{
+            animation: blog-nav-active .3s forwards;
+            @keyframes blog-nav-active {
+                0%{
+                    color: var(--color-bg-white);             
+                }
+                100%{
+                    color: var(--color-bg-black);
+                    background-color: var(--color-bg-white);
+                    border: none;
+                }
+            }
+        }
+    }
+}
+</style>

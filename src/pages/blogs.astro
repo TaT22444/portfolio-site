@@ -4,6 +4,7 @@ const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publ
 
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
+import BlogList from '../components/blogList.astro';
 import '../css/inner/inner.css'
 import '../css/blog/anim-blog.css'
 import '../css/blog/blog.css'
@@ -62,46 +63,13 @@ import '../css/blog/blog.css'
                     <ul class="blog-nav__list">
                         {response.contents.map((nav => 
                             <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id[0]}>{nav.tags[0]}</a>
-                            </li>
-                            <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id[1]}>{nav.tags[1]}</a>
-                            </li>
-                            <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id[2]}>{nav.tags[2]}</a>
-                            </li>
-                            <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags[3]}</a>
-                            </li>
-                            <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags[4]}</a>
-                            </li>
-                            <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id}>{nav.tags[5]}</a>
+                                <a class="blog-nav__link active-blog-nav" href={nav.id[0]}>{nav.tags}</a>
                             </li>
                         ))}
                     </ul>
                 </nav>
                 <div class="blog-contents">
-                    <ul class="blog-contents__list">
-                        {response.contents.map((content => 
-                            <li class="blog-contents__item">
-                                <a class="blog-contents__link" href={"../"+content.id}>
-                                    <img class="blog-contents__thumbnail" src={content.image.url} alt="" />
-                                    <h3 class="blog-contents__title">{content.title}</h3>
-                                    <div class="blog-contents__tags">
-                                        <p class="blog-contents__tag">UI</p>
-                                        <p class="blog-contents__tag">Figma</p>
-                                        <p class="blog-contents__tag">Figma</p>
-                                    </div>
-                                    <div class="blog-contents__wrapper">
-                                        <p class="blog-contents__name">{content.name}</p>
-                                        <time class="blog-contents__time">{content.publishedAt.substring(0, 10)}</time>
-                                    </div>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                    <BlogList />
                 </div>
             </section>
         </div>
