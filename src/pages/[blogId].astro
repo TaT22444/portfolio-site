@@ -42,23 +42,30 @@ import '../css/blogId/blogid.css'
                     </div>
                     <h1 class="article__title">{blog.title}</h1>
                     <p class="article__intro">{blog.intro}</p>
-                    <div class="article__text" set:html={blog.content} />
+                    <div class="article__text" id="js-article__text" set:html={blog.content} />
                 </section>
                 <aside class="article-aside">
                     <div class="article-aside__inner">
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
-                        <p>ああああ</p>
+                        <div class="article-aside__container">
+                            <h3 class="article-aside__title">目次</h3>
+                            <ol class="article-aside__list">
+                                <li class="article-aside__item">
+                                    <a class="article-aside__link" href="">item1</a>
+                                </li>
+                                <li class="article-aside__item">
+                                    <a class="article-aside__link" href="">item2</a>
+                                </li>
+                                <li class="article-aside__item">
+                                    <a class="article-aside__link" href="">item3</a>
+                                </li>
+                                <li class="article-aside__item">
+                                    <a class="article-aside__link" href="">item4</a>
+                                </li>
+                                <li class="article-aside__item">
+                                    <a class="article-aside__link" href="">item5</a>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </aside>
             </div>
@@ -81,3 +88,12 @@ import '../css/blogId/blogid.css'
         display: none;
     }
 </style>
+
+<script>
+    document.querySelectorAll('#js-article__text').forEach((article_text)=>{
+        // const article_h2 = article_text.querySelectorAll('h2')
+        article_text.querySelectorAll('h2').forEach((article_h2)=>{
+            // console.log(article_h2)
+        })
+    })
+</script>

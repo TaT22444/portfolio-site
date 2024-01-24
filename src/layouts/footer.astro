@@ -6,7 +6,9 @@ import '../css/root/root.css'
 
 <footer class="footer" id="footer">
     <div class="inner inner--footer">
-        <small class="copy">&copy; 2023 Tatsuya Aihara</small>
+        <p>
+            <small class="copy">&copy; 2023 Tatsuya Aihara</small>
+        </p>
         <p class="footer__page-top" id="js-page-top">
             page top
         </p>
@@ -14,9 +16,13 @@ import '../css/root/root.css'
 </footer>
 
 <style lang="scss">
+    .copy{
+        font-size: var(--font-size-xxs);
+    }
+    
     .footer{
         width: 100%;
-        padding: 24px 0;
+        // padding: 24px 0;
         font-family: 'Noto Sans JP', sans-serif;
         color: var(--color-white);
         background-color: var(--color-bg-black);
@@ -29,7 +35,7 @@ import '../css/root/root.css'
             position: absolute;
             right: 4vw;
             bottom: 20px;
-            font-size: var(--font-size-xs);
+            font-size: var(--font-size-xxs);
             cursor: pointer;
         }
     }

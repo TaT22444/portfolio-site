@@ -36,6 +36,7 @@
 }
 .inner--article {
   max-width: 1200px;
+  height: auto;
 }
 .inner--header {
   display: flex;

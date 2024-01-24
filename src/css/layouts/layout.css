@@ -59,6 +59,7 @@
 
 .inner--article {
   max-width: 1200px;
+  height: auto;
 }
 
 .inner--header {
@@ -2811,8 +2812,4 @@ body {
 }
 .header__logo {
   font-weight: bold;
-}
-
-main {
-  overflow-x: hidden;
 }/*# sourceMappingURL=layout.css.map */

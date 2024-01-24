@@ -19,11 +19,11 @@
   --font-family-en: "Dela Gothic One", cursive;
 } 
 main {
-  position: relative;
   background-color: var(--color-bg-white);
   color: var(--color-bg-black);
   font-family: var(--font-family-ja);
   padding-top: 140px;
+  overflow: inherit;
 }
 
 .header__logo {
@@ -36,15 +36,16 @@ main {
   padding-bottom: 80px;
 }
 .article-main {
-  width: calc(100% - 340px);
+  width: calc(100% - 320px);
+  height: auto;
 }
 @media screen and (max-width: 992px) {
   .article-main {
-    width: 100%;
+    width: auto;
   }
 }
 .article__container {
-  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -150,8 +151,7 @@ main {
      object-fit: cover;
 }
 .article-aside {
-  width: 300px;
-  height: 100%;
+  width: 280px;
 }
 @media screen and (max-width: 992px) {
   .article-aside {
@@ -159,12 +159,28 @@ main {
   }
 }
 .article-aside__inner {
+  height: 100%;
+}
+.article-aside__container {
   position: sticky;
-  top: 0;
+  top: 140px;
+  left: 0;
+  min-height: auto;
+  padding: 24px;
+  border: 1px solid var(--color-bg-black);
+}
+.article-aside__list {
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 50px);
-  border: 1px solid var(--color-bg-black);
+  gap: 16px;
+  margin-top: 40px;
+}
+.article-aside__link {
+  width: auto;
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #8a8a8a;
+  color: #8a8a8a;
 }
 
 .blog {

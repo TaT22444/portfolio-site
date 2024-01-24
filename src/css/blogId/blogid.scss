@@ -1,11 +1,11 @@
 @use "../root/root.css";
 
 main{
-    position: relative;
     background-color: var(--color-bg-white);
     color: var(--color-bg-black);
     font-family: var(--font-family-ja);
     padding-top: 140px;
+    overflow: inherit;
 }
 
 .header__logo{
@@ -18,15 +18,16 @@ main{
     padding-bottom: 80px;
 
     &-main{
-        width: calc(100% - 340px);
+        width: calc(100% - 320px);
+        height: auto;
 
         @media screen and (max-width:992px) {
-            width: 100%;
+            width: auto;
         }
     }
 
     &__container{
-        height: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
@@ -130,20 +131,38 @@ main{
     }
 
     &-aside{
-        width: 300px;
-        height: 100%;
+        width: 280px;
 
         @media screen and (max-width:992px) {
             display: none;
         }
 
         &__inner{
+            height: 100%;
+        }
+
+        &__container{
             position: sticky;
-            top: 0;
+            top: 140px;
+            left: 0;
+            min-height: auto;
+            padding: 24px;
+            border: 1px solid var(--color-bg-black);
+        }
+
+        &__list{
             display: flex;
             flex-direction: column;
-            max-height: calc(100vh - 50px);
-            border: 1px solid var(--color-bg-black);
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        &__link{
+            width: auto;
+            display: inline-block;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #8a8a8a;
+            color: #8a8a8a;
         }
     }
 }
