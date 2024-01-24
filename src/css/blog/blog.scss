@@ -185,7 +185,7 @@ main{
             color: var(--color-bg-white);
             border: 2px solid var(--color-bg-white);
             border-radius: 100px;
-            transition: all .2s;
+            transition: all .1s;
 
             @media screen and (max-width:768px) {
                 font-size: var(--font-size-xs);
@@ -194,6 +194,7 @@ main{
             }
 
             &:hover{
+                transform: scale(1.1) rotate(-30deg);
                 background-color: var(--color-hamori);
                 transition: all .2s;
             }

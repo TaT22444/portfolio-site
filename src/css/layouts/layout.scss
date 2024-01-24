@@ -55,7 +55,13 @@ body{
         &__link{
             display: block;
             opacity: 1;
-            transition: all .3s;
+            transition: all .1s;
+
+            &:hover{
+                color: var(--color-hamori);
+                transform: scale(1.2);
+                transition: all .1s;
+            }
         }
     }
 

@@ -52,12 +52,12 @@ import '../css/layouts/layout.css'
 	<header class="header" id="header">
 	    <div class="inner inner--header">
 			<h2 class="header__logo">
-				<a href={href}>{title}</a>
+				<a id="js-header__logo" href={href}>{title}</a>
 			</h2><!--{title}-->
 			<nav class="header-nav">
 				<ul class="header-nav__list">
 					{nav.map((item)=>
-						<li class="header-nav__item"><a class:list="header-nav__link c-black" href={item.href}>{item.label}</a></li>
+						<li class="header-nav__item"><a class="header-nav__link c-black" href={item.href}>{item.label}</a></li>
 					)}
 					<li></li>
 				</ul>
@@ -75,7 +75,7 @@ import '../css/layouts/layout.css'
 			</h2>
 		    <ul class="header-mordal__list inner">
 				{nav.map((item)=>
-					<li class="header-mordal__item"><a class:list="header-mordal__link" href={item.href}>{item.label}</a></li>
+					<li class="header-mordal__item"><a class="header-mordal__link" href={item.href}>{item.label}</a></li>
 				)}
 			</ul>
 			<ul class="header-mordal__sns-list inner">
@@ -123,6 +123,13 @@ import '../css/layouts/layout.css'
 </body>
 
 <script>
+	const header_logo = document.getElementById('js-header__logo')
+	const str = header_logo.textContent
+	const len = 18
+	if(str.length > len) {
+		header_logo.textContent = str.substring(0, len) + "..."
+	}
+
 	const ham = document.getElementById('js-ham')
 	const mordal = document.getElementById('js-mordal')
 	// const mordal_back = document.getElementById('js-mordal__back')
