@@ -56,8 +56,8 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
-  font-size: var(--font-size-xs);
   color: #8a8a8a;
+  font-size: var(--font-size-xs);
 }
 .article__publish, .article__updated {
   text-align: right;
