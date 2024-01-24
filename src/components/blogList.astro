@@ -7,9 +7,9 @@ import '../css/root/root.css'
 
 <ul class="blog-contents__list">
     {response.contents.map((content => 
-        <li class="blog-contents__item">
+        <li class="blog-contents__item" id="js-blog__item">
             <a class="blog-contents__link" href={"../"+content.id}>
-                <img class="blog-contents__thumbnail" src={content.image.url} alt="" />
+                <img class="blog-contents__thumbnail" id="js-blog__img" src={content.image.url} alt="" />
                 <h3 class="blog-contents__title">{content.title}</h3>
                 <ul class="blog-contents__tags">
                     <li class="blog-contents__tag">
@@ -65,6 +65,7 @@ import '../css/root/root.css'
             aspect-ratio: 16/9;
             object-fit: cover;
             border: 1px solid var(--color-bg-white);
+            z-index: 2;
             @media screen and (max-width:768px) {
                 border-radius: 8px 0;
             }
@@ -144,4 +145,54 @@ import '../css/root/root.css'
         }
     }
 }
+
+.anim{
+        &-blog{
+            &__img-up{
+                animation: img-up 10s forwards;
+                @keyframes img-up {
+                    0%{
+                        transform: scale(1);
+                    }
+                    10%{
+                        transform: scale(1.05);
+                        border-radius: 16px;
+                    }
+                    100%{
+                        transform: scale(1.5);
+                        border-radius: 400px;
+                    }
+                }
+            }
+            &__img-down{
+                animation: img-down .2s forwards;
+                @keyframes img-down {
+                    0%{
+                        transform: scale(1.2);
+                        border-radius: 200px;
+                    }
+                    100%{
+                        transform: scale(1);
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
 </style>
+
+<script>
+    window.addEventListener('mouseover', ()=>{
+        document.querySelectorAll('#js-blog__item').forEach((blog_item)=>{
+            const blog_img = blog_item.querySelector('#js-blog__img')
+            blog_item.addEventListener('mouseover', ()=>{
+                blog_img.classList.add('anim-blog__img-up')
+                blog_img.classList.remove('anim-blog__img-down')
+            })
+            blog_item.addEventListener('mouseleave', ()=>{
+                blog_img.classList.remove('anim-blog__img-up')
+                blog_img.classList.add('anim-blog__img-down')
+            })
+        })
+    })
+</script>
