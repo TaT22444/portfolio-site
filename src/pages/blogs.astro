@@ -55,17 +55,45 @@ import '../css/blog/blog.css'
             <h3 class="blog__sub-title"></h3>
             <section class="blog__container">
                 <nav class="blog-nav">
-                    <!-- <ul class="blog-nav__list">
-                        <li class="blog-nav__list">
-                            <a class="blog-nav__link active-blog-nav" href=>{blog.tags[1]}</a>
-                        </li>
-                    </ul> -->
                     <ul class="blog-nav__list">
-                        {response.contents.map((nav => 
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link active-blog-nav">All</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">About me</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">Figma</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">UI</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">UX</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">Webデザイン</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">アプリデザイン</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">HTML</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">CSS</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">Javascript</a>
+                        </li>
+                        <li class="blog-nav__item">
+                            <a href="" class="blog-nav__link">デザインシステム</a>
+                        </li>
+                        <!-- {response.contents.map((nav => 
                             <li class="blog-nav__list">
                                 <a class="blog-nav__link active-blog-nav" href={nav.id[0]}>{nav.tags}</a>
                             </li>
-                        ))}
+                        ))} -->
                     </ul>
                 </nav>
                 <div class="blog-contents">

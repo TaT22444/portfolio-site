@@ -1,4 +1,5 @@
 ---
+import '../css/inner/inner.css'
 import '../css/top/style.css'
 import '../css/root/root.css'
 ---
@@ -15,10 +16,14 @@ import '../css/root/root.css'
 <style lang="scss">
     .footer{
         width: 100%;
+        padding: 24px 0;
         font-family: 'Noto Sans JP', sans-serif;
-        // background-color: var(--color-bg-black);
         color: var(--color-white);
         background-color: var(--color-bg-black);
+
+        @media screen and (max-width:768px) {
+            padding: 16px 0;
+        }
 
         &__page-top{
             position: absolute;

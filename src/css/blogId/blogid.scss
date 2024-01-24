@@ -145,12 +145,17 @@ main{
 }
 
 .blog{
+    color: var(--color-white);
+    background-color: var(--color-bg-black);
+
     &-contents{
         width: 100%;
-        padding-top: 40px;
-        @media screen and (max-width:768px) {
+        padding-top: 120px;
+        padding-bottom: 40px;
+
+        @media screen and (max-width:992px) {
             width: 100%;
-            padding-top: 24px;
+            padding-top: 80px;
         }
     }
 }

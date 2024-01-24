@@ -169,7 +169,7 @@ main{
             flex-wrap: wrap;
             align-items: center;
             // justify-content: center;
-            gap: 8px 16px;
+            gap: 16px;
 
             @media screen and (max-width:768px) {
                 // width: 100%;
@@ -179,28 +179,23 @@ main{
             }
         }
 
-        // &__item{
-        //     padding: 8px 16px;
-        //     color: var(--color-bg-white);
-        //     border: 2px solid var(--color-bg-white);
-        //     border-radius: 100px;
-        //     @media screen and (max-width:768px) {
-        //         font-size: var(--font-size-xs);
-        //         padding: 8px 16px;
-        //         border: 1px solid var(--color-bg-black);
-        //     }
-        // }
-
         &__link{
             display: block;
             padding: 8px 16px;
             color: var(--color-bg-white);
             border: 2px solid var(--color-bg-white);
             border-radius: 100px;
+            transition: all .2s;
+
             @media screen and (max-width:768px) {
                 font-size: var(--font-size-xs);
                 padding: 8px 16px;
-                border: 1px solid var(--color-bg-black);
+                border: 1px solid var(--color-white);
+            }
+
+            &:hover{
+                background-color: var(--color-hamori);
+                transition: all .2s;
             }
         }
     }
@@ -320,20 +315,20 @@ main{
     
 }
 
-// .active{
-//     &-blog{
-//         &-nav{
-//             animation: blog-nav-active .3s forwards;
-//             @keyframes blog-nav-active {
-//                 0%{
-//                     color: var(--color-bg-white);             
-//                 }
-//                 100%{
-//                     color: var(--color-bg-black);
-//                     background-color: var(--color-bg-white);
-//                     border: none;
-//                 }
-//             }
-//         }
-//     }
-// }
+.active{
+    &-blog{
+        &-nav{
+            animation: blog-nav-active .3s forwards;
+            @keyframes blog-nav-active {
+                0%{
+                    color: var(--color-bg-white);             
+                }
+                100%{
+                    color: var(--color-bg-black);
+                    background-color: var(--color-bg-white);
+                    border: none;
+                }
+            }
+        }
+    }
+}
