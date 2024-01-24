@@ -271,8 +271,8 @@ main{
             margin-top: 16px;
             display: flex;
             gap: 8px;
-            color: #8a8a8a;
             font-size: var(--font-size-xs);
+            color: #8a8a8a;
 
             @media screen and (max-width:768px) {
                 width: 100%;
