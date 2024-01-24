@@ -34,12 +34,17 @@ main{
         border: 1px solid var(--color-bg-black);
     }
 
-    &__publish, &__updated{
-        display: block;
+    &__data{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         margin-top: 24px;
-        text-align: right;
         font-size: var(--font-size-xs);
         color: #8a8a8a;
+    }
+
+    &__publish, &__updated{
+        text-align: right;
     }
 
     &__updated{

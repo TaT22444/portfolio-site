@@ -51,12 +51,16 @@ main {
      object-fit: cover;
   border: 1px solid var(--color-bg-black);
 }
-.article__publish, .article__updated {
-  display: block;
+.article__data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   margin-top: 24px;
-  text-align: right;
   font-size: var(--font-size-xs);
   color: #8a8a8a;
+}
+.article__publish, .article__updated {
+  text-align: right;
 }
 .article__updated {
   margin-top: 8px;

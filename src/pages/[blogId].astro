@@ -1,6 +1,6 @@
 ---
 import { getBlogs, getBlogDetail } from '../library/microcms'
-const response2 = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt",] })
+const response2 = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt", "name"] })
 export async function getStaticPaths(){
     const response = await getBlogs({fields: ["id"]})
     return response.contents.map((content)=>({
@@ -28,12 +28,17 @@ import '../css/blogId/blogid.css'
             <div class="article__container">
                 <section class="article-main">
                     <img class="article__thumbnail" src={blog.image.url} alt=""  />
-                    <p class="article__publish">
-                        <time datetime={blog.publishedAt.substring(0, 10)}>公開日 : {blog.publishedAt.substring(0, 10)}</time>
-                    </p>
-                    <p class="article__updated">
-                        <time datetime={blog.updatedAt.substring(0, 10)}>最終更新日 : {blog.updatedAt.substring(0, 10)}</time>
-                    </p>
+                    <div class="article__data">
+                        <p class="article__name">作者 : {blog.name}</p>
+                        <div class="article__times">
+                            <p class="article__publish">
+                                <time datetime={blog.publishedAt.substring(0, 10)}>公開日 : {blog.publishedAt.substring(0, 10)}</time>
+                            </p>
+                            <p class="article__updated">
+                                <time datetime={blog.updatedAt.substring(0, 10)}>最終更新日 : {blog.updatedAt.substring(0, 10)}</time>
+                            </p>
+                        </div>
+                    </div>
                     <h1 class="article__title">{blog.title}</h1>
                     <p class="article__intro">{blog.intro}</p>
                     <div class="article__text" set:html={blog.content} />

@@ -29,6 +29,7 @@ export type Blog = {
   }
   tags: string;
   intro: string;
+  name: string;
 //   
   content: string;
 };

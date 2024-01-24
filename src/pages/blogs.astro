@@ -1,6 +1,6 @@
 ---
 import { getBlogs, getTags } from '../library/microcms'
-const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt",] })
+const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt", "name"] })
 
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
@@ -94,7 +94,10 @@ import '../css/blog/blog.css'
                                         <p class="blog-contents__tag">Figma</p>
                                         <p class="blog-contents__tag">Figma</p>
                                     </div>
-                                    <time class="blog-contents__time">{content.publishedAt.substring(0, 10)}</time>
+                                    <div class="blog-contents__wrapper">
+                                        <p class="blog-contents__name">{content.name}</p>
+                                        <time class="blog-contents__time">{content.publishedAt.substring(0, 10)}</time>
+                                    </div>
                                 </a>
                             </li>
                         ))}
