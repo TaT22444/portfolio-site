@@ -110,7 +110,17 @@ main{
         }
 
         &__item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 330px;
+            aspect-ratio: 16/9;
+            border: 1px solid #393939;
+            color: #393939;
+
+            @media screen and (max-width:768px) {
+                width: 100%;
+            }
         }
 
         &__link{

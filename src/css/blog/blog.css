@@ -129,7 +129,18 @@ main {
   gap: 24px;
 }
 .course-contents__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 330px;
+  aspect-ratio: 16/9;
+  border: 1px solid #393939;
+  color: #393939;
+}
+@media screen and (max-width: 768px) {
+  .course-contents__item {
+    width: 100%;
+  }
 }
 .course-contents__link {
   display: flex;
