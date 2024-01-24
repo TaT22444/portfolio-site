@@ -41,6 +41,9 @@ main{
         margin-top: 24px;
         color: #8a8a8a;
         font-size: var(--font-size-xs);
+        @media screen and (max-width:768px) {
+            font-size: var(--font-size-xxs);
+        }
     }
 
     &__publish, &__updated{
