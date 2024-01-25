@@ -96,6 +96,8 @@ main{
             background-color: var(--color-bg-black);
             font-size: var(--font-size-ml);
             border-radius: 4px;
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
 
             @media screen and (max-width:768px) {
                 margin-top: 40px;
@@ -155,6 +157,16 @@ main{
             flex-direction: column;
             gap: 16px;
             margin-top: 40px;
+
+            >a{
+                width: auto;
+                display: inline-block;
+                padding-bottom: 4px;
+                border-bottom: 1px solid #8a8a8a;
+                color: #8a8a8a;
+                scroll-behavior: smooth;
+                scroll-padding-top: 80px;
+            }
         }
 
         &__link{
@@ -163,6 +175,8 @@ main{
             padding-bottom: 4px;
             border-bottom: 1px solid #8a8a8a;
             color: #8a8a8a;
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
     }
 }

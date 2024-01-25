@@ -2,6 +2,11 @@
 @use "../inner/inner.css";
 @use "../layouts/anim-layout.css";
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body{
     background-color: var(--color-bg-black);
     color: var(--color-white);

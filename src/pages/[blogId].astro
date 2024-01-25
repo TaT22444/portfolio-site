@@ -48,22 +48,7 @@ import '../css/blogId/blogid.css'
                     <div class="article-aside__inner">
                         <div class="article-aside__container">
                             <h3 class="article-aside__title">目次</h3>
-                            <ol class="article-aside__list">
-                                <li class="article-aside__item">
-                                    <a class="article-aside__link" href="">item1</a>
-                                </li>
-                                <li class="article-aside__item">
-                                    <a class="article-aside__link" href="">item2</a>
-                                </li>
-                                <li class="article-aside__item">
-                                    <a class="article-aside__link" href="">item3</a>
-                                </li>
-                                <li class="article-aside__item">
-                                    <a class="article-aside__link" href="">item4</a>
-                                </li>
-                                <li class="article-aside__item">
-                                    <a class="article-aside__link" href="">item5</a>
-                                </li>
+                            <ol class="article-aside__list" id="js-article-list">
                             </ol>
                         </div>
                     </div>
@@ -91,9 +76,51 @@ import '../css/blogId/blogid.css'
 
 <script>
     document.querySelectorAll('#js-article__text').forEach((article_text)=>{
+        const hTag = article_text.querySelectorAll('h2')
+        const article_list = document.getElementById('js-article-list')
+        let h2Count = 1
+        // console.log(hTag)
+        // console.log(artile_list)
+        for (let i = 0; i < hTag.length; i++) {
+            const hTagElem = hTag[i]
+            if (hTagElem.tagName == "H2") {
+                const aside_li = document.createElement("li")
+                const aside_aTag = document.createElement("a")
+                const aside_Nestlist = document.createElement("ol")
+                // aside_Nestlist.classList = `article_list${h2Count}`
+                aside_aTag.textContent = hTagElem.textContent
+                aside_aTag.href = "#"+hTagElem.id;
+                article_list.appendChild(aside_li)
+                aside_li.appendChild(aside_aTag)
+                aside_li.appendChild(aside_Nestlist)
+                h2Count++
+            } else {
+                // const aside_li = document.createElement("li")
+                const aside_aTag = document.createElement("a")
+                aside_aTag.textContent = hTagElem.textContent
+                aside_aTag.href = "#"+hTagElem.id;
+                // const aside_Nestlist = document.querySelector(`.artile_list${h2Count-1}`)
+            }
+        }
         // const article_h2 = article_text.querySelectorAll('h2')
-        article_text.querySelectorAll('h2').forEach((article_h2)=>{
-            // console.log(article_h2)
-        })
+        // article_text.querySelectorAll('h2').forEach((article_h2)=>{
+        //     // console.log(article_h2)
+        //     // console.log(article_h2.textContent)
+        //     // console.log(article_h2.getBoundingClientRect().top)
+        //     // console.log(article_h2.getBoundingClientRect().bottom)
+        //     // let article_h2_top = article_h2.getBoundingClientRect().top
+        //     window.addEventListener('scroll', ()=>{
+        //         if (article_h2.getBoundingClientRect().top < 0) {
+        //             article_h2.classList.add('a')
+        //             article_h2.classList.remove('b')
+        //         } else if(article_h2.getBoundingClientRect().top < 600) {
+        //             article_h2.classList.add('b')
+        //             article_h2.classList.remove('a')
+        //         }
+        //         // console.log(article_h2)
+        //     })
+        //     const article_h2_text = article_h2.textContent
+        //     console.log(article_h2_text)
+        // })
     })
 </script>
