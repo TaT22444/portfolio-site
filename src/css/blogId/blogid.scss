@@ -157,16 +157,6 @@ main{
             flex-direction: column;
             gap: 16px;
             margin-top: 40px;
-
-            >a{
-                width: auto;
-                display: inline-block;
-                padding-bottom: 4px;
-                border-bottom: 1px solid #8a8a8a;
-                color: #8a8a8a;
-                scroll-behavior: smooth;
-                scroll-padding-top: 80px;
-            }
         }
 
         &__link{
@@ -176,7 +166,42 @@ main{
             border-bottom: 1px solid #8a8a8a;
             color: #8a8a8a;
             scroll-behavior: smooth;
-            scroll-padding-top: 80px;
+            scroll-padding-top: 100px;
+
+            &--in{
+                animation: aside_link_in .3s forwards;
+                @keyframes aside_link_in {
+                    0%{
+                        color: #8a8a8a;
+                    }
+                    100%{
+                        color: var(--color-bg-black);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            &--out{
+                animation: aside_link_out .3s forwards;
+                @keyframes aside_link_out {
+                    0%{
+                        color: var(--color-bg-black);
+                    }
+                    100%{
+                        color: #8a8a8a;
+                    }
+                }
+            }
+            &--active{
+                animation: aside_link_active .3s forwards;
+                @keyframes aside_link_active {
+                    0%{
+                        color: var(--color-bg-black);
+                    }
+                    100%{
+                        color: var(--color-hamori);
+                    }
+                }
+            }
         }
     }
 }

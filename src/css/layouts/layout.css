@@ -2704,6 +2704,11 @@ main {
     transform: translateY(-6px) rotate(45deg);
   }
 } 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 body {
   background-color: var(--color-bg-black);
   color: var(--color-white);
