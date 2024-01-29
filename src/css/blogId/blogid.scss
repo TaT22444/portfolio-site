@@ -100,7 +100,6 @@ main{
             scroll-padding-top: 80px;
 
             @media screen and (max-width:768px) {
-                margin-top: 40px;
                 font-size: var(--font-size-m);
             }
         }
@@ -115,7 +114,7 @@ main{
             padding: 0 8px;
             font-size: var(--font-size-s);
             @media screen and (max-width:768px) {
-                margin-top: 16px;
+                margin-top: 24px;
                 padding: 0 4px;
                 font-size: var(--font-size-xs);
             }
@@ -162,14 +161,23 @@ main{
 
             >p{
                 font-size: var(--font-size-s);
+                @media screen and (max-width:768px) {
+                    font-size: var(--font-size-xs);
+                }
 
                 &:first-of-type{
                     padding-bottom: 16px;
                     border-bottom: 1px dotted var(--color-bg-black);
+                    @media screen and (max-width:768px) {
+                        padding-bottom: 8px;
+                    }
                 }
                 &:nth-of-type(2){
                     margin-top: 16px;
                     font-size: var(--font-size-xxs);
+                    @media screen and (max-width:768px) {
+                        margin-top: 8px;
+                    }
                 }
 
                 >a{
