@@ -43,7 +43,7 @@ main {
 }
 @media screen and (max-width: 992px) {
   .article-main {
-    width: auto;
+    width: 100%;
   }
 }
 .article__container {
