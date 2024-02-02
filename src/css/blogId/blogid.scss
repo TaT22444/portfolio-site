@@ -16,7 +16,7 @@ main{
     position: relative;
     width: 100%;
     padding-bottom: 80px;
-    font-weight: 400;
+    font-weight: 500;
 
     &-main{
         width: calc(100% - 320px);
@@ -129,6 +129,7 @@ main{
             padding: 0 8px;
             font-size: var(--font-size-s);
             @media screen and (max-width:768px) {
+                margin-top: 24px;
                 padding: 0 4px;
                 font-size: var(--font-size-xs);
             }
@@ -164,6 +165,10 @@ main{
             margin-top: 32px;
             padding: 48px 24px 24px;
             background-color: #e9e9e9;
+
+            @media screen and (max-width:768px) {
+                margin-top: 24px;
+            }
 
             &::after{
                 content: '引用';
