@@ -195,6 +195,7 @@ main{
             color: var(--color-bg-white);
             border: 2px solid var(--color-bg-white);
             border-radius: 100px;
+            font-weight: 600;
             transition: all .1s;
 
             @media screen and (max-width:768px) {
