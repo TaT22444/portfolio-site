@@ -76,7 +76,7 @@ main{
         color: #393939;
 
         @media screen and (max-width:768px) {
-            font-size: var(--font-size-s);
+            font-size: var(--font-size-xs);
         }
     }
 
@@ -121,6 +121,7 @@ main{
             font-weight: 600;
             @media screen and (max-width:768px) {
                 margin-top: 40px;
+                padding: 0 4px;
             }
         }
         > p{
@@ -129,7 +130,7 @@ main{
             font-size: var(--font-size-s);
             @media screen and (max-width:768px) {
                 padding: 0 4px;
-                font-size: var(--font-size-s);
+                font-size: var(--font-size-xs);
             }
 
             >a{

@@ -93,7 +93,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .article__intro {
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
   }
 }
 .article__text {
@@ -141,6 +141,7 @@ main {
 @media screen and (max-width: 768px) {
   .article__text > h4 {
     margin-top: 40px;
+    padding: 0 4px;
   }
 }
 .article__text > p {
@@ -151,7 +152,7 @@ main {
 @media screen and (max-width: 768px) {
   .article__text > p {
     padding: 0 4px;
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
   }
 }
 .article__text > p > a {
