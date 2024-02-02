@@ -16,6 +16,7 @@ main{
     position: relative;
     width: 100%;
     padding-bottom: 80px;
+    font-weight: 400;
 
     &-main{
         width: calc(100% - 320px);
@@ -45,10 +46,7 @@ main{
         justify-content: space-between;
         margin-top: 24px;
         color: #8a8a8a;
-        font-size: var(--font-size-xs);
-        @media screen and (max-width:768px) {
-            font-size: var(--font-size-xxs);
-        }
+        font-size: var(--font-size-xxs);
     }
 
     &__publish, &__updated{
@@ -72,12 +70,13 @@ main{
     }
 
     &__intro{
-        margin-top: 24px;
+        margin-top: 40px;
         line-height: 2;
+        font-size: var(--font-size-s);
         color: #393939;
 
         @media screen and (max-width:768px) {
-            font-size: var(--font-size-xs);
+            font-size: var(--font-size-s);
         }
     }
 
@@ -100,16 +99,13 @@ main{
             border-radius: 4px;
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
-
-            @media screen and (max-width:768px) {
-                font-size: var(--font-size-m);
-            }
         }
         >h3{
             // display: inline-block;
             margin-top: 64px;
+            padding-bottom: 4px;
             line-height: 1.4;
-            font-size: var(--font-size-ms);
+            font-size: var(--font-size-m);
             font-weight: 600;
             border-bottom: 1px solid var(--color-bg-black);
             @media screen and (max-width:768px) {
@@ -119,25 +115,21 @@ main{
         >h4{
             display: inline-block;
             line-height: 1.4;
-            margin: 64px 8px 0;
-            padding: 16px 24px;
+            margin-top: 64px;
+            padding: 0 8px;
             font-size: var(--font-size-ms);
             font-weight: 600;
-            background-color: #c9c9c9;
-            border-radius: 4px;
             @media screen and (max-width:768px) {
-                margin: 40px 4px 0;
+                margin-top: 40px;
             }
         }
         > p{
             margin-top: 32px;
             padding: 0 8px;
             font-size: var(--font-size-s);
-            font-weight: 400;
             @media screen and (max-width:768px) {
-                margin-top: 24px;
                 padding: 0 4px;
-                font-size: var(--font-size-xs);
+                font-size: var(--font-size-s);
             }
 
             >a{
