@@ -189,6 +189,10 @@ main{
                 left: 0;
                 font-size: var(--font-size-xs);
                 color: var(--color-white);
+                @media screen and (max-width:768px) {
+                    top: -32px;
+                    font-size: var(--font-size-xxs);
+                }
             }
 
             @media screen and (max-width:768px) {

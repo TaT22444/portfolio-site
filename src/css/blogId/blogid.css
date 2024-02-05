@@ -247,6 +247,12 @@ main {
   letter-spacing: 0.05em;
   border-radius: 4px;
 }
+@media screen and (max-width: 768px) {
+  .article__text > div > pre {
+    margin-top: 16px;
+    padding: 0 4px;
+  }
+}
 .article-aside {
   width: 280px;
 }

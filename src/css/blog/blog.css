@@ -209,6 +209,12 @@ main {
   color: var(--color-white);
 }
 @media screen and (max-width: 768px) {
+  .blog-nav__list::after {
+    top: -32px;
+    font-size: var(--font-size-xxs);
+  }
+}
+@media screen and (max-width: 768px) {
   .blog-nav__list {
     justify-content: center;
     gap: 8px;
