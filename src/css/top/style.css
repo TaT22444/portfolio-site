@@ -7,7 +7,7 @@
   --color-hamori: #7E62EC;
   --color-hov-black: #48484b;
   --color-hov-hamori: #8c77e1;
-  --font-size-xxs: 10px;
+  --font-size-xxs: 12px;
   --font-size-xs: 14px;
   --font-size-s: 16px;
   --font-size-ms: 20px;
@@ -503,8 +503,7 @@
 }
 .skills__item-description {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: var(--font-size-s);
-  font-weight: 400;
+  font-size: var(--font-size-xs);
   line-height: 2;
 }
 .skills__skillset {

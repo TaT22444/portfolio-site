@@ -150,7 +150,7 @@ main {
   }
 }
 .article__text > p {
-  margin-top: 32px;
+  margin-top: 24px;
   padding: 0 8px;
   font-size: var(--font-size-s);
 }
@@ -171,21 +171,20 @@ main {
 }
 .article__text > figure {
   width: 100%;
-  margin-top: 32px;
+  margin-top: 24px;
   padding: 0 8px;
-  aspect-ratio: 16/9;
 }
 @media screen and (max-width: 768px) {
   .article__text > figure {
-    margin-top: 24px;
+    margin-top: 16px;
     padding: 0 4px;
   }
 }
 .article__text > figure > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .article__text > blockquote {
   position: relative;
@@ -237,6 +236,16 @@ main {
   display: block;
   overflow: hidden;
   color: var(--color-link);
+}
+.article__text > div > pre {
+  display: block;
+  margin: 16px 8px 0;
+  padding: 8px 16px;
+  color: var(--color-white);
+  background-color: rgb(18, 11, 46);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
 }
 .article-aside {
   width: 280px;
