@@ -249,8 +249,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .article__text > div > pre {
-    margin-top: 16px;
-    padding: 0 4px;
+    margin: 16px 4px 0;
   }
 }
 .article-aside {
