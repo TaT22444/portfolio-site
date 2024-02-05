@@ -56,39 +56,39 @@ import '../css/blog/blog.css'
             <h3 class="blog__sub-title"></h3>
             <section class="blog__container">
                 <nav class="blog-nav">
-                    <ul class="blog-nav__list">
-                        <li class="blog-nav__item">
-                            <button class="blog-nav__btn active-blog-nav">All</button>
+                    <ul class="blog-nav__list" id="js-blog-nav-list">
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button class="blog-nav__btn active-blog-nav" id="js-blog-nav-btn">All</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">About me</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">About me</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">Figma</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">Figma</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">UI</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">UI</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">UX</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">UX</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">Webデザイン</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">Webデザイン</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">アプリデザイン</a>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">アプリデザイン</a>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">HTML</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">HTML</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">CSS</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">CSS</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">Javascript</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">Javascript</button>
                         </li>
-                        <li class="blog-nav__item">
-                            <button type="button" class="blog-nav__btn">デザインシステム</button>
+                        <li class="blog-nav__item" id="js-blog-nav-item">
+                            <button type="button" class="blog-nav__btn" id="js-blog-nav-btn">デザインシステム</button>
                         </li>
                         <!-- {response.contents.map((nav => 
                             <li class="blog-nav__list">
@@ -107,4 +107,17 @@ import '../css/blog/blog.css'
 </main>
 
 <Footer />
+
+<script>
+    document.querySelectorAll("#js-blog-nav-item").forEach((blog_nav_item)=>{
+        const blog_nav_btn = blog_nav_item.querySelector("#js-blog-nav-btn")
+        blog_nav_btn.addEventListener("click", ()=>{
+            if(blog_nav_btn.classList.contains("active-blog-nav") == true){
+                blog_nav_btn.classList.remove("active-blog-nav")
+            } else if (blog_nav_btn.classList.contains("active-blog-nav") == false){
+                blog_nav_btn.classList.add("active-blog-nav")
+            }
+        })
+    })
+</script>
 
