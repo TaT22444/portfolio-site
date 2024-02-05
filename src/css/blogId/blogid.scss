@@ -128,7 +128,7 @@ main{
             }
         }
         > p{
-            margin-top: 24px;
+            margin-top: 32px;
             padding: 0 8px;
             font-size: var(--font-size-s);
             @media screen and (max-width:768px) {
@@ -148,7 +148,7 @@ main{
         }
         >figure{
             width: 100%;
-            margin-top: 24px;
+            margin-top: 32px;
             padding: 0 8px;
             // aspect-ratio: 16/9;
             @media screen and (max-width:768px) {
@@ -215,7 +215,7 @@ main{
         >div{
             >pre{
                 display: block;
-                margin: 16px 8px 0;
+                margin: 24px 8px 0;
                 padding: 8px 16px;
                 color: var(--color-white);
                 background-color: rgb(18, 11, 46);
