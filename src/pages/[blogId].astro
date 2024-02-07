@@ -95,7 +95,7 @@ import '../css/blogId/blogid.css'
                 aside_aTag.classList.add("article-aside__link")
                 h2Count++
 
-                console.log(hTag[1])
+                // console.log(hTag[1])
 
                 window.addEventListener('scroll', ()=>{
                     if(hTagElem.getBoundingClientRect().top < 280) {
@@ -115,25 +115,5 @@ import '../css/blogId/blogid.css'
                 // const aside_Nestlist = document.querySelector(`.artile_list${h2Count-1}`)
             }
         }
-        // const article_h2 = article_text.querySelectorAll('h2')
-        // article_text.querySelectorAll('h2').forEach((article_h2)=>{
-        //     // console.log(article_h2)
-        //     // console.log(article_h2.textContent)
-        //     // console.log(article_h2.getBoundingClientRect().top)
-        //     // console.log(article_h2.getBoundingClientRect().bottom)
-        //     // let article_h2_top = article_h2.getBoundingClientRect().top
-        //     window.addEventListener('scroll', ()=>{
-        //         if (article_h2.getBoundingClientRect().top < 0) {
-        //             article_h2.classList.add('a')
-        //             article_h2.classList.remove('b')
-        //         } else if(article_h2.getBoundingClientRect().top < 600) {
-        //             article_h2.classList.add('b')
-        //             article_h2.classList.remove('a')
-        //         }
-        //         // console.log(article_h2)
-        //     })
-        //     const article_h2_text = article_h2.textContent
-        //     console.log(article_h2_text)
-        // })
     })
 </script>

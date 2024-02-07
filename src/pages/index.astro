@@ -10,9 +10,7 @@ import '../css/top/style.css'
 
 <Layout title="portfolio-site"/>
 <Alert />
-<!-- <Mordal_back/> -->
 <main>
-	<!-- <div class="mordal-back" id="js-mordal-back"></div> -->
 	<div class="hero">
 		<div class="inner inner--hero">
 			<div class="hero__images">
@@ -38,7 +36,6 @@ import '../css/top/style.css'
 		<div class="inner inner--scrolldown">
 			<p class="scrolldown__scroll anim-fadein-scroll">scroll down</p>
 			<span class="scrolldown__line anim-fadein-scroll anim-scrolldown" id="js-scrolldown"></span>
-			<!-- <p class="scrolldown__thankyou">Thank you!</p> -->
 		</div>
 	</div>
 
@@ -338,23 +335,6 @@ import '../css/top/style.css'
 
 	<section class="contact">
 		<div class="inner inner--contact">
-			<!-- <div class="alert">
-				<div class="alert__body">
-					<p class="alert__text">instagramを開きますか？</p>
-					<div class="alert__btn-wrapper">
-						<button class="alert-button alert-button--yes">
-							<a href="https://instagram.com/tatsu_aihara" class="alert-button__link">はい</a>
-						</button>
-						<button class="alert-button alert-button--no">
-							いいえ
-						</button>
-					</div>
-				</div>
-				<button class="alert-close">
-					<span class="alert-close__elem alert-close__elem--left"></span>
-					<span class="alert-close__elem alert-close__elem--right"></span>
-				</button>
-			</div> -->
 			<h2 class="heading heading--contact">
 				<span class="heading__wrapper js-heading--contact">
 					<span class="heading__splitText">C</span>
@@ -406,56 +386,6 @@ import '../css/top/style.css'
 <Footer/>
 
 <script>
-	// document.querySelectorAll('#js-contact-insta-alert').forEach((contact_insta)=>{
-	// 	const insta_alert = contact_insta.querySelector('#js-alert')
-    //     const alert_back = contact_insta.querySelector('#js-alert-back')
-	//     contact_insta.addEventListener('click', ()=>{
-	//     	console.log(insta_alert)
-	//     	insta_alert.classList.add('ds-in')
-	//     	insta_alert.classList.remove('ds-none')
-	//     	alert_back.classList.add('ds-in')
-	//     	alert_back.classList.remove('ds-none')
-	//     })
-	// })
-	
-	// document.querySelectorAll('#js-alert').forEach((alert_area)=>{
-	// 	const contact_insta = document.getElementById('js-contact-insta-alert')
-	//     const contact_twitter = document.getElementById('js-contact-twitter-alert')
-	// 	const insta_alert = document.querySelector('#js-alert')
-    //     const mordal_back = document.querySelector('#js-mordal-back')
-	//     const alert_text = document.querySelector('#js-alert-text')
-	//     const alert_link = document.querySelector('#js-alert-link')
-	//     const alert_yes = document.querySelector('#js-alert-yes')
-    //     const alert_no = document.querySelector('#js-alert-no')
-	// 	contact_insta.addEventListener('click', ()=>{
-	//     	console.log(alert_link)
-	//     	console.log(alert_text)
-	//     	insta_alert.classList.add('ds-in')
-	//     	insta_alert.classList.remove('ds-none')
-	//     	mordal_back.classList.add('ds-in')
-	//     	mordal_back.classList.remove('ds-out')
-	//     	alert_text.textContent = "Instagramを開きますか？"
-	//     	alert_link.innerHTML = '<a href="https://instagram.com/tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
-	//     	alert_yes.classList.remove('anim-alert-link-in')
-	//     })
-	//     contact_twitter.addEventListener('click', ()=>{
-	//     	console.log(alert_link)
-	//     	console.log(alert_text)
-	//     	insta_alert.classList.add('ds-in')
-	//     	insta_alert.classList.remove('ds-none')
-	//     	mordal_back.classList.add('ds-in')
-	//     	mordal_back.classList.remove('ds-out')
-	//     	alert_text.textContent = "Twitterを開きますか？"
-	//     	alert_link.innerHTML = '<a href="twitter:@tatsu_aihara" class="alert-button__link" id="js-alert-link">はい</a>'
-	//     	alert_yes.classList.remove('anim-alert-link-in')
-	//     })
-	//     mordal_back.addEventListener('click', ()=>{
-    //         insta_alert.classList.add('ds-out')
-    //         mordal_back.classList.add('ds-out')
-	//     	insta_alert.classList.remove('ds-in')
-    //         mordal_back.classList.remove('ds-in')
-    //     })
-	// })
 	const about_insta = document.getElementById('js-about-insta')
 	const about_twitter = document.getElementById('js-about-twitter')
 	const contact_insta = document.getElementById('js-contact-insta-alert')
