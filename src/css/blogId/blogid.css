@@ -336,4 +336,23 @@ main {
     width: 100%;
     padding-top: 80px;
   }
+}
+.blog-contents__page-back {
+  display: inline-block;
+  margin-bottom: 80px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-link);
+  color: var(--color-link);
+  font-size: var(--font-size-xs);
+  transition: all 0.3s;
+}
+.blog-contents__page-back:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+@media screen and (max-width: 992px) {
+  .blog-contents__page-back {
+    width: 100%;
+    padding-top: 40px;
+  }
 }/*# sourceMappingURL=blogid.css.map */

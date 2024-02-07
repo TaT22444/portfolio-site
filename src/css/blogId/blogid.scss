@@ -317,5 +317,25 @@ main{
             width: 100%;
             padding-top: 80px;
         }
+
+        &__page-back{
+            display: inline-block;
+            margin-bottom: 80px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--color-link);
+            color: var(--color-link);
+            font-size: var(--font-size-xs);
+            transition: all .3s;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: all .3s;
+            }
+
+            @media screen and (max-width:992px) {
+                width: 100%;
+                padding-top: 40px;
+            }
+        }
     }
 }
