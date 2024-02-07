@@ -65,21 +65,23 @@ import '../css/root/root.css'
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
-            border-bottom: 1px solid var(--color-bg-white);
+            border: 1px solid var(--color-bg-white);
             z-index: 2;
+            transition: all .3s;
             @media screen and (max-width:768px) {
                 border-radius: 8px 8px 0 0;
             }
 
             &:hover{
-                border-bottom: none;
+                transition: all .3s;
+                border: none;
             }
         }
 
         &__title{
             margin-top: 16px;
             line-height: 1.4;
-            font-size: var(--font-size-s);
+            font-size: var(--font-size-xs);
             font-weight: 500;
 
             @media screen and (max-width:768px) {
