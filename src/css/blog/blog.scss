@@ -182,18 +182,18 @@ main{
             // justify-content: center;
             gap: 16px;
 
-            &::after{
-                content: "このタブはまだ機能しません";
-                position: absolute;
-                top: -32px;
-                left: 0;
-                font-size: var(--font-size-xs);
-                color: var(--color-white);
-                @media screen and (max-width:768px) {
-                    top: -16px;
-                    font-size: var(--font-size-xxs);
-                }
-            }
+            // &::after{
+            //     content: "このタブはまだ機能しません";
+            //     position: absolute;
+            //     top: -32px;
+            //     left: 0;
+            //     font-size: var(--font-size-xs);
+            //     color: var(--color-white);
+            //     @media screen and (max-width:768px) {
+            //         top: -16px;
+            //         font-size: var(--font-size-xxs);
+            //     }
+            // }
 
             @media screen and (max-width:768px) {
                 // width: 100%;
@@ -219,10 +219,11 @@ main{
             }
 
             &:hover{
-                transform: scale(1.1) rotate(-30deg);
+                transform: scale(1.1) rotate(-15deg);
                 background-color: var(--color-hamori);
                 transition: all .2s;
             }
+            
         }
     }
 
@@ -352,9 +353,31 @@ main{
                 100%{
                     color: var(--color-bg-black);
                     background-color: var(--color-bg-white);
-                    border: none;
+                    border: 2px solid var(--color-bg-white);
                 }
             }
         }
     }
+}
+
+.out{
+    &-blog{
+        &-nav{
+            animation: blog-nav-out .3s forwards;
+            @keyframes blog-nav-out {
+                0%{
+                    color: var(--color-bg-black);
+                    background-color: var(--color-bg-white);
+                    border: 2px solid var(--color-bg-white);    
+                }
+                100%{
+                    color: var(--color-bg-white);  
+                }
+            }
+        }
+    }
+}
+
+.ds-block{
+    display: block;
 }

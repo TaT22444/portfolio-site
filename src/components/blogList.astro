@@ -7,13 +7,13 @@ import '../css/root/root.css'
 
 <ul class="blog-contents__list">
     {response.contents.map((content => 
-        <li class="blog-contents__item" id="js-blog__item">
-            <a class="blog-contents__link" href={"../"+content.id}>
+        <li class="blog-contents__item" id="js-blog-area">
+            <a class="blog-contents__link" id="js-blog__item" href={"../"+content.id}>
                 <img class="blog-contents__thumbnail" id="js-blog__img" src={content.image.url} alt="" />
                 <h3 class="blog-contents__title">{content.title}</h3>
                 <ul class="blog-contents__tags">
-                    <li class="blog-contents__tag">
-                        <p class="blog-contents__tag-link">{content.tags}</p>
+                    <li class="blog-contents__tag" id="js-blog-tag-item">
+                        <p class="blog-contents__tag-link" id="js-blog-tag-text">{content.tags}</p>
                     </li>
                 </ul>
                 <div class="blog-contents__wrapper">
@@ -199,5 +199,11 @@ import '../css/root/root.css'
                 blog_img.classList.add('anim-blog__img-down')
             })
         })
+    })
+
+    document.querySelectorAll("#js-blog-tag-item").forEach((blog_tag_item)=>{
+        const blog_tag_text = blog_tag_item.querySelector("#js-blog-tag-text")
+        // console.log(blog_tag_text.textContent)
+        const blog_tag_textContent = blog_tag_text.textContent
     })
 </script>
