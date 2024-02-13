@@ -239,6 +239,7 @@ main {
 }
 .article__text > div {
   width: 100%;
+  margin-top: 32px;
 }
 .article__text > div > pre {
   display: block;
