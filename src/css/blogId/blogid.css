@@ -124,7 +124,7 @@ main {
 }
 .article__text > h3 {
   margin-top: 64px;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   line-height: 1.4;
   font-size: var(--font-size-m);
   font-weight: 600;
