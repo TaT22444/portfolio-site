@@ -241,6 +241,13 @@ main {
   width: 100%;
   margin-top: 32px;
 }
+@media screen and (max-width: 768px) {
+  .article__text > div {
+    margin-top: 24px;
+    padding: 0 4px;
+    font-size: var(--font-size-xs);
+  }
+}
 .article__text > div > pre {
   display: block;
   margin: 24px 8px 0;
