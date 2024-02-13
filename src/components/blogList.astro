@@ -1,5 +1,5 @@
 ---
-import { getBlogs, getTags } from '../library/microcms'
+import { getBlogs} from '../library/microcms'
 const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt", "name"] })
 
 import '../css/root/root.css'
@@ -42,24 +42,16 @@ import '../css/root/root.css'
         &__item{
             width: calc((100% - 100px) / 4);
             z-index: 3;
-            // margin-top: 40px;
 
             @media screen and (max-width:1024px) {
                 width: calc((100% - 75px) / 3);
-                // margin-top: 40px;
             }
             @media screen and (max-width:768px) {
                 width: 100%;
-                // margin-top: 24px;
                 border: 1px solid #8a8a8a;
                 border-radius: 9px;
             }
         }
-
-        // &__link{
-        //     display: flex;
-        //     flex-direction: column;
-        // }
 
         &__thumbnail{
             width: 100%;
@@ -108,12 +100,9 @@ import '../css/root/root.css'
 
         &__tag-link{
             display: block;
-            // padding: 4px 8px;
-            // border: 1px solid #8a8a8a;
             border-radius: 8px;
 
             @media screen and (max-width:768px) {
-                // padding: 8px;
                 border-radius: 4px;
             }
         }
@@ -205,7 +194,6 @@ import '../css/root/root.css'
 
     document.querySelectorAll("#js-blog-tag-item").forEach((blog_tag_item)=>{
         const blog_tag_text = blog_tag_item.querySelector("#js-blog-tag-text")
-        // console.log(blog_tag_text.textContent)
         const blog_tag_textContent = blog_tag_text.textContent
     })
 </script>

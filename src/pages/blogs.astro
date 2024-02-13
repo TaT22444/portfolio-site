@@ -1,5 +1,5 @@
 ---
-import { getBlogs, getTags } from '../library/microcms'
+import { getBlogs} from '../library/microcms'
 const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publishedAt", "name"] })
 
 import Layout from '../layouts/Layout.astro';
@@ -77,11 +77,6 @@ import '../css/blog/blog.css'
                         <li class="blog-nav__item" id="js-blog-nav-item">
                             <button type="button" class="blog-nav__btn out-blog-nav" id="js-blog-nav-btn">デザインシステム</button>
                         </li>
-                        <!-- {response.contents.map((nav => 
-                            <li class="blog-nav__list">
-                                <a class="blog-nav__link active-blog-nav" href={nav.id[0]}>{nav.tags}</a>
-                            </li>
-                        ))} -->
                     </ul>
                 </nav>
                 <div class="blog-contents">
