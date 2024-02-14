@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../layouts/footer.astro';
+import '../css/inner/inner.css'
+import '../css/contact/anim-contact.css'
+import '../css/contact/contact.css'
+---
+<Layout 
+    title="contact" 
+    ogptitle="contact" 
+    type="website"
+    description="webサイトのデザインも拘りたいけど安く、速くwebサイトが欲しいという方はお任せください。"
+ />
+ <main>
+    <article class="article">
+        <div class="inner inner--article">
+            <ul class="article-list">
+                <li class="article-list__item">
+                    <img class="article-list__img" src="../../icon/blog.svg" alt="">
+                    <p class="article-list__text">TaT-Blogにブログ記事を書いてみたい学生</p>
+                </li>
+                <li class="article-list__item">
+                    <img class="article-list__img" src="../../icon/website.svg" alt="">
+                    <p class="article-list__text">Webサイト制作を依頼したい方</p>
+                </li>
+                <li class="article-list__item">
+                    <img class="article-list__img" src="../../icon/talk.svg" alt="">
+                    <p class="article-list__text">話をしたいと思ってくださった方</p>
+                </li>
+            </ul>
+            <h2 class="article-text">ぜひ、お問い合わせください！</h2>
+        </div>
+    </article>
+
+    <form class="form" name="contact" method="POST" data-netlify="true">
+		<p class="form__name">
+		  <label>お名前: <input type="text" name="name" placeholder="相原立弥" /></label>
+		</p>
+		<p class="form__mail">
+		  <label>メールアドレス: <input type="email" name="email" placeholder="info@example.com" /></label>
+		</p>
+		<p class="form__purpose">
+		    <label>目的: 
+                <select class="form__select" name="purpose[]" multiple>
+                    <option value="blog">TaT-Blogに記事を書きたい</option>
+			        <option value="webDesign">Webサイトのデザインのみを依頼したい</option>
+			        <option value="webAll">Webサイト制作全体の依頼をしたい</option>
+                    <option value="interview">お話をしたい</option>
+                    <option value="others">その他</option>
+		        </select>
+            </label>
+		</p>
+		<p class="form__text">
+		  <label>メッセージ本文: <textarea name="message" placeholder="ご依頼の詳細や質問など、気軽にご記入ください。"></textarea></label>
+		</p>
+		<p class="form__submit">
+		  <button type="submit">送信</button>
+		</p>
+	</form>
+ </main>
+
+ <Footer />

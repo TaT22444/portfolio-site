@@ -1,0 +1,143 @@
+@use "../root/root.css";
+
+.article{
+    width: 100%;
+    margin-top: 164px;
+    font-family: var(--font-family-ja);
+    font-weight: 800;
+
+    &-list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        &__item{
+            width: 300px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-bg-black);
+            background-color: var(--color-bg-white);
+            border-radius: 4px;
+            text-align: center;
+            @media screen and (max-width:768px) {
+                width: 260px;
+                gap: 16px;
+                padding: 16px;
+            }
+        }
+        &__img{
+            @media screen and (max-width:768px) {
+                transform: scale(.9);
+            } 
+        }
+        &__text{
+            line-height: 1.6;
+        }
+    }
+    &-text{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        display: inline-block;
+        padding-top: 40px;
+        padding-bottom: 8px;
+        font-size: var(--font-size-m);
+        text-align: center;
+        border-bottom: 2px dotted var(--color-white);
+        @media screen and (max-width:768px) {
+            font-size: var(--font-size-ms);
+        }
+    }
+}
+
+.form{
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px 8vw;
+    background-color: var(--color-bg-white);
+    color: var(--color-bg-black);
+    font-family: var(--font-family-ja);
+    font-weight: 600;
+
+    @media screen and (max-width:768px) {
+        font-size: var(--font-size-xs);
+    }
+
+    >p{
+        width: 100%;
+        margin-top: 40px;
+        @media screen and (max-width:768px) {
+            margin-top: 16px;
+        }
+
+        >label{
+            display: block;
+            width: 100%;
+            align-items: center;
+
+            >input, >textarea{
+                width: 100%;
+                display: inline-block;
+                margin-top: 8px;
+                padding: 8px;
+                border: 1px solid var(--color-bg-black);
+                border-radius: 8px;
+            }
+
+            >textarea{
+                height: 200px;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    &__select{
+        width: 100%;
+        display: block;
+        // margin-top: 8px;
+        padding: 16px 24px;
+        border: 1px solid var(--color-bg-black);
+        border-radius: 8px;
+        &:first-of-type{
+            margin-top: 8px;
+        }
+        @media screen and (max-width:768px) {
+            padding: 8px 16px;
+        }
+
+        >option{
+            display: block;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+
+    &__submit{
+        >button{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px 40px;
+            border-radius: 8px;
+            color: var(--color-bg-white);
+            background-color: var(--color-bg-black);
+        }
+    }
+
+    // &__name{
+    //     display: flex;
+
+    //     font-size: var(--font-size-s);
+    // }
+}
