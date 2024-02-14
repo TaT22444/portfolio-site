@@ -2,6 +2,8 @@
 
 .article{
     width: 100%;
+    display: flex;
+    justify-content: center;
     margin-top: 164px;
     font-family: var(--font-family-ja);
     font-weight: 800;
@@ -63,7 +65,7 @@
 
 .form{
     width: 100%;
-    margin-top: 80px;
+    margin: 80px auto;
     padding: 80px 8vw;
     background-color: var(--color-bg-white);
     color: var(--color-bg-black);
@@ -73,31 +75,32 @@
     @media screen and (max-width:768px) {
         font-size: var(--font-size-xs);
     }
-
-    >p{
-        width: 100%;
-        margin-top: 40px;
-        @media screen and (max-width:768px) {
-            margin-top: 16px;
-        }
-
-        >label{
-            display: block;
+    div{
+        >p{
             width: 100%;
-            align-items: center;
-
-            >input, >textarea{
-                width: 100%;
-                display: inline-block;
-                margin-top: 8px;
-                padding: 8px;
-                border: 1px solid var(--color-bg-black);
-                border-radius: 8px;
+            margin-top: 40px;
+            @media screen and (max-width:768px) {
+                margin-top: 16px;
             }
-
-            >textarea{
-                height: 200px;
-                line-height: 1.6;
+    
+            >label{
+                display: block;
+                width: 100%;
+                align-items: center;
+    
+                >input, >textarea{
+                    width: 100%;
+                    display: inline-block;
+                    margin-top: 8px;
+                    padding: 8px;
+                    border: 1px solid var(--color-bg-black);
+                    border-radius: 8px;
+                }
+    
+                >textarea{
+                    height: 200px;
+                    line-height: 1.6;
+                }
             }
         }
     }
