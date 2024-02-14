@@ -66,14 +66,14 @@
 .form{
     width: 100%;
     margin: 80px auto;
-    padding: 80px 8vw;
+    padding: 80px 8vw 0;
     background-color: var(--color-bg-white);
     color: var(--color-bg-black);
     font-family: var(--font-family-ja);
     font-weight: 600;
 
     @media screen and (max-width:768px) {
-        margin: 40px auto;
+        margin: 40px auto 0;
         padding: 40px 8vw;
         font-size: var(--font-size-xs);
     }
