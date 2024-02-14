@@ -78,7 +78,8 @@ body {
 }
 
 .contents {
-  padding: 8px 4vw 8vw 4vw;
+  padding: 16px 4vw 8vw 4vw;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 768px) {
   .contents {
@@ -87,7 +88,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .contents {
-    padding: 24px 4vw 0 4vw;
+    padding: 16px 4vw 0 4vw;
   }
 }
 .contents__list {
@@ -109,9 +110,9 @@ body {
   justify-content: center;
   border: 2px solid var(--color-bg-black);
   border-radius: 4px;
-  min-width: 260px;
+  min-width: 200px;
   min-height: 240px;
-  max-width: 22vw;
+  max-width: 18vw;
   max-height: 20vw;
   transition: all 0.3s;
 }

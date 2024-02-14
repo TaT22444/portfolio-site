@@ -20,7 +20,7 @@
   --font-family-en: "Dela Gothic One", cursive;
 } 
 .anim-about__contents {
-  animation: slide-text 50s linear infinite 1.4s;
+  animation: slide-text 40s linear infinite 1.4s;
 }
 @keyframes slide-text {
   0% {
