@@ -19,23 +19,24 @@ body{
 //     border-radius: 30px;
 //     display: block;
 // }
+
+
 .header{
     width: 100%;
-    height: auto;
     position: fixed;
     top: 0;
     left: 0;
-    align-items: center;
+    // align-items: center;
     color: var(--color-bg-black);
     background-color: var(--color-bg-white);
-    z-index: 99;
+    z-index: 90;
 
     @media screen and (min-width:768px) {
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        align-items: center;
+        // align-items: flex-end;
         color: var(--color-white);
         background-color: transparent;
         mix-blend-mode: difference;
@@ -52,13 +53,16 @@ body{
 
         &__list{
             display: flex;
-            justify-content: space-between;
-            column-gap: 24px;
             align-items: center;
             font-size: .8rem;
         }
-        >a{
-            font-size: var(--font-family-ja);
+
+        &__item{
+            margin-right: 24px;
+
+            &:last-child{
+                margin-right: 0;
+            }
         }
 
         &__link{
@@ -135,7 +139,7 @@ body{
     }
 
     &__logo{
-        font-family: var(--font-family-en);
+        font-family: var(--font-family-ja);
         font-weight: bold;
     }
 }

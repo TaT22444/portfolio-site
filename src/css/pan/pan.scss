@@ -1,0 +1,31 @@
+.pan{
+    position: relative;
+    top: 88px;
+    padding: 0 4vw;
+    color: var(--color-bg-black);
+    font-family: var(--font-family-ja);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    z-index: 99;
+
+    @media screen and (max-width:768px) {
+        top: 64px;
+    }
+
+    &-list{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &__link{
+            display: block;
+            position: relative;
+            color: var(--color-link);
+
+            &::after{
+                content: ">";
+                padding-left: 8px;
+            }
+        }
+    }
+}
