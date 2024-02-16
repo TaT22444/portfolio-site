@@ -101,6 +101,7 @@ body{
         z-index: 90;
 
         &__myname{
+            font-family: var(--font-family-en);
             font-size: var(--font-size-ml);
         }
 
@@ -117,6 +118,7 @@ body{
             width: 100%;
             transition: all .3s;
             padding-bottom: 4px;
+            font-size: var(--font-size-xs);
 
             &:hover{
                 border-bottom: 1px solid var(--color-bg-black);
