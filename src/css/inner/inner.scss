@@ -54,6 +54,10 @@
         position: relative;
         padding: 24px 4vw;
         text-align: center;
+
+        @media screen and (max-width:768px) {
+            padding: 16px 4vw;
+        }
     }
 
     &--hero{
