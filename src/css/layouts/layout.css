@@ -59,6 +59,11 @@
   padding: 0 8vw;
 }
 
+.inner--form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .inner--article {
   max-width: 1200px;
   height: auto;
@@ -90,6 +95,7 @@
 
 .inner--footer {
   position: relative;
+  padding: 24px 4vw;
   text-align: center;
 }
 
@@ -156,6 +162,7 @@ body {
 }
 .header-nav {
   display: none;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .header-nav {
@@ -170,10 +177,14 @@ body {
   align-items: center;
   font-size: 0.8rem;
 }
+.header-nav > a {
+  font-size: var(--font-family-ja);
+}
 .header-nav__link {
   display: block;
   opacity: 1;
   transition: all 0.1s;
+  font-size: var(--font-family-ja);
 }
 .header-nav__link:hover {
   color: var(--color-hamori);
@@ -231,5 +242,6 @@ body {
   padding-top: 40px;
 }
 .header__logo {
+  font-family: var(--font-family-en);
   font-weight: bold;
 }/*# sourceMappingURL=layout.css.map */

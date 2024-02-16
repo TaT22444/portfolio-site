@@ -1,5 +1,8 @@
 @use "../root/root.css";
 
+.header{
+    font-family: var(--font-family-ja);
+}
 .hero{
     position: relative;
     height: 100%;

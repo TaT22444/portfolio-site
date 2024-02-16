@@ -28,6 +28,9 @@ main {
   overflow: inherit;
 }
 
+.header {
+  font-family: var(--font-family-ja);
+}
 .header__logo {
   font-family: var(--font-family-ja);
 }

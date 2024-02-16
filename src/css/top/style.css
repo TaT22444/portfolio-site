@@ -19,6 +19,10 @@
   --font-family-ja: "Noto Sans JP", sans-serif;
   --font-family-en: "Dela Gothic One", cursive;
 } 
+.header {
+  font-family: var(--font-family-ja);
+}
+
 .hero {
   position: relative;
   height: 100%;

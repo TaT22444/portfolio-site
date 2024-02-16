@@ -8,8 +8,12 @@ main{
     overflow: inherit;
 }
 
-.header__logo{
+.header{
     font-family: var(--font-family-ja);
+
+    &__logo{
+        font-family: var(--font-family-ja);
+    }
 }
 
 .article{

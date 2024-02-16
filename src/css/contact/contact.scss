@@ -1,5 +1,9 @@
 @use "../root/root.css";
 
+.header{
+    font-family: var(--font-family-ja);
+}
+
 .article{
     width: 100%;
     display: flex;

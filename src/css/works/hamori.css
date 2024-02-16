@@ -22,6 +22,7 @@
 body {
   color: var(--color-bg-black);
   background-color: var(--color-bg-white);
+  font-family: var(--font-family-ja);
 }
 
 main {
@@ -83,6 +84,7 @@ main {
 }
 .top-title__name {
   font-size: var(--font-size-m);
+  font-family: var(--font-family-en);
   color: var(--color-bg-black);
 }
 @media screen and (min-width: 768px) {
