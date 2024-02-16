@@ -16,7 +16,6 @@ const blog = await getBlogDetail(blogId);
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
 import BlogList from '../components/blogList.astro';
-import '../css/inner/inner.css'
 import '../css/blogId/anim-blogid.css'
 import '../css/blogId/blogid.css'
 ---
@@ -26,6 +25,20 @@ import '../css/blogId/blogid.css'
     ogptitle={blog.title}  
     description={blog.title}  
 />
+
+<nav class="pan">
+    <ol class="pan-list">
+        <li class="pan-list__item">
+            <a href="https://www.tat-design2244.com/" class="pan-list__link">トップ</a>
+        </li>
+        <li class="pan-list__item">
+            <a href="https://www.tat-design2244.com/blogs/" class="pan-list__link">ブログ一覧</a>
+        </li>
+        <li class="pan-list__item" id="js-pan-label">
+            {blog.title}
+        </li>
+    </ol>
+</nav>
 
 <main>
     <article class="article">
@@ -89,6 +102,13 @@ import '../css/blogId/blogid.css'
 </style>
 
 <script>
+    const pan_label = document.getElementById('js-pan-label')
+	const str = pan_label.textContent
+	const len = 16
+	if(str.length > len) {
+		pan_label.textContent = str.substring(0, len) + "..."
+	}
+
     document.querySelectorAll('#js-article__text').forEach((article_text)=>{
         const hTag = article_text.querySelectorAll('h2')
         // const article_list = document.getElementById('js-article-list')

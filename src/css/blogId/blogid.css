@@ -34,10 +34,14 @@ main {
 }
 
 .header {
+  padding-top: 0;
   font-family: var(--font-family-ja);
 }
 .header__logo {
   font-family: var(--font-family-ja);
+}
+.header-mordal {
+  background-color: none;
 }
 
 .article {

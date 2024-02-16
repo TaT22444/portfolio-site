@@ -4,6 +4,19 @@ body{
     background-color: var(--color-bg-white);
 }
 
+.header{
+    padding-top: 0;
+    font-family: var(--font-family-ja);
+
+    &__logo{
+        font-family: var(--font-family-ja);
+    }
+
+    &-mordal{
+        background-color: none;
+    }
+}
+
 .about-title{
     padding: 140px 4vw 0 4vw;
     font-family: var(--font-family-en);

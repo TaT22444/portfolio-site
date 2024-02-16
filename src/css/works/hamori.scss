@@ -10,6 +10,18 @@ main{
     position: relative;
     overflow-x: hidden;
 }
+.header{
+    padding-top: 0;
+    font-family: var(--font-family-ja);
+
+    &__logo{
+        font-family: var(--font-family-ja);
+    }
+
+    &-mordal{
+        background-color: none;
+    }
+}
 
 .inner{
     &--about{

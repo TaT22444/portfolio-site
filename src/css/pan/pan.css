@@ -6,11 +6,13 @@
   font-family: var(--font-family-ja);
   font-size: var(--font-size-xs);
   font-weight: 500;
-  z-index: 99;
+  z-index: 80;
 }
 @media screen and (max-width: 768px) {
   .pan {
-    top: 64px;
+    top: 80px;
+    padding: 0 4vw;
+    font-size: var(--font-size-xxs);
   }
 }
 .pan-list {
