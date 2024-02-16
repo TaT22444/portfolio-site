@@ -24,7 +24,7 @@ main {
   background-color: var(--color-bg-white);
   color: var(--color-bg-black);
   font-family: var(--font-family-ja);
-  padding-top: 140px;
+  padding-top: 120px;
   overflow: inherit;
 }
 
@@ -282,7 +282,7 @@ main {
 }
 .article-aside__container {
   position: sticky;
-  top: 140px;
+  top: 120px;
   left: 0;
   min-height: auto;
   padding: 24px;
