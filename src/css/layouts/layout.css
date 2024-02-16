@@ -126,6 +126,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  padding-top: 24px;
   color: var(--color-bg-black);
   background-color: var(--color-bg-white);
   z-index: 90;
