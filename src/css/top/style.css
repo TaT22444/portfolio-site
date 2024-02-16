@@ -500,7 +500,7 @@
   border-radius: 10px;
 }
 .skills__item-name {
-  font-size: var(--font-size-ms);
+  font-size: var(--font-size-s);
 }
 .skills__item-heading {
   font-family: "Noto Sans JP", sans-serif;
