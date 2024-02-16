@@ -1,7 +1,5 @@
 .pan {
-  position: relative;
-  top: 88px;
-  padding: 0 4vw;
+  padding: 88px 4vw 0;
   color: var(--color-bg-black);
   font-family: var(--font-family-ja);
   font-size: var(--font-size-xs);
@@ -10,8 +8,7 @@
 }
 @media screen and (max-width: 768px) {
   .pan {
-    top: 80px;
-    padding: 0 4vw;
+    padding: 80px 4vw 0;
     font-size: var(--font-size-xxs);
   }
 }
