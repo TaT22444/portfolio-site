@@ -53,7 +53,7 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding-top: 24px;
+  padding: 24px 4vw;
   z-index: 99;
 }
 
@@ -126,7 +126,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 24px;
   color: var(--color-bg-black);
   background-color: var(--color-bg-white);
   z-index: 90;
@@ -156,6 +155,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 0.8rem;
+  gap: 24px;
 }
 .header-nav__link {
   display: block;

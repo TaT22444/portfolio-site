@@ -26,7 +26,6 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 24px;
     // align-items: center;
     color: var(--color-bg-black);
     background-color: var(--color-bg-white);
@@ -56,6 +55,7 @@ body{
             display: flex;
             align-items: center;
             font-size: .8rem;
+            gap: 24px;
         }
 
         &__link{

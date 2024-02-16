@@ -24,12 +24,12 @@ main {
   background-color: var(--color-bg-white);
   color: var(--color-bg-black);
   font-family: var(--font-family-ja);
-  padding-top: 120px;
+  padding-top: 140px;
   overflow: inherit;
 }
 @media screen and (max-width: 768px) {
   main {
-    padding-top: 96px;
+    padding-top: 120px;
   }
 }
 
