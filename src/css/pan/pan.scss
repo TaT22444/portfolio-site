@@ -1,5 +1,7 @@
 .pan{
-    padding: 88px 4vw 0;
+    position: absolute;
+    top: 88px;
+    padding: 0 4vw;
     color: var(--color-bg-black);
     font-family: var(--font-family-ja);
     font-size: var(--font-size-xs);
@@ -7,7 +9,8 @@
     z-index: 80;
 
     @media screen and (max-width:768px) {
-        padding: 80px 4vw 0;
+        top: 96px;
+        padding: 0 4vw;
         font-size: var(--font-size-xxs);
     }
 
