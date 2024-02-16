@@ -62,6 +62,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 32px;
     z-index: 99;
   }
 }
@@ -154,12 +155,6 @@ body {
   display: flex;
   align-items: center;
   font-size: 0.8rem;
-}
-.header-nav__item {
-  margin-right: 24px;
-}
-.header-nav__item:last-child {
-  margin-right: 0;
 }
 .header-nav__link {
   display: block;
