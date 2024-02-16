@@ -6,6 +6,10 @@ main{
     font-family: var(--font-family-ja);
     padding-top: 120px;
     overflow: inherit;
+
+    @media screen and (max-width:768px) {
+        padding-top: 96px;
+    }
 }
 
 .header{

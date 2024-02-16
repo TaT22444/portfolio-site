@@ -27,6 +27,11 @@ main {
   padding-top: 120px;
   overflow: inherit;
 }
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 96px;
+  }
+}
 
 .header {
   font-family: var(--font-family-ja);
