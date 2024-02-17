@@ -117,16 +117,23 @@ main{
             border-radius: 4px;
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
+            @media screen and (max-width:768px) {
+                margin-bottom: 24px;
+                padding: 8px 16px;
+                font-size: var(--font-size-m);
+            }
         }
         >h3{
             margin-top: 64px;
             padding-bottom: 8px;
-            line-height: 1.4;
+            line-height: 1.6;
             font-size: var(--font-size-m);
             font-weight: 600;
             border-bottom: 1px solid var(--color-bg-black);
             @media screen and (max-width:768px) {
-                margin-top: 40px;
+                margin-top: 64px;
+                margin-bottom: 24px;
+                font-size: var(--font-size-ms);
             }
         }
         >h4{
@@ -137,7 +144,7 @@ main{
             font-size: var(--font-size-ms);
             font-weight: 600;
             @media screen and (max-width:768px) {
-                margin-top: 40px;
+                font-size: var(--font-size-s);
                 padding: 0 4px;
             }
         }
@@ -146,9 +153,10 @@ main{
             padding: 0 8px;
             font-size: var(--font-size-s);
             @media screen and (max-width:768px) {
-                margin-top: 24px;
+                margin-top: 16px;
                 padding: 0 4px;
                 font-size: var(--font-size-xs);
+                font-weight: 400;
             }
 
             >a{
