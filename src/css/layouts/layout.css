@@ -196,6 +196,7 @@ body {
 .header-mordal__myname {
   font-family: var(--font-family-en);
   font-size: var(--font-size-ml);
+  padding: 0 8vw;
 }
 .header-mordal__list {
   display: flex;
