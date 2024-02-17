@@ -61,7 +61,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
     padding: 40px 4vw;
     z-index: 99;
   }
@@ -202,7 +201,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 80px 4vw 0;
+  padding: 80px 8vw 0;
 }
 .header-mordal__item {
   width: 100%;
@@ -220,7 +219,7 @@ body {
   display: flex;
   gap: 24px;
   justify-content: right;
-  padding-top: 40px;
+  padding: 40px 8vw 0;
 }
 .header__logo {
   font-family: var(--font-family-ja);
