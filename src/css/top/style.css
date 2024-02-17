@@ -1,13 +1,10 @@
 .header {
-  top: 0;
   padding-top: 0;
   font-family: var(--font-family-ja);
+  background-color: none;
 }
 .header__logo {
   font-family: var(--font-family-ja);
-}
-.header-mordal {
-  background-color: none;
 }
 
 .hero {

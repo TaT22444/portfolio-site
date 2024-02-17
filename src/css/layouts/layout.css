@@ -52,17 +52,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 40px 4vw;
+  padding: 64px 4vw 24px;
   z-index: 99;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .inner--header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 4vw;
+    height: 60px;
+    padding: 64px 4vw 24px;
     z-index: 99;
   }
 }
@@ -129,7 +129,6 @@ body {
   align-items: center;
   padding-top: 0;
   color: var(--color-bg-black);
-  background-color: var(--color-bg-white);
   z-index: 90;
 }
 @media screen and (min-width: 768px) {

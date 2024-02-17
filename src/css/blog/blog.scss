@@ -39,7 +39,7 @@ main{
         align-items: center;
         justify-content: center;
         gap: 24px;
-        padding: 64px 4vw;
+        padding: 80px 4vw;
         // text-align: center;
         font-family: var(--font-family-en);
         color: var(--color-bg-black);
@@ -48,7 +48,7 @@ main{
         overflow: hidden;
 
         @media screen and (max-width:768px) {
-            padding: 40px 4vw;
+            padding: 64px 4vw;
             gap: 16px;
         }
     }
@@ -80,7 +80,7 @@ main{
         font-family: var(--font-family-ja);
         font-size: var(--font-size-s);
         font-weight: 700;
-        line-height: 1.6;
+        line-height: 2;
         text-align: center;
         margin-top: 8px;
 

@@ -1,5 +1,5 @@
 @use "../root/root.css";
-@use "../inner/inner.css";
+@use '../inner/inner.css';
 
 html{
     scroll-behavior: smooth;
@@ -29,7 +29,6 @@ body{
     align-items: center;
     padding-top: 0;
     color: var(--color-bg-black);
-    background-color: var(--color-bg-white);
     z-index: 90;
 
     @media screen and (min-width:768px) {
