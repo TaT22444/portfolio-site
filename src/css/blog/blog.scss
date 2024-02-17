@@ -40,7 +40,7 @@ main{
         align-items: center;
         justify-content: center;
         gap: 24px;
-        padding: 80px 4vw;
+        padding: 120px 4vw;
         // text-align: center;
         font-family: var(--font-family-en);
         color: var(--color-bg-black);
@@ -58,6 +58,8 @@ main{
         font-size: var(--font-size-xxl);
         color: var(--color-white);
         z-index: 10;
+        text-align: center;
+        line-height: .8;
         background-color: transparent;
         mix-blend-mode: difference;
         &::after{
@@ -80,14 +82,12 @@ main{
         display: inline-block;
         font-family: var(--font-family-ja);
         font-size: var(--font-size-s);
-        font-weight: 700;
+        font-weight: 500;
         line-height: 2;
-        text-align: center;
-        margin-top: 8px;
 
         @media screen and (max-width:768px) {
+            margin-top: 24px;
             font-size: var(--font-size-xxs);
-            font-weight: 500;
         }
     }
 }
