@@ -142,22 +142,13 @@ main {
 .top__title {
   position: relative;
   font-size: var(--font-size-xxl);
+  font-family: var(--font-family-en);
   color: var(--color-white);
   z-index: 10;
   text-align: center;
   line-height: 0.8;
   background-color: transparent;
   mix-blend-mode: difference;
-}
-.top__title::after {
-  content: "TaT-Blog";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: var(--color-bg-white);
-  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .top__title {
