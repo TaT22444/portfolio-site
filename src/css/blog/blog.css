@@ -85,6 +85,7 @@ main {
 @media screen and (max-width: 768px) {
   .top__sub-title {
     font-size: var(--font-size-xxs);
+    font-weight: 500;
   }
 }
 

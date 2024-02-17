@@ -62,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    padding: 64px 4vw 24px;
+    padding: 40px 4vw;
     z-index: 99;
   }
 }
