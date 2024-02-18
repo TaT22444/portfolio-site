@@ -128,7 +128,7 @@ body {
   align-items: center;
   padding-top: 0;
   color: var(--color-bg-black);
-  z-index: 90;
+  z-index: 99;
 }
 @media screen and (min-width: 768px) {
   .header {
