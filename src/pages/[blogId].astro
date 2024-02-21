@@ -58,7 +58,8 @@ import '../css/blogId/blogid.css'
                         </div>
                     </div>
                     <h1 class="article__title">{blog.title}</h1>
-                    <p class="article__intro">{blog.intro}</p>
+                    <div class="article__text article__text--intro" set:html={blog.intro} />
+                    <!-- <p class="article__intro">{blog.intro}</p> -->
                     <div class="article-index">
                         <div class="article-index__inner">
                             <div class="article-index__container">

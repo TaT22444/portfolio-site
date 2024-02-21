@@ -46,7 +46,8 @@ const response = await getBlogs({ fields: ["id", "title", "image", "tags", "publ
                 width: calc((100% - 75px) / 3);
             }
             @media screen and (max-width:768px) {
-                width: 100%;
+                margin-inline: auto;
+                width: calc(100% - 8vw);
                 border: 1px solid #8a8a8a;
                 border-radius: 9px;
             }
