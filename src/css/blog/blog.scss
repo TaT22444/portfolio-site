@@ -193,8 +193,6 @@ main{
             gap: 16px;
 
             @media screen and (max-width:768px) {
-                // width: 100%;
-                // flex-wrap: nowrap;
                 justify-content: center;
                 gap: 8px;
             }
