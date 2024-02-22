@@ -10,7 +10,7 @@
 }
 @media screen and (max-width: 768px) {
   .pan {
-    top: 80px;
+    top: 88px;
     padding: 0 4vw;
     font-size: var(--font-size-xxs);
     font-weight: 300;
