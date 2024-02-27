@@ -489,6 +489,43 @@ import '../css/about/about.css'
             </div>
         </div>
     </section>
+
+    <section class="mbti">
+        <div class="inner inner--mbti">
+            <div class="mbti-is">
+                <p class="mbti-is__heading">
+                    <span class="mbti-is__text" id="js-mbti-heading">相原のMBTIは...</span>
+                    <span class="mbti-is__border" id="js-mbti-slash"></span>
+                </p>
+                <p class="mbti-is__name" id="js-mbti-area">
+                    <span class="mbti-is__word" id="js-mbti-word">?
+                        <span class="mbti-is__elem" id="js-mbti-elem">E</span>
+                        <span class="mbti-is__elem elem2" id="js-mbti-elem">I</span>
+                    </span>
+                    <span class="mbti-is__word anim-delay-1" id="js-mbti-word">?
+                        <span class="mbti-is__elem anim-delay-1" id="js-mbti-elem">S</span>
+                        <span class="mbti-is__elem elem2 anim-delay-1" id="js-mbti-elem">N</span>
+                    </span>
+                    <span class="mbti-is__word anim-delay-2" id="js-mbti-word">?
+                        <span class="mbti-is__elem anim-delay-2" id="js-mbti-elem">F</span>
+                        <span class="mbti-is__elem elem2 anim-delay-2" id="js-mbti-elem">T</span>
+                    </span>
+                    <span class="mbti-is__word anim-delay-3" id="js-mbti-word">?
+                        <span class="mbti-is__elem anim-delay-3" id="js-mbti-elem">P</span>
+                        <span class="mbti-is__elem elem2 anim-delay-3" id="js-mbti-elem">J</span>
+                    </span>
+                    <span class="mbti-is__word anim-delay-4" id="js-mbti-word">-</span>
+                    <span class="mbti-is__word anim-delay-5" id="js-mbti-word">?
+                        <span class="mbti-is__elem anim-delay-4" id="js-mbti-elem">A</span>
+                        <span class="mbti-is__elem elem2 anim-delay-4" id="js-mbti-elem">T</span>
+                    </span>
+                </p>
+                <button class="mbti-is__btn" id="js-mbti-btn">
+                    スタート！
+                </button>
+            </div>
+        </div>
+    </section>
 </main>
 
 <Footer/>
@@ -505,4 +542,78 @@ import '../css/about/about.css'
         prof_img.classList.add('anim-gray-in')
 }
 })
+    
+    const mbti_area = document.querySelector('#js-mbti-area')
+    const mbti_slash = document.getElementById('js-mbti-slash')
+    const mbti_heading = document.getElementById('js-mbti-heading')
+    const mbti_btn = document.querySelector('#js-mbti-btn')
+    const mbti_word_1 = mbti_area.children[0]
+    const mbti_word_2 = mbti_area.children[1]
+    const mbti_word_3 = mbti_area.children[2]
+    const mbti_word_4 = mbti_area.children[3]
+    const mbti_word_5 = mbti_area.children[5]
+    window.addEventListener('scroll', ()=>{
+        if(mbti_area.getBoundingClientRect().top < 500){
+            mbti_slash.classList.add("anim-slash")
+            mbti_heading.classList.add("anim-fadeIn")
+        }
+    })
+    if(mbti_area.getBoundingClientRect().top < 500){
+        mbti_slash.classList.add("anim-slash")
+        mbti_heading.classList.add("anim-fadeIn")
+    }
+    mbti_area.querySelectorAll('#js-mbti-word').forEach((mbti_word)=>{
+        mbti_word.querySelectorAll('#js-mbti-elem').forEach((mbti_elem)=>{
+            mbti_btn.addEventListener('click', ()=>{
+                if (mbti_elem.classList.contains("changing-text") === true) {
+                    mbti_elem.classList.remove("changing-text")
+                    mbti_word_1.textContent = "E"
+                    mbti_word_2.textContent = "N"
+                    mbti_word_3.textContent = "F"
+                    mbti_word_4.textContent = "P"
+                    mbti_word_5.textContent = "A"
+                    if (mbti_word_1.textContent = "E"){
+                        mbti_btn.classList.add('ds-none')
+                        // mbti_area.classList.add('anim-spread-circle')
+                        // mbti_area.classList.add('over-auto')
+                        mbti_word.classList.add('anim-changing-bgc')
+                    }
+
+                } else if (mbti_elem.classList.contains("changing-text") === false) {
+                    mbti_elem.classList.add("changing-text")
+                    mbti_word.firstChild.textContent = ""
+                    mbti_btn.textContent = "ストップ！"
+                    // console.log(mbti_word.firstChild.textContent)
+                    // console.log(mbti_word.children[1].textContent)
+                    // console.log(mbti_word.children[0])
+                    // console.log(mbti_word.children[1])
+                }
+            })
+        })
+    })
+    // mbti_word_1.textContent = "?"
+    // mbti_word_2.textContent = "?"
+    // mbti_word_3.textContent = "?"
+    // mbti_word_4.textContent = "?"
+    // mbti_word_5.textContent = "?"
+    // console.log(mbti_word_1.textContent)
+    // console.log(mbti_word_2.textContent)
+    // console.log(mbti_word_3.textContent)
+    // console.log(mbti_word_4.textContent)
+    // console.log(mbti_word_5.textContent)
+    // mbti_btn.addEventListener('click', ()=>{
+    //     mbti_word_1.textContent = "E"
+    //     if(mbti_word_1.textContent = "E"){
+    //         mbti_word_2.textContent = "N"
+    //     }
+    //     if(mbti_word_2.textContent = "N"){
+    //         mbti_word_3.textContent = "F"
+    //     }
+    //     if(mbti_word_3.textContent = "F"){
+    //         mbti_word_4.textContent = "P"
+    //     }
+    //     if(mbti_word_4.textContent = "P"){
+    //         mbti_word_5.textContent = "A"
+    //     }
+    // })
 </script>
