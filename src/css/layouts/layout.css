@@ -100,13 +100,12 @@ body {
   width: 100%;
   display: block;
   width: 100%;
-  transition: all 0.3s;
-  padding-bottom: 4px;
   font-size: var(--font-size-xs);
 }
-.header-mordal__item:hover {
-  border-bottom: 1px solid var(--color-bg-black);
-  transition: all 0.3s;
+.header-mordal__item > a {
+  display: block;
+  padding: 4px 4px 8px 0;
+  border-bottom: 1px solid var(--color-gray);
 }
 .header-mordal__sns-list {
   display: flex;

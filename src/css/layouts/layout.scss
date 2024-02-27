@@ -114,13 +114,11 @@ body{
             width: 100%;
             display: block;
             width: 100%;
-            transition: all .3s;
-            padding-bottom: 4px;
             font-size: var(--font-size-xs);
-
-            &:hover{
-                border-bottom: 1px solid var(--color-bg-black);
-                transition: all .3s;
+            >a{
+                display: block;
+                padding: 4px 4px 8px 0;
+                border-bottom: 1px solid var(--color-gray);
             }
         }
 
