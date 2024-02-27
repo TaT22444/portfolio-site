@@ -54,7 +54,7 @@ body{
             display: flex;
             align-items: center;
             font-size: .8rem;
-            gap: 24px;
+            gap: 32px;
         }
 
         &__link{
@@ -62,7 +62,7 @@ body{
             opacity: 1;
             transition: all .1s;
             font-size: var(--font-family-ja);
-            font-weight: 400;
+            font-weight: 500;
 
             &:hover{
                 color: var(--color-hamori);

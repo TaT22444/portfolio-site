@@ -144,11 +144,7 @@ main {
 .top__wrapper {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 24px;
   padding: 120px 4vw;
   font-family: var(--font-family-en);
   color: var(--color-bg-black);
@@ -158,7 +154,6 @@ main {
 @media screen and (max-width: 768px) {
   .top__wrapper {
     padding: 64px 4vw;
-    gap: 16px;
   }
 }
 .top__title {
@@ -178,7 +173,8 @@ main {
   }
 }
 .top__sub-title {
-  display: inline-block;
+  display: block;
+  margin-top: 40px;
   font-family: var(--font-family-ja);
   font-size: var(--font-size-s);
   font-weight: 500;
