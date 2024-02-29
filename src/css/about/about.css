@@ -671,8 +671,7 @@ body {
 }
 @media screen and (max-width: 765px) {
   .mbti-card__item {
-    max-width: 100%;
-    padding: 24px;
+    padding: 32px 24px 24px;
   }
 }
 .mbti-card__title-wrapper {
@@ -730,6 +729,7 @@ body {
   .mbti-card__text {
     margin-top: 32px;
     padding-top: 32px;
+    font-size: var(--font-size-xxs);
   }
   .mbti-card__text::after {
     content: "";
