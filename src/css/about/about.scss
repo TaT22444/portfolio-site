@@ -5,6 +5,16 @@ body{
     background-color: var(--color-bg-white);
 }
 
+.color--hamori{
+    color: var(--color-hamori);
+}
+.color--tat-green{
+    color: var(--color-tat-green);
+}
+.color--tat-red{
+    color: var(--color-tat-red);
+}
+
 .header{
     padding-top: 0;
     font-family: var(--font-family-ja);
@@ -500,6 +510,113 @@ body{
             }
         }
     }
+
+    &-card{
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        @media screen and (max-width:1440px) {
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media screen and (max-width:1024px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 0;
+        }
+
+        &__item{
+            width: calc(100% - 8vw - 128px / 3);
+            max-width: 420px;
+            padding: 32px 40px;
+            border: 3px solid var(--color-hamori);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba($color: #7E62EC, $alpha: .7);
+            opacity: 0;
+            &:nth-of-type(2){
+                border: 3px solid var(--color-tat-green);
+                box-shadow: 0 0 30px rgba($color: #4BAAA4, $alpha: .7);
+                animation-delay: .1s;
+            }
+            &:nth-of-type(3){
+                border: 3px solid var(--color-tat-red);
+                box-shadow: 0 0 30px rgba($color: #D05F81, $alpha: .7);
+                animation-delay: .2s;
+            }
+
+            @media screen and (max-width:1440px) {
+                width: calc(100% - 8vw - 80px / 3);
+            }
+            @media screen and (max-width:1024px) {
+                width: 100%;
+                max-width: 80%;
+            }
+            @media screen and (max-width:765px) {
+                max-width: 100%;
+                padding: 24px;
+            }
+        }
+
+        &__title-wrapper{
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            @media screen and (max-width:1024px) {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+
+        &__icon{
+            transform: translate(20px, 20px) scale(2);
+            @media screen and (max-width:1440px) {
+                transform: translate(14px, 14px) scale(1.5);
+            }
+            @media screen and (max-width:1024px) {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+        &__title{
+            font-size: var(--font-size-l);
+            @media screen and (max-width:1440px) {
+                font-size: var(--font-size-ml);
+            }
+            @media screen and (max-width:765px) {
+                font-size: var(--font-size-m);
+            }
+        }
+
+        &__text{
+            position: relative;
+            margin-top: 64px;
+            line-height: 2;
+            font-size: var(--font-size-xs);
+            font-family: var(--font-family-ja);
+            font-weight: 400;
+            @media screen and (max-width:1024px) {
+                margin-top: 40px;
+            }
+
+            @media screen and (max-width:765px) {
+                margin-top: 32px;
+                padding-top: 32px;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 60px;
+                    height: 1px;
+                    border-bottom: 1px dotted var(--color-bg-black);
+                }
+            }
+        }
+    }
 }
 
 .changing-text{
@@ -647,10 +764,42 @@ body{
             }
         }
     }
+
+    &-card{
+        &-in{
+            animation: ds-in 1s forwards;
+            @keyframes ds-in {
+                0%{
+                    display: none;
+                    opacity: 0;
+                }
+                80%{
+                    opacity: 0;
+                    transform: scale(1);
+                }
+                90%{
+                    transform: scale(1.05);
+                }
+                100%{
+                    display: block;
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+.visib-hid{
+    visibility: hidden;
 }
 
 .ds-none{
-    visibility: hidden;
+    display: none;
+}
+
+.op0{
+    opacity: 0;
 }
 
 .over-auto{
