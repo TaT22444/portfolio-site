@@ -96,6 +96,8 @@
   --color-bg-black: #252528;
   --color-bg-black-blog: #313135;
   --color-hamori: #7E62EC;
+  --color-tat-green: #4BAAA4;
+  --color-tat-red: #D05F81;
   --color-hov-black: #48484b;
   --color-hov-hamori: #8c77e1;
   --font-size-xxs: 12px;
@@ -306,6 +308,7 @@ main {
   width: 100%;
   margin-top: 32px;
   padding: 0 8px;
+  aspect-ratio: 16/9;
 }
 @media screen and (max-width: 768px) {
   .article__text > figure {
@@ -318,6 +321,12 @@ main {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.article__text > figure > figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 10px;
+  color: var(--color-gray);
 }
 .article__text > blockquote {
   position: relative;
