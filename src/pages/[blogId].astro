@@ -12,6 +12,14 @@ export async function getStaticPaths(){
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 
+const {title} = Astro.props
+const { href } = Astro.props
+const {ogptitle} = Astro.props
+const { type } = Astro.props
+const { description } = Astro.props
+const { twitter_img } = Astro.props
+const {sns_img} = Astro.props
+
 
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/footer.astro';
@@ -27,7 +35,21 @@ import '../css/blogId/blogid.css'
     sns_img={blog.image.url}
     twitter_img={blog.image.url}
     type="article"
-/>
+>
+    <head>
+        <meta name="twitter:card" content="summary_large_image" />
+	    <meta name="twitter:domain" content="tat-design22444.com" />
+	    <meta name="twitter:image" content={ twitter_img }  />
+	    <meta name="twitter:title" content={ogptitle} />
+	    <meta name="twitter:description" content={description} />
+	    <meta name="twitter:site" content="@tatsu_aihara" />
+	    <meta property="og:title" content={ogptitle}>
+        <meta property="og:type" content={type}>
+        <meta property="og:description" content={ description }>
+	    <meta name="description" content={ description } />
+	    <meta property="og:image" content={sns_img}>
+    </head>
+</Layout>
 
 <nav class="pan">
     <ol class="pan-list">
