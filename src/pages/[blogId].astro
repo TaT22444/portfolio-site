@@ -12,8 +12,8 @@ export async function getStaticPaths(){
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 
-const {title} = Astro.props
-const { href } = Astro.props
+// const {title} = Astro.props
+// const { href } = Astro.props
 const {ogptitle} = Astro.props
 const { type } = Astro.props
 const { description } = Astro.props
