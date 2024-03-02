@@ -5,6 +5,7 @@ const {ogptitle} = Astro.props
 const { type } = Astro.props
 const { description } = Astro.props
 const { twitter_img } = Astro.props
+const {sns_img} = Astro.props
 const nav = [
     {
         href: '/',
@@ -61,7 +62,7 @@ import '../css/layouts/layout.css'
     <meta property="og:type" content={type}>
     <meta property="og:description" content={ description }>
 	<meta name="description" content={ description } />
-	<meta property="og:image" content="../public/images/me.JPG">
+	<meta property="og:image" content={sns_img}>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:domain" content="tat-design22444.com" />
 	<meta name="twitter:image" content={ twitter_img }  />
