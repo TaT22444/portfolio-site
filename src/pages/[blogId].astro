@@ -12,10 +12,7 @@ export async function getStaticPaths(){
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 const blog_url = "https://tat-design22444.com/"+blog.id+"/"
-const sns_share = "https://twitter.com/share?"+blog_url+blog.id+"/"+"text="+blog.title
-                            // text=リンクテキスト" 
-                            //   rel="nofollow" 
-                            //   target="_blank"
+const sns_share = "https://twitter.com/share?"+blog_url+blog.id+"/"+"&text="+blog.title
                              
 
 
