@@ -12,6 +12,11 @@ export async function getStaticPaths(){
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId);
 const blog_url = "https://tat-design22444.com/"+blog.id+"/"
+const sns_share = "https://twitter.com/share?"+blog_url+"text="+blog.title
+                            // text=リンクテキスト" 
+                            //   rel="nofollow" 
+                            //   target="_blank"
+                             
 
 
 import Layout from '../layouts/Layout.astro';
@@ -27,7 +32,7 @@ import '../css/blogId/blogid.css'
     ogptitle={blog.title}  
     description={blog.title}  
     sns_img={blog.image.url}
-    type="article"
+    type="website"
 >
 </Layout>
 
@@ -75,13 +80,13 @@ import '../css/blogId/blogid.css'
                         </div>
                     </div>
                     <div class="article__text" id="js-article__text" set:html={blog.content} />
-                    <!-- <div class="article__share">
-                        <ul>
-                            <li>
-                                <a href="http://twitter.com/share?url={blog.id}"></a>
-                            </li>
-                        </ul>
-                    </div> -->
+                    <button class="article__share">
+                        <a href={sns_share}
+                              rel="nofollow noopener" 
+                              target="_blank"
+                              >Xでシェア
+                        </a>
+                    </button>
                 </section>
                 <aside class="article-aside">
                     <div class="article-aside__inner">

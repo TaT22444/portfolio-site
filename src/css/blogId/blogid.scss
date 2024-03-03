@@ -290,6 +290,19 @@ main{
         }
     }
 
+    &__share{
+        margin-top: 24px;
+        padding: 0 8px;
+
+        >a{
+            display: block;
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            color: var(--color-link);
+            border-bottom: 1px solid var(--color-link);
+        }
+    }
+
     &-aside{
         width: 280px;
 
