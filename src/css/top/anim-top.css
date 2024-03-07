@@ -177,54 +177,6 @@
     width: 0;
   }
 }
-.in-rotate-insta {
-  animation: in-rotate-insta 0.3s forwards linear 0.1s;
-}
-
-@keyframes in-rotate-insta {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.out-rotate-insta {
-  animation: out-rotate-insta 0.3s forwards linear 0.1s;
-}
-
-@keyframes out-rotate-insta {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-.in-rotate-twi {
-  animation: in-rotate-twi 0.3s forwards linear 0.1s;
-}
-
-@keyframes in-rotate-twi {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-.out-rotate-twi {
-  animation: out-rotate-twi 0.3s forwards linear 0.1s;
-}
-
-@keyframes out-rotate-twi {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .el-fig {
   animation: el-fig 0.2s forwards linear;
 }

@@ -13,6 +13,10 @@
     padding: 0 4vw;
   }
 }
+.inner--hamori {
+  padding: 120px 0;
+}
+
 .inner--alert {
   padding: 0 8vw;
 }
@@ -94,7 +98,9 @@
   --color-bg-white: #f3f3f3;
   --color-bg-black: #252528;
   --color-bg-black-blog: #313135;
-  --color-hamori: #7E62EC;
+  --color-hamori: #7051E9;
+  --color-tat-green: #4BAAA4;
+  --color-tat-red: #D05F81;
   --color-hov-black: #48484b;
   --color-hov-hamori: #8c77e1;
   --font-size-xxs: 12px;

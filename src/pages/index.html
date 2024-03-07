@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DEMNYVRJB0"></script>
+		<script>
+			
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+		  
+			gtag('config', 'G-DEMNYVRJB0');
+		  </script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4144123835991811"
+     crossorigin="anonymous"></script>
+	<meta name="google-adsense-account" content="ca-pub-4144123835991811">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../../icon/portfolio-logo.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" rel="stylesheet"/>
+	<title>HAMORI 超α版</title>
+</head>
+<body>
+    <section class="hamori">
+        <h2 class="test-heading">
+            HAMORI
+            <br>超α版
+        </h2>
+        <div class="inner">
+            <div class="hamori__test">
+                <div class="page-title">
+                    <img src="../../icon/hamori-line.svg" alt="">
+                    <h3 class="page-title__text" id="js-hamori-page-title">スタート画面</h3>
+                </div>
+                <div class="hamori__frame">
+                    <div class="hamori-start">
+                        <div class="hamori-start__title">
+                            <img src="../../icon/portfolio-logo.svg" alt="">
+                            <h4 class="hamori-start__text">HAMORI</h4>
+                        </div>
+                        <p class="hamori-start__tap">tap to start</p>
+                    </div>
+                    <div class="hamori-main">
+                        <div class="hamori__comps"></div>
+                        <div class="hamori-hamori">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<script>
+    SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
+    const recognition = new SpeechRecognition();
+  
+    recognition.onresult = (event) => {
+      alert(event.results[0][0].transcript);
+    }
+  
+    recognition.start();
+</script>

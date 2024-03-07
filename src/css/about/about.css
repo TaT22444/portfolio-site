@@ -13,6 +13,10 @@
     padding: 0 4vw;
   }
 }
+.inner--hamori {
+  padding: 120px 0;
+}
+
 .inner--alert {
   padding: 0 8vw;
 }
