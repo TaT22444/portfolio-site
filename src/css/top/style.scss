@@ -2,6 +2,12 @@
 @use "../root/root.css";
 
 
+.spline{
+    width: 100%;
+    height: 200px;
+    margin-inline: auto;
+}
+
 .header{
     padding-top: 0;
     font-family: var(--font-family-ja);
