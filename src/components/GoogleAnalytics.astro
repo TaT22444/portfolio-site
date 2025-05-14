@@ -1,0 +1,17 @@
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DEMNYVRJB0"></script>
+<script>
+    interface Window {
+        dataLayer: any[];
+    }
+    // @ts-ignore
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+        // @ts-ignore
+        window.dataLayer.push(arguments);
+    }
+    // @ts-ignore
+    gtag('js', new Date());
+    // @ts-ignore
+    gtag('config', 'G-DEMNYVRJB0');
+</script> 

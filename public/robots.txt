@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tat-design22444.com/sitemap.xml 

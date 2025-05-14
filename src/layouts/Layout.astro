@@ -30,6 +30,8 @@ const nav = [
 ];
 
 import Mordal_back from '../components/mordal-back.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import GoogleAdsense from '../components/GoogleAdsense.astro';
 import '../css/pan/pan.css'
 import '../css/layouts/anim-layout.css'
 import '../css/layouts/layout.css'
@@ -38,39 +40,27 @@ import '../css/layouts/layout.css'
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DEMNYVRJB0"></script>
-		<script>
-			
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-		  
-			gtag('config', 'G-DEMNYVRJB0');
-		  </script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4144123835991811"
-     crossorigin="anonymous"></script>
-	<meta name="google-adsense-account" content="ca-pub-4144123835991811">
-	<!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCFLZXJ349"></script> -->
-	<!-- Google tag (gtag.js) -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@tatsu_aihara" />
-    <meta property="og:url" content={URL} />
-    <meta property="og:title" content={ogptitle} />
-    <meta property="og:description" content={description} />
-	<meta name="description" content={ description } />
-	<meta property="og:type" content={type}>
-    <meta property="og:image" content={sns_img} />
-	<link rel="icon" href="../../icon/portfolio-logo.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" rel="stylesheet"/>
-	<title>{ogptitle}</title>
-</head>
+        <GoogleAnalytics />
+        <GoogleAdsense />
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tatsu_aihara" />
+        <meta property="og:url" content={URL} />
+        <meta property="og:title" content={ogptitle} />
+        <meta property="og:description" content={description} />
+        <meta name="description" content={ description } />
+        <meta property="og:type" content={type}>
+        <meta property="og:image" content={sns_img} />
+        <link rel="icon" href="../../icon/portfolio-logo.ico">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" rel="stylesheet"/>
+        <title>{ogptitle}</title>
+    </head>
 <body>
 	<Mordal_back/>
 	<header class="header" id="header" style="paddingTop: 0;">
@@ -122,183 +112,202 @@ import '../css/layouts/layout.css'
     </header>
 </body>
 <script>
-	const header_logo = document.getElementById('js-header__logo')
-	const str = header_logo.textContent
-	const len = 18
-	if(str.length > len) {
-		header_logo.textContent = str.substring(0, len) + "..."
+	const header_logo = document.getElementById('js-header__logo');
+	if (header_logo) {
+		const str = header_logo.textContent;
+		const len = 18;
+		if (str && str.length > len) {
+			header_logo.textContent = str.substring(0, len) + "...";
+		}
 	}
 
-	const ham = document.getElementById('js-ham')
-	const mordal = document.getElementById('js-mordal')
-	// const mordal_back = document.getElementById('js-mordal__back')
-	const ham_item1 = document.getElementById('js-ham__item1')
-    const ham_item2 = document.getElementById('js-ham__item2')
-    const ham_item3 = document.getElementById('js-ham__item3')
-	const mordal_back = document.getElementById('js-mordal-back')
-	ham.addEventListener('click', ()=>{
-		if (mordal.classList.contains('ds-out') === true) {
-			mordal.classList.remove('ds-out')
-            mordal.classList.add('ds-block')
-			mordal_back.classList.remove('ds-out')
-            mordal_back.classList.add('ds-in')
-			// mordal_back.classList.remove('ds-none')
-			// mordal_back.classList.add('ds-block')
-			ham_item1.classList.add('anim-ham__item1--rotate-45')
-			ham_item1.classList.remove('anim-ham__item1--rotate-0')
-		    ham_item2.classList.add('anim-ham__item2--op-0')
-			ham_item2.classList.remove('anim-ham__item2--op-1')
-		    ham_item3.classList.add('anim-ham__item3--rotate-45')
-			ham_item3.classList.remove('anim-ham__item3--rotate-0')
-		} else if (mordal.classList.contains('ds-block') === true) {
-			mordal.classList.add('ds-out')
-            mordal.classList.remove('ds-block')
-			mordal_back.classList.add('ds-out')
-            mordal_back.classList.remove('ds-in')
-			// mordal_back.classList.remove('ds-block')
-			ham_item1.classList.remove('anim-ham__item1--rotate-45')
-			ham_item1.classList.add('anim-ham__item1--rotate-0')
-		    ham_item2.classList.remove('anim-ham__item2--op-0')
-			ham_item2.classList.add('anim-ham__item2--op-1')
-		    ham_item3.classList.remove('anim-ham__item3--rotate-45')
-			ham_item3.classList.add('anim-ham__item3--rotate-0')
-		}
-		mordal_back.addEventListener('click', ()=>{
-			mordal.classList.add('ds-out')
-            mordal.classList.remove('ds-block')
-			mordal_back.classList.add('ds-out')
-            mordal_back.classList.remove('ds-in')
-			ham_item1.classList.remove('anim-ham__item1--rotate-45')
-			ham_item1.classList.add('anim-ham__item1--rotate-0')
-		    ham_item2.classList.remove('anim-ham__item2--op-0')
-			ham_item2.classList.add('anim-ham__item2--op-1')
-		    ham_item3.classList.remove('anim-ham__item3--rotate-45')
-			ham_item3.classList.add('anim-ham__item3--rotate-0')
-		})
-	})
+	const ham = document.getElementById('js-ham');
+	const mordal = document.getElementById('js-mordal');
+	const ham_item1 = document.getElementById('js-ham__item1');
+    const ham_item2 = document.getElementById('js-ham__item2');
+    const ham_item3 = document.getElementById('js-ham__item3');
+	const mordal_back = document.getElementById('js-mordal-back');
+	
+	if (ham && mordal && mordal_back && ham_item1 && ham_item2 && ham_item3) {
+		ham.addEventListener('click', () => {
+			if (mordal.classList.contains('ds-out') === true) {
+				mordal.classList.remove('ds-out');
+				mordal.classList.add('ds-block');
+				mordal_back.classList.remove('ds-out');
+				mordal_back.classList.add('ds-in');
+				ham_item1.classList.add('anim-ham__item1--rotate-45');
+				ham_item1.classList.remove('anim-ham__item1--rotate-0');
+				ham_item2.classList.add('anim-ham__item2--op-0');
+				ham_item2.classList.remove('anim-ham__item2--op-1');
+				ham_item3.classList.add('anim-ham__item3--rotate-45');
+				ham_item3.classList.remove('anim-ham__item3--rotate-0');
+			} else if (mordal.classList.contains('ds-block') === true) {
+				mordal.classList.add('ds-out');
+				mordal.classList.remove('ds-block');
+				mordal_back.classList.add('ds-out');
+				mordal_back.classList.remove('ds-in');
+				ham_item1.classList.remove('anim-ham__item1--rotate-45');
+				ham_item1.classList.add('anim-ham__item1--rotate-0');
+				ham_item2.classList.remove('anim-ham__item2--op-0');
+				ham_item2.classList.add('anim-ham__item2--op-1');
+				ham_item3.classList.remove('anim-ham__item3--rotate-45');
+				ham_item3.classList.add('anim-ham__item3--rotate-0');
+			}
+		});
+		
+		mordal_back.addEventListener('click', () => {
+			mordal.classList.add('ds-out');
+			mordal.classList.remove('ds-block');
+			mordal_back.classList.add('ds-out');
+			mordal_back.classList.remove('ds-in');
+			ham_item1.classList.remove('anim-ham__item1--rotate-45');
+			ham_item1.classList.add('anim-ham__item1--rotate-0');
+			ham_item2.classList.remove('anim-ham__item2--op-0');
+			ham_item2.classList.add('anim-ham__item2--op-1');
+			ham_item3.classList.remove('anim-ham__item3--rotate-45');
+			ham_item3.classList.add('anim-ham__item3--rotate-0');
+		});
+	}
 
-	window.addEventListener('scroll', ()=>{
-	document.querySelectorAll("#fig-elem").forEach((fig_elem)=>{
-		// console.log(fig_elem)
-		let fig_shadow = document.getElementById('js-shadow-fig')
-		if(fig_elem.getBoundingClientRect().top < 550){
-			fig_shadow.classList.add('skills__skillset__item-fig')
-			fig_elem.classList.add('el-fig')
-		}
+	window.addEventListener('scroll', () => {
+		document.querySelectorAll("#fig-elem").forEach((fig_elem) => {
+			const fig_shadow = document.getElementById('js-shadow-fig');
+			if (fig_elem && fig_shadow) {
+				if (fig_elem.getBoundingClientRect().top < 550) {
+					fig_shadow.classList.add('skills__skillset__item-fig');
+					fig_elem.classList.add('el-fig');
+				}
 
-	    fig_shadow.addEventListener('mouseover', ()=>{
-            fig_shadow.classList.add('skills__skillset__item-hover-figover')
-            fig_shadow.classList.remove('skills__skillset__item-hover-figleave')
-            fig_shadow.classList.remove('skills__skillset__item-fig')
-            fig_elem.classList.remove('el-fig')
-        })
-        fig_shadow.addEventListener('mouseleave', ()=>{
-            fig_shadow.classList.remove('skills__skillset__item-hover-figover')
-            fig_shadow.classList.add('skills__skillset__item-hover-figleave')
-            fig_elem.classList.add('el-fig')
-        })
-	})
-	document.querySelectorAll("#ai-elem").forEach((ai_elem)=>{
-		// console.log(ai_elem)
-		let ai_shadow = document.getElementById('js-shadow-ai')
-		if(ai_elem.getBoundingClientRect().top < 550){
-			ai_shadow.classList.add('skills__skillset__item-ai')
-			ai_elem.classList.add('el-ai')
-		}
+				fig_shadow.addEventListener('mouseover', () => {
+					fig_shadow.classList.add('skills__skillset__item-hover-figover');
+					fig_shadow.classList.remove('skills__skillset__item-hover-figleave');
+					fig_shadow.classList.remove('skills__skillset__item-fig');
+					fig_elem.classList.remove('el-fig');
+				});
+				
+				fig_shadow.addEventListener('mouseleave', () => {
+					fig_shadow.classList.remove('skills__skillset__item-hover-figover');
+					fig_shadow.classList.add('skills__skillset__item-hover-figleave');
+					fig_elem.classList.add('el-fig');
+				});
+			}
+		});
+		
+		document.querySelectorAll("#ai-elem").forEach((ai_elem) => {
+			const ai_shadow = document.getElementById('js-shadow-ai');
+			if (ai_elem && ai_shadow) {
+				if (ai_elem.getBoundingClientRect().top < 550) {
+					ai_shadow.classList.add('skills__skillset__item-ai');
+					ai_elem.classList.add('el-ai');
+				}
 
-	    ai_shadow.addEventListener('mouseover', ()=>{
-            ai_shadow.classList.add('skills__skillset__item-hover-aiover')
-            ai_shadow.classList.remove('skills__skillset__item-hover-aileave')
-            ai_shadow.classList.remove('skills__skillset__item-ai')
-            ai_elem.classList.remove('el-ai')
-        })
-        ai_shadow.addEventListener('mouseleave', ()=>{
-            ai_shadow.classList.remove('skills__skillset__item-hover-aiover')
-            ai_shadow.classList.add('skills__skillset__item-hover-aileave')
-            ai_elem.classList.add('el-ai')
-        })
-	})
-	document.querySelectorAll("#ps-elem").forEach((ps_elem)=>{
-		// console.log(ps_elem)
-		let ps_shadow = document.getElementById('js-shadow-ps')
-		if(ps_elem.getBoundingClientRect().top < 550){
-			ps_shadow.classList.add('skills__skillset__item-ps')
-			ps_elem.classList.add('el-ps')
-		}
+				ai_shadow.addEventListener('mouseover', () => {
+					ai_shadow.classList.add('skills__skillset__item-hover-aiover');
+					ai_shadow.classList.remove('skills__skillset__item-hover-aileave');
+					ai_shadow.classList.remove('skills__skillset__item-ai');
+					ai_elem.classList.remove('el-ai');
+				});
+				
+				ai_shadow.addEventListener('mouseleave', () => {
+					ai_shadow.classList.remove('skills__skillset__item-hover-aiover');
+					ai_shadow.classList.add('skills__skillset__item-hover-aileave');
+					ai_elem.classList.add('el-ai');
+				});
+			}
+		});
+		
+		document.querySelectorAll("#ps-elem").forEach((ps_elem) => {
+			const ps_shadow = document.getElementById('js-shadow-ps');
+			if (ps_elem && ps_shadow) {
+				if (ps_elem.getBoundingClientRect().top < 550) {
+					ps_shadow.classList.add('skills__skillset__item-ps');
+					ps_elem.classList.add('el-ps');
+				}
 
-	    ps_shadow.addEventListener('mouseover', ()=>{
-            ps_shadow.classList.add('skills__skillset__item-hover-psover')
-            ps_shadow.classList.remove('skills__skillset__item-hover-psleave')
-            ps_shadow.classList.remove('skills__skillset__item-ps')
-            ps_elem.classList.remove('el-ps')
-        })
-        ps_shadow.addEventListener('mouseleave', ()=>{
-            ps_shadow.classList.remove('skills__skillset__item-hover-psover')
-            ps_shadow.classList.add('skills__skillset__item-hover-psleave')
-            ps_elem.classList.add('el-ps')
-        })
-	})
-	document.querySelectorAll("#hc-elem").forEach((hc_elem)=>{
-		// console.log(hc_elem)
-		let hc_shadow = document.getElementById('js-shadow-hc')
-		if(hc_elem.getBoundingClientRect().top < 550){
-			hc_shadow.classList.add('skills__skillset__item-hc')
-			hc_elem.classList.add('el-hc')
-		}
+				ps_shadow.addEventListener('mouseover', () => {
+					ps_shadow.classList.add('skills__skillset__item-hover-psover');
+					ps_shadow.classList.remove('skills__skillset__item-hover-psleave');
+					ps_shadow.classList.remove('skills__skillset__item-ps');
+					ps_elem.classList.remove('el-ps');
+				});
+				
+				ps_shadow.addEventListener('mouseleave', () => {
+					ps_shadow.classList.remove('skills__skillset__item-hover-psover');
+					ps_shadow.classList.add('skills__skillset__item-hover-psleave');
+					ps_elem.classList.add('el-ps');
+				});
+			}
+		});
+		
+		document.querySelectorAll("#hc-elem").forEach((hc_elem) => {
+			const hc_shadow = document.getElementById('js-shadow-hc');
+			if (hc_elem && hc_shadow) {
+				if (hc_elem.getBoundingClientRect().top < 550) {
+					hc_shadow.classList.add('skills__skillset__item-hc');
+					hc_elem.classList.add('el-hc');
+				}
 
-	    hc_shadow.addEventListener('mouseover', ()=>{
-            hc_shadow.classList.add('skills__skillset__item-hover-hcover')
-            hc_shadow.classList.remove('skills__skillset__item-hover-hcleave')
-            hc_shadow.classList.remove('skills__skillset__item-hc')
-            hc_elem.classList.remove('el-hc')
-        })
-        hc_shadow.addEventListener('mouseleave', ()=>{
-            hc_shadow.classList.remove('skills__skillset__item-hover-hcover')
-            hc_shadow.classList.add('skills__skillset__item-hover-hcleave')
-            hc_elem.classList.add('el-hc')
-        })
-	})
-	document.querySelectorAll("#js-elem").forEach((js_elem)=>{
-		// console.log(js_elem)
-		let js_shadow = document.getElementById('js-shadow-js')
-		if(js_elem.getBoundingClientRect().top < 550){
-			js_shadow.classList.add('skills__skillset__item-js')
-			js_elem.classList.add('el-js')
-		}
+				hc_shadow.addEventListener('mouseover', () => {
+					hc_shadow.classList.add('skills__skillset__item-hover-hcover');
+					hc_shadow.classList.remove('skills__skillset__item-hover-hcleave');
+					hc_shadow.classList.remove('skills__skillset__item-hc');
+					hc_elem.classList.remove('el-hc');
+				});
+				
+				hc_shadow.addEventListener('mouseleave', () => {
+					hc_shadow.classList.remove('skills__skillset__item-hover-hcover');
+					hc_shadow.classList.add('skills__skillset__item-hover-hcleave');
+					hc_elem.classList.add('el-hc');
+				});
+			}
+		});
+		
+		document.querySelectorAll("#js-elem").forEach((js_elem) => {
+			const js_shadow = document.getElementById('js-shadow-js');
+			if (js_elem && js_shadow) {
+				if (js_elem.getBoundingClientRect().top < 550) {
+					js_shadow.classList.add('skills__skillset__item-js');
+					js_elem.classList.add('el-js');
+				}
 
-	    js_shadow.addEventListener('mouseover', ()=>{
-            js_shadow.classList.add('skills__skillset__item-hover-jsover')
-            js_shadow.classList.remove('skills__skillset__item-hover-jsleave')
-            js_shadow.classList.remove('skills__skillset__item-js')
-            js_elem.classList.remove('el-js')
-        })
-        js_shadow.addEventListener('mouseleave', ()=>{
-            js_shadow.classList.remove('skills__skillset__item-hover-jsover')
-            js_shadow.classList.add('skills__skillset__item-hover-jsleave')
-            js_elem.classList.add('el-js')
-        })
-	})
-	document.querySelectorAll("#wp-elem").forEach((wp_elem)=>{
-		// console.log(wp_elem)
-		let wp_shadow = document.getElementById('js-shadow-wp')
-		if(wp_elem.getBoundingClientRect().top < 550){
-			wp_shadow.classList.add('skills__skillset__item-wp')
-			wp_elem.classList.add('el-wp')
-		}
+				js_shadow.addEventListener('mouseover', () => {
+					js_shadow.classList.add('skills__skillset__item-hover-jsover');
+					js_shadow.classList.remove('skills__skillset__item-hover-jsleave');
+					js_shadow.classList.remove('skills__skillset__item-js');
+					js_elem.classList.remove('el-js');
+				});
+				
+				js_shadow.addEventListener('mouseleave', () => {
+					js_shadow.classList.remove('skills__skillset__item-hover-jsover');
+					js_shadow.classList.add('skills__skillset__item-hover-jsleave');
+					js_elem.classList.add('el-js');
+				});
+			}
+		});
+		
+		document.querySelectorAll("#wp-elem").forEach((wp_elem) => {
+			const wp_shadow = document.getElementById('js-shadow-wp');
+			if (wp_elem && wp_shadow) {
+				if (wp_elem.getBoundingClientRect().top < 550) {
+					wp_shadow.classList.add('skills__skillset__item-wp');
+					wp_elem.classList.add('el-wp');
+				}
 
-	    wp_shadow.addEventListener('mouseover', ()=>{
-            wp_shadow.classList.add('skills__skillset__item-hover-wpover')
-            wp_shadow.classList.remove('skills__skillset__item-hover-wpleave')
-            wp_shadow.classList.remove('skills__skillset__item-wp')
-            wp_elem.classList.remove('el-wp')
-        })
-        wp_shadow.addEventListener('mouseleave', ()=>{
-            wp_shadow.classList.remove('skills__skillset__item-hover-wpover')
-            wp_shadow.classList.add('skills__skillset__item-hover-wpleave')
-            wp_elem.classList.add('el-wp')
-        })
-	})
-})
+				wp_shadow.addEventListener('mouseover', () => {
+					wp_shadow.classList.add('skills__skillset__item-hover-wpover');
+					wp_shadow.classList.remove('skills__skillset__item-hover-wpleave');
+					wp_shadow.classList.remove('skills__skillset__item-wp');
+					wp_elem.classList.remove('el-wp');
+				});
+				
+				wp_shadow.addEventListener('mouseleave', () => {
+					wp_shadow.classList.remove('skills__skillset__item-hover-wpover');
+					wp_shadow.classList.add('skills__skillset__item-hover-wpleave');
+					wp_elem.classList.add('el-wp');
+				});
+			}
+		});
+	});
 </script>
 
 </html>
